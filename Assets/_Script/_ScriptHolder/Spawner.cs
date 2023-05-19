@@ -15,7 +15,19 @@ public class Spawner : MonoBehaviour
     public int maxObj = 1;
     public int layerOrder = 0;
 
+    [SerializeField] protected PlayerCollider playerCollider;
+    public PlayerCollider PlayerCollider { get => playerCollider; }
 
+    protected virtual void Reset()
+    {
+        this.LoadPlayerCollider();
+    }
+    protected virtual void LoadPlayerCollider()
+    {
+        if (this.playerCollider != null) return;
+        this.playerCollider = FindAnyObjectByType<PlayerCollider>();
+        Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
+    }
     private void Awake()
     {
         this.objects = new List<GameObject>();
@@ -29,13 +41,13 @@ public class Spawner : MonoBehaviour
     {
         this.Spawn();
 
-        this.CheckDead();
+        //this.CheckDead();
     }
     protected virtual GameObject Spawn()
     {
-        if (PlayerCtrl.instance.damageReceiver.IsDead()) return null;
+        //if (PlayerCtrl.instance.damageReceiver.IsDead()) return null;
+
         if (this.objects.Count >= this.maxObj) return null;
-        // giải thuật delay
         this.spawnTimer += Time.deltaTime;
         if (this.spawnTimer < this.spawnDelay) return null;
         this.spawnTimer = 0;
@@ -54,15 +66,18 @@ public class Spawner : MonoBehaviour
 
         this.objects.Add(obj);
 
+        if (this.prefabName == "BombPrefab") this.playerCollider.bombCount--;
+        
         return obj;
     }
-    protected virtual void CheckDead()
-    {
-        GameObject minion;
-        for (int i = 0; i < this.objects.Count; i++)
-        {
-            minion = this.objects[i];
-            if (minion == null) this.objects.RemoveAt(i);
-        }
-    }
+
+    //protected virtual void CheckDead()
+    //{
+    //    GameObject minion;
+    //    for (int i = 0; i < this.objects.Count; i++)
+    //    {
+    //        minion = this.objects[i];
+    //        if (minion == null) this.objects.RemoveAt(i);
+    //    }
+    //}
 }

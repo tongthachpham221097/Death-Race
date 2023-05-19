@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageReceiver : MonoBehaviour
+public class DamageReceiver : LoboMonoBehaviour
 {
     [Header("DamageReceiver")]
     public int hp = 1;

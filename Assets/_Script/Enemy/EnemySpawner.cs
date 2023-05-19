@@ -6,7 +6,7 @@ public class EnemySpawner : Spawner
 {
     //[Header("Enemy")]
     
-    private void Reset()
+    protected override void Reset()
     {
         this.spawnPosName = "EnemySpawnPos";
         this.prefabName = "EnemyPrefab";

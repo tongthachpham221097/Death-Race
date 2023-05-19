@@ -13,7 +13,7 @@ public class RoadDespawner : MonoBehaviour
 
     protected virtual void UpdateRoad()
     {
-        this.distance = Vector2.Distance(PlayerCtrl.instance.transform.position, transform.position);
+        //this.distance = Vector2.Distance(PlayerCtrl.instance.transform.position, transform.position);
         if (this.distance > 70) this.Despawn();
     }
     protected virtual void Despawn()

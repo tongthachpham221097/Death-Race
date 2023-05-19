@@ -2,16 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCtrl : MonoBehaviour
+public class EnemyCtrl : LoboMonoBehaviour
 {
-   //Header("EnemyCtrl")]
-    public Despawner despawner;
-    public EnemyDamageReceiver damageReceiver;
+    //Header("Enemy Ctrl")]
+    //public Despawner despawner;
+    //public EnemyDamageReceiver damageReceiver;
+    [SerializeField] protected PlayerCtrl playerCtrl;
+    public PlayerCtrl PlayerCtrl { get => playerCtrl; }
 
-    private void Awake()
+    //public Transform PlayerCtrl;
+    protected override void LoadComponents()
     {
-        this.despawner = GetComponent<Despawner>();
-
-        this.damageReceiver = GetComponent<EnemyDamageReceiver>();
+        base.LoadComponents();
+        this.LoadPlayerCtrl();
     }
+    protected virtual void LoadPlayerCtrl()
+    {
+        if (this.playerCtrl != null) return;
+        this.playerCtrl = FindAnyObjectByType<PlayerCtrl>();
+        Debug.Log(transform.name + ": LoadPlayerCtrl", gameObject);
+    }
+    //private void Awake()
+    //{
+    //    this.despawner = GetComponent<Despawner>();
+
+    //    this.damageReceiver = GetComponent<EnemyDamageReceiver>();
+    //}
 }

@@ -7,7 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public virtual void GameOver()
     {
+        if (UIManager.instance.UICtrl.buttonRestart.activeSelf) this.ResetGame();
+    }
+    public virtual void ResetGame()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+        Time.timeScale = 1;
     }
 }

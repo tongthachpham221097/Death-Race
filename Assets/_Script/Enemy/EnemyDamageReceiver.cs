@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class EnemyDamageReceiver : DamageReceiver
 {
-    [Header("Enemy")]
-    public EnemyCtrl enemyCtrl;
-
-    private void Awake()
+    //[Header("Enemy")]
+    //public EnemyCtrl enemyCtrl;
+    //private void Awake()
+    //{
+    //    enemyCtrl = GetComponent<EnemyCtrl>();
+    //}
+    [SerializeField] protected Despawner despawner;
+    public Despawner Despawner { get => despawner; }
+    protected override void LoadComponents()
     {
-        enemyCtrl = GetComponent<EnemyCtrl>();
+        base.LoadComponents();
+        this.LoadDespawner();
     }
-
-    private void Reset()
+    protected virtual void LoadDespawner()
+    {
+        if (this.despawner != null) return;
+        this.despawner = FindAnyObjectByType<Despawner>();
+        Debug.Log(transform.name + ": LoadPlayerCtrl", gameObject);
+    }
+    protected override void ResetValue()
     {
         this.hp = 3;
     }
@@ -24,7 +35,7 @@ public class EnemyDamageReceiver : DamageReceiver
         {
             EffectManager.instance.SpawnVFX("Explosion_A", transform.position, transform.rotation);
 
-            this.enemyCtrl.despawner.Despawn();
+            this.despawner.Despawn();
 
         }
     }

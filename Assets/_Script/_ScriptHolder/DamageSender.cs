@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageSender : MonoBehaviour
+public class DamageSender : LoboMonoBehaviour
 {
     [Header("DamageSender")]
     public int damage = 1;

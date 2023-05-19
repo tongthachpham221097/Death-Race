@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class EnemyDamegeSender : DamageSender
 {
-    [Header("Enemy")]
-    public EnemyCtrl enemyCtrl;
+    //[Header("Enemy")]
+    //public EnemyCtrl enemyCtrl;
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    // tạo liên kết trong realtime
+    //    enemyCtrl = GetComponent<EnemyCtrl>();
+    //}
+    [SerializeField] protected EnemyDamageReceiver enemyDamageReceiver;
+    public EnemyDamageReceiver EnemyDamageReceiver { get => enemyDamageReceiver; }
+    protected override void LoadComponents()
     {
-        // tạo liên kết trong realtime
-        enemyCtrl = GetComponent<EnemyCtrl>();
+        base.LoadComponents();
+        this.LoadEnemyDamageReceiver();
     }
-
+    protected virtual void LoadEnemyDamageReceiver()
+    {
+        if (this.enemyDamageReceiver != null) return;
+        this.enemyDamageReceiver = FindAnyObjectByType<EnemyDamageReceiver>();
+        Debug.Log(transform.name + ": LoadEnemyDamageReceiver", gameObject);
+    }
     protected override void ColliderSendDamage(Collider2D collision)
     {
         
         base.ColliderSendDamage(collision);
 
-        this.enemyCtrl.damageReceiver.Receive(1);
+        this.enemyDamageReceiver.Receive(1);
     }
 }

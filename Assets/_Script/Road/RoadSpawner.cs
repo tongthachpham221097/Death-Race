@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class RoadSpawner : MonoBehaviour
+public class RoadSpawner : LoboMonoBehaviour
 {
+    [SerializeField] protected RoadCtrl roadCtrl;
+    public RoadCtrl RoadCtrl { get => roadCtrl; }
+
     protected GameObject roadPrefab;
     protected GameObject roadSpawnPos;
     protected float distance = 0;
     protected GameObject roadCurrent;
     protected int roadLayerOrder = 0;
 
-    private void Awake()
+    protected override void Awake()
     {
         this.roadPrefab = GameObject.Find("RoadPrefab");
         this.roadSpawnPos = GameObject.Find("RoadSpawnPos");
@@ -22,7 +25,17 @@ public class RoadSpawner : MonoBehaviour
 
         this.Spawn(this.roadPrefab.transform.position);
     }
-
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        this.LoadRoadCtrl();
+    }
+    protected virtual void LoadRoadCtrl()
+    {
+        if (this.roadCtrl != null) return;
+        this.roadCtrl = GetComponentInParent<RoadCtrl>();
+        Debug.Log(transform.name + ": LoadRoadCtrl", gameObject);
+    }
     private void FixedUpdate()
     {
         this.UpdateRoad();
@@ -30,7 +43,7 @@ public class RoadSpawner : MonoBehaviour
 
     protected virtual void UpdateRoad()
     {
-        this.distance = Vector2.Distance(PlayerCtrl.instance.transform.position, this.roadCurrent.transform.position);
+        this.distance = Vector2.Distance(this.roadCtrl.PlayerCtrl.transform.position, this.roadCurrent.transform.position);
         if (this.distance > 40) this.Spawn();
     }
 
@@ -41,7 +54,7 @@ public class RoadSpawner : MonoBehaviour
         pos.z = this.roadLayerOrder;
 
         this.Spawn(pos);
-        //this.roadCurrent = Instantiate(this.roadPrefab, pos, this.roadPrefab.transform.rotation);
+        this.roadCurrent = Instantiate(this.roadPrefab, pos, this.roadPrefab.transform.rotation);
     }
 
     protected virtual void Spawn(Vector3 position)

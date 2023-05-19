@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class BombSpawner : Spawner
 {
-    [SerializeField] protected PlayerCollider playerCollider;
-    public PlayerCollider PlayerCollider { get => playerCollider; }
-
-    private void Reset()
+    protected override void Reset()
     {
         this.spawnPosName = "BombSpawnPos";
         this.prefabName = "BombPrefab";
         this.maxObj = 17;
-        this.LoadPlayerCollider();
-    }
-    protected virtual void LoadPlayerCollider()
-    {
-        if (this.playerCollider != null) return;
-        this.playerCollider = FindAnyObjectByType<PlayerCollider>();
-        Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
     }
     protected override void Update()
     {
-        if (InputManager.Instance.pressKeySpace == 0) return;
+        if (InputManager.Instance.pressKeySpace == 0 || this.playerCollider.bombCount == 0) return;
         this.Spawn();
         //this.CheckDead();
     }
