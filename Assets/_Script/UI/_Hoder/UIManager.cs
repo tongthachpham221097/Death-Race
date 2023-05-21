@@ -29,6 +29,10 @@ public class UIManager : LoboMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        this.uiCtrl.buttonRestart.SetActive(false);
+        //this.uiCtrl.restartButton.SetActive(false);
+        //this.uiCtrl.pauseButton.SetActive(true);
+        //this.uiCtrl.pauseDialog.SetActive(false);
+        this.uiCtrl.gameOverMenu.SetActive(false);
+        this.uiCtrl.pauseMenu.SetActive(false);
     }
 }

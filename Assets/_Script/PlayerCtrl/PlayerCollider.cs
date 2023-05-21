@@ -8,7 +8,6 @@ public class PlayerCollider : LoboMonoBehaviour
 
     [SerializeField] protected PlayerCtrl playerCtrl;
     public PlayerCtrl PlayerCtrl { get => playerCtrl; }
-
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -33,7 +32,7 @@ public class PlayerCollider : LoboMonoBehaviour
     {
         this.playerCtrl.CanvasCtrl.LastDistance.EnableLastDistance();
         Time.timeScale = 0;
-        UIManager.instance.UICtrl.buttonRestart.SetActive(true);
+        UIManager.instance.UICtrl.gameOverMenu.SetActive(true);
     }
    
 }

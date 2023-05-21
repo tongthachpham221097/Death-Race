@@ -5,13 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public virtual void GameOver()
-    {
-        if (UIManager.instance.UICtrl.buttonRestart.activeSelf) this.ResetGame();
-    }
     public virtual void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+    }
+    public virtual void PauseGame()
+    {
+        Time.timeScale = 0;
+        UIManager.instance.UICtrl.pauseMenu.SetActive(true);
+    }
+    public virtual void ExitGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
+    public virtual void ResumeGame()
+    {
+        Time.timeScale = 1;
+        UIManager.instance.UICtrl.pauseMenu.SetActive(false);
     }
 }
