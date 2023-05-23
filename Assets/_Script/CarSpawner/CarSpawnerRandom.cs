@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class CarSpawnerRandom : LoboMonoBehaviour
 {
-    [Header("Junk Random")]
+    [Header("Car Spawner Random")]
     [SerializeField] protected CarSpawnerCtrl carSpawnerCtrl;
     [SerializeField] protected float randomDelay = 1f;
     [SerializeField] protected float randomTimer = 0f;
     [SerializeField] protected int randomLimit = 20;
-
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -22,7 +21,12 @@ public class CarSpawnerRandom : LoboMonoBehaviour
         this.carSpawnerCtrl = GetComponent<CarSpawnerCtrl>();
         Debug.Log(transform.name + ": LoadCarSpawnerCtrl", gameObject);
     }
-
+    protected override void Start()
+    {
+        base.Start();
+        InvokeRepeating(nameof(this.ChangeRamdomDelay), 1f, 3f);
+        InvokeRepeating(nameof(this.ChangeRamdomLimit), 1f, 15f);
+    }
 
     protected virtual void FixedUpdate()
     {
@@ -48,5 +52,14 @@ public class CarSpawnerRandom : LoboMonoBehaviour
     {
         int currentCar = this.carSpawnerCtrl.CarSpawner.SpawnedCount;
         return currentCar >= this.randomLimit;
+    }
+    protected virtual void ChangeRamdomDelay()
+    {
+        this.randomDelay -= 0.01f;
+        if(this.randomDelay < 0) this.randomDelay = 0;
+    }
+    protected virtual void ChangeRamdomLimit()
+    {
+        this.randomLimit += 1;
     }
 }

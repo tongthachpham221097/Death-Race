@@ -11,8 +11,9 @@ public class GameManager : GameManagerAbstract
     }
     public virtual void ResetGame()
     {
-        this.GameManagerCtrl.DistanceText.SetLastDistance();
-        this.GameManagerCtrl.DistanceText.SetHighDistance();
+        this.gameManagerCtrl.DistanceText.SetLastDistance();
+        this.gameManagerCtrl.DistanceText.SetHighDistance();
+        this.gameManagerCtrl.PlayerCollider.isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }

@@ -8,6 +8,8 @@ public class PlayerCollider : LoboMonoBehaviour
 
     [SerializeField] protected PlayerCtrl playerCtrl;
     public PlayerCtrl PlayerCtrl { get => playerCtrl; }
+
+    [SerializeField] public bool isGameOver = false;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -30,8 +32,6 @@ public class PlayerCollider : LoboMonoBehaviour
     }
     protected virtual void ColliderWithCar()
     {
-        Time.timeScale = 0;
-        UIManager.instance.UICtrl.gameOverMenu.SetActive(true);
+        this.isGameOver = true;
     }
-   
 }

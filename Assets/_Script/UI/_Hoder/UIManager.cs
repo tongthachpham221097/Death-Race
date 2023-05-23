@@ -7,12 +7,14 @@ public class UIManager : LoboMonoBehaviour
     static public UIManager instance;
     [SerializeField] protected UICtrl uiCtrl;
     public UICtrl UICtrl => uiCtrl;
-    //public GameObject gamePlay;
-    //public GameObject gameStarting;
     protected override void Awake()
     {
         base.Awake();
         UIManager.instance = this;
+    }
+    protected virtual void Update()
+    {
+        if(this.uiCtrl.PlayerCollider.isGameOver == true) this.OnEnableGameOverMenu();
     }
     protected override void LoadComponents()
     {
@@ -29,10 +31,14 @@ public class UIManager : LoboMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        //this.uiCtrl.restartButton.SetActive(false);
-        //this.uiCtrl.pauseButton.SetActive(true);
-        //this.uiCtrl.pauseDialog.SetActive(false);
         this.uiCtrl.gameOverMenu.SetActive(false);
         this.uiCtrl.pauseMenu.SetActive(false);
+    }
+    protected virtual void OnEnableGameOverMenu()
+    {
+        this.uiCtrl.gameOverMenu.SetActive(true);
+        this.uiCtrl.DistanceTextGO.GetDistance();
+        this.uiCtrl.DistanceTextGO.OnEnableDistance();
+        Time.timeScale = 0f;
     }
 }

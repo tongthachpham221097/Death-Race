@@ -2,19 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPoints : MonoBehaviour
+public class SpawnPoints : LoboMonoBehaviour
 {
     [SerializeField] protected List<Transform> points;
-    protected virtual void Reset()
+    protected override void LoadComponents()
     {
-        this.LoadComponents();
-    }
-    protected virtual void Awake()
-    {
-        this.LoadComponents();
-    }
-    protected virtual void LoadComponents()
-    {
+        base.LoadComponents();
         this.LoadPoints();
     }
     protected virtual void LoadPoints()

@@ -12,7 +12,7 @@ public class Spawner2 : LoboMonoBehaviour
     public int SpawnedCount => spawnedCount;
 
     [SerializeField] protected List<Transform> prefabs;
-    [SerializeField] protected List<Transform> poolObjs;
+    [SerializeField] protected List<Transform> poolObjs = new List<Transform>();
     protected override void LoadComponents()
     {
         this.LoadPrefabs();
@@ -67,11 +67,12 @@ public class Spawner2 : LoboMonoBehaviour
     }
     protected virtual Transform GetObjectFromPoll(Transform prefab)
     {
-        foreach (Transform poolObj in this.poolObjs)
+        for (int i = this.poolObjs.Count - 1; i >= 0; i--)
         {
+            Transform poolObj = this.poolObjs[i];
             if (poolObj.name == prefab.name)
             {
-                this.poolObjs.Remove(poolObj);
+                this.poolObjs.RemoveAt(i);
                 return poolObj;
             }
         }

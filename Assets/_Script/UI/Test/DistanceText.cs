@@ -14,11 +14,15 @@ public class DistanceText : BaseText
     }
     protected virtual void FixedUpdate()
     {
-        this.DistanceRace();
+        this.GetDistance();
+        this.OnEnableDistance();
     }
-    protected virtual void DistanceRace()
+    public virtual void GetDistance()
     {
         this.distance = (int)TextCtrl.PlayerCollider.transform.parent.position.y;
+    }
+    public virtual void OnEnableDistance()
+    {
         text.text = "Distance: " + this.distance.ToString();
     }
     public virtual void SetHighDistance()
