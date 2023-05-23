@@ -3,43 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DistanceText : TestManager
+public class DistanceText : BaseText
 {
-    [SerializeField] protected Text distanceText;
+    [Header("Distance Text")]
     [SerializeField] public int distance;
-    [SerializeField] public int lastDistance = 0;
     [SerializeField] public int highDistance = 0;
-    protected override void Reset()
+    protected override void Start()
     {
-        base.Reset();
-        this.distanceText = GetComponent<Text>();
-    }
-    protected virtual void Start()
-    {
-        //highDistance = PlayerPrefs.GetInt("highDistance");
-        // may be use PlayerPrefs.DeleteAll();
+        this.highDistance = PlayerPrefs.GetInt("highDistance");
     }
     protected virtual void FixedUpdate()
     {
         this.DistanceRace();
-        //PlayerPrefs.DeleteAll();
-        this.SetHighDistance();
-        this.SetLastDistance();
     }
     protected virtual void DistanceRace()
     {
-        this.distance = (int)playerCollider.transform.parent.position.y;
-        distanceText.text = "Distance: " + this.distance.ToString();
+        this.distance = (int)TextCtrl.PlayerCollider.transform.parent.position.y;
+        text.text = "Distance: " + this.distance.ToString();
     }
-    protected virtual void SetHighDistance()
+    public virtual void SetHighDistance()
     {
         if (this.distance <= this.highDistance) return;
         this.highDistance = this.distance;
         PlayerPrefs.SetInt("highDistance", highDistance);
     }
-    protected virtual void SetLastDistance()
+    public virtual void SetLastDistance()
     {
-        this.lastDistance = this.distance;
-        PlayerPrefs.SetInt("lastDistance", lastDistance);
+        PlayerPrefs.SetInt("lastDistance", this.distance);
     }
 }

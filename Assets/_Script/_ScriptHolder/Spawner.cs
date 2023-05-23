@@ -40,8 +40,7 @@ public class Spawner : MonoBehaviour
     protected virtual void Update()
     {
         this.Spawn();
-
-        //this.CheckDead();
+        this.CheckDead();
     }
     protected virtual GameObject Spawn()
     {
@@ -71,13 +70,13 @@ public class Spawner : MonoBehaviour
         return obj;
     }
 
-    //protected virtual void CheckDead()
-    //{
-    //    GameObject minion;
-    //    for (int i = 0; i < this.objects.Count; i++)
-    //    {
-    //        minion = this.objects[i];
-    //        if (minion == null) this.objects.RemoveAt(i);
-    //    }
-    //}
+    protected virtual void CheckDead()
+    {
+        GameObject minion;
+        for (int i = 0; i < this.objects.Count; i++)
+        {
+            minion = this.objects[i];
+            if (minion == null) this.objects.RemoveAt(i);
+        }
+    }
 }

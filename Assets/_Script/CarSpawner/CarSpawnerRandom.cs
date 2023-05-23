@@ -20,7 +20,7 @@ public class CarSpawnerRandom : LoboMonoBehaviour
     {
         if (this.carSpawnerCtrl != null) return;
         this.carSpawnerCtrl = GetComponent<CarSpawnerCtrl>();
-        Debug.Log(transform.name + ": LoadJunkCtrl", gameObject);
+        Debug.Log(transform.name + ": LoadCarSpawnerCtrl", gameObject);
     }
 
 

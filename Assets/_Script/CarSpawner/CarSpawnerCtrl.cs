@@ -15,14 +15,12 @@ public class CarSpawnerCtrl : LoboMonoBehaviour
         this.LoadCarSpawner();
         this.LoadSpawnPoints();
     }
-
     protected virtual void LoadCarSpawner()
     {
         if (this.carSpawner != null) return;
         this.carSpawner = GetComponent<CarSpawner>();
         Debug.Log(transform.name + ": LoadCarSpawner", gameObject);
     }
-
     protected virtual void LoadSpawnPoints()
     {
         if (this.spawnPoints != null) return;

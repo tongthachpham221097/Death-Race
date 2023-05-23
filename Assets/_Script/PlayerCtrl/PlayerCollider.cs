@@ -30,7 +30,6 @@ public class PlayerCollider : LoboMonoBehaviour
     }
     protected virtual void ColliderWithCar()
     {
-        this.playerCtrl.CanvasCtrl.LastDistance.EnableLastDistance();
         Time.timeScale = 0;
         UIManager.instance.UICtrl.gameOverMenu.SetActive(true);
     }

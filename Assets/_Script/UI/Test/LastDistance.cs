@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LastDistance : MonoBehaviour
+public class LastDistance : BaseText
 {
-    [SerializeField] protected Text lastDistance;
     
-    protected virtual void Reset()
-    {
-        this.lastDistance = GetComponent<Text>();
-    }
-    protected virtual void Start()
+    protected override void Start()
     {
         this.EnableLastDistance();
     }
     public virtual void EnableLastDistance()
     {
-        lastDistance.text = "LastDistance: " + PlayerPrefs.GetInt("lastDistance").ToString();
+        text.text = PlayerPrefs.GetInt("lastDistance").ToString();
     }
 
 }

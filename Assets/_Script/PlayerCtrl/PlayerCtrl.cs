@@ -8,9 +8,6 @@ public class PlayerCtrl : LoboMonoBehaviour
     //public PlayerStatus playerStatus;
     [SerializeField] protected UICtrl uiCtrl;
     public UICtrl UICtrl => uiCtrl;
-
-    [SerializeField] protected CanvasCtrl canvasCtrl;
-    public CanvasCtrl CanvasCtrl { get => canvasCtrl; }
     protected override void Awake()
     {
         //this.damageReceiver = GetComponent<DamageReceiver>();
@@ -20,18 +17,11 @@ public class PlayerCtrl : LoboMonoBehaviour
     {
         base.LoadComponents();
         this.LoadUICtrl();
-        this.LoadCanvasCtrl();
     }
     protected virtual void LoadUICtrl()
     {
         if (this.uiCtrl != null) return;
         this.uiCtrl = FindAnyObjectByType<UICtrl>();
         Debug.Log(transform.name + ": LoadUICtrl", gameObject);
-    }
-    protected virtual void LoadCanvasCtrl()
-    {
-        if (this.canvasCtrl != null) return;
-        this.canvasCtrl = FindAnyObjectByType<CanvasCtrl>();
-        Debug.Log(transform.name + ": CanvasCtrl", gameObject);
     }
 }

@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class EnemyDamageReceiver : DamageReceiver
 {
-    //[Header("Enemy")]
-    //public EnemyCtrl enemyCtrl;
-    //private void Awake()
-    //{
-    //    enemyCtrl = GetComponent<EnemyCtrl>();
-    //}
+    [Header("Enemy")]
     [SerializeField] protected Despawner despawner;
     public Despawner Despawner { get => despawner; }
     protected override void LoadComponents()
@@ -27,16 +22,13 @@ public class EnemyDamageReceiver : DamageReceiver
     {
         this.hp = 3;
     }
-
     public override void Receive(int damage)
     {
         base.Receive(damage);
         if(this.IsDead())
         {
             EffectManager.instance.SpawnVFX("Explosion_A", transform.position, transform.rotation);
-
             this.despawner.Despawn();
-
         }
     }
 }

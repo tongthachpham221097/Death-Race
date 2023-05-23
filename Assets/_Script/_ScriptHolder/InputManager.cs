@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] public float pressVertical = 0f;
     [SerializeField] public float pressKeySpace = 0f;
     [SerializeField] public bool pressKeyS = false;
-    [SerializeField] public bool pressKeyEscape = false;
+    [SerializeField] public float pressKeyEscape = 0f;
     
     private void Awake()
     {
@@ -24,6 +24,6 @@ public class InputManager : MonoBehaviour
         this.pressVertical = Input.GetAxis("Vertical");
         this.pressKeySpace = Input.GetAxis("Jump");
         this.pressKeyS = Input.GetKey(KeyCode.S);
-        this.pressKeyEscape = Input.GetKey(KeyCode.Escape);
+        this.pressKeyEscape = Input.GetAxis("Cancel");
     }
 }

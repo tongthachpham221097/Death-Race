@@ -14,7 +14,6 @@ public class DamageSender : LoboMonoBehaviour
     {
         DamageReceiver damageReceiver = collision.GetComponent<DamageReceiver>();
         if (damageReceiver == null) return;
-        // hàm GetComponent t?o s? lk gi?a hai obj, gi?a hai Script
         damageReceiver.Receive(this.damage);
     }
 }
