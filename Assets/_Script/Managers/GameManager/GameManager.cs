@@ -35,14 +35,16 @@ public class GameManager : GameManagerAbstract
     public virtual void StartGame()
     {
         this.gameManagerCtrl.pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        
+        this.audioSource = FindObjectOfType<AudioSource>();
+        this.audioSource.enabled = false;
     }
     public virtual void PauseGame()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
     }
     public virtual void ResumeGame()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
     }
 }
