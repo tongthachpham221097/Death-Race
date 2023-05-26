@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HighDistance : BaseText
 {    
-    protected override void Start()
+    protected virtual void Start()
     {
         this.EnableHighDistance();
     }

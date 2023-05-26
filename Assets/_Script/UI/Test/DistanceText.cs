@@ -7,8 +7,8 @@ public class DistanceText : BaseText
 {
     [Header("Distance Text")]
     [SerializeField] public int distance;
-    [SerializeField] public int highDistance = 0;
-    protected override void Start()
+    [SerializeField] protected int highDistance = 0;
+    protected virtual void Start()
     {
         this.highDistance = PlayerPrefs.GetInt("highDistance");
     }

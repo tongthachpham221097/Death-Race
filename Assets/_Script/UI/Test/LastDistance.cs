@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class LastDistance : BaseText
 {
-    
-    protected override void Start()
+    protected virtual void Start()
     {
         this.EnableLastDistance();
     }

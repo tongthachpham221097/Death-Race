@@ -11,6 +11,7 @@ public class UIManager : LoboMonoBehaviour
     {
         base.Awake();
         UIManager.instance = this;
+        this.uiCtrl.gameOverMenu.SetActive(false);
     }
     protected virtual void Update()
     {
@@ -27,12 +28,9 @@ public class UIManager : LoboMonoBehaviour
         this.uiCtrl = GetComponent<UICtrl>();
         Debug.Log(transform.name + ": LoadUICtrl", gameObject);
     }
-
-    protected override void Start()
+    protected virtual void Start()
     {
-        base.Start();
-        this.uiCtrl.gameOverMenu.SetActive(false);
-        this.uiCtrl.pauseMenu.SetActive(false);
+        //Time.timeScale = 0f;
     }
     protected virtual void OnEnableGameOverMenu()
     {

@@ -22,12 +22,4 @@ public class LoboMonoBehaviour : MonoBehaviour
     {
         //For override
     }
-    protected virtual void OnEnable()
-    {
-        //For override
-    }
-    protected virtual void Start()
-    {
-        //For override
-    }
 }

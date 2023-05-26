@@ -10,11 +10,16 @@ public class GameManagerCtrl : LoboMonoBehaviour
 
     [SerializeField] protected PlayerCollider playerCollider;
     public PlayerCollider PlayerCollider => playerCollider;
+
+    public GameObject pauseMenu;
+    public GameObject mainMenu;
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadDistanceText();
         this.LoadPlayerCollider();
+        this.LoadPauseMenu();
+        this.LoadMainMenu();
     }
     protected virtual void LoadDistanceText()
     {
@@ -27,5 +32,17 @@ public class GameManagerCtrl : LoboMonoBehaviour
         if (this.playerCollider != null) return;
         this.playerCollider = FindAnyObjectByType<PlayerCollider>();
         Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
+    }
+    protected virtual void LoadPauseMenu()
+    {
+        if (this.pauseMenu != null) return;
+        this.pauseMenu = GameObject.Find("PauseMenu");
+        Debug.Log(transform.name + ": LoadMainMenu", gameObject);
+    }
+    protected virtual void LoadMainMenu()
+    {
+        if (this.mainMenu != null) return;
+        this.mainMenu = GameObject.Find("MainMenu");
+        Debug.Log(transform.name + ": LoadMainMenu", gameObject);
     }
 }

@@ -21,9 +21,8 @@ public class CarSpawnerRandom : LoboMonoBehaviour
         this.carSpawnerCtrl = GetComponent<CarSpawnerCtrl>();
         Debug.Log(transform.name + ": LoadCarSpawnerCtrl", gameObject);
     }
-    protected override void Start()
+    protected virtual void Start()
     {
-        base.Start();
         InvokeRepeating(nameof(this.ChangeRamdomDelay), 1f, 3f);
         InvokeRepeating(nameof(this.ChangeRamdomLimit), 1f, 15f);
     }

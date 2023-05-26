@@ -1,7 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class GameManager : GameManagerAbstract
 {
@@ -9,27 +10,39 @@ public class GameManager : GameManagerAbstract
     {
         if(InputManager.Instance.pressKeyEscape != 0) this.PauseGame();
     }
-    public virtual void ResetGame()
+    public virtual async void ResetGame()
     {
         this.gameManagerCtrl.DistanceText.SetLastDistance();
         this.gameManagerCtrl.DistanceText.SetHighDistance();
         this.gameManagerCtrl.PlayerCollider.isGameOver = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        while (!asyncLoad.isDone)
+        {
+            await Task.Yield();
+        }
+        MainMenu mainMenu = FindObjectOfType<MainMenu>();
+        if (mainMenu != null)
+        {
+            mainMenu.DisableMainMenu();
+        }
+        PauseMenu pauseMenu = FindObjectOfType<PauseMenu>();
+        if (pauseMenu != null)
+        {
+            pauseMenu.DisablePauseMenu();
+        }
+        Time.timeScale = 1;
+    }
+    public virtual void StartGame()
+    {
+        this.gameManagerCtrl.pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
     public virtual void PauseGame()
     {
-        UIManager.instance.UICtrl.pauseMenu.SetActive(true);
         Time.timeScale = 0;
-    }
-    public virtual void ExitGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
     }
     public virtual void ResumeGame()
     {
-        UIManager.instance.UICtrl.pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
 }

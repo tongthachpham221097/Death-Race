@@ -6,6 +6,7 @@ public class UICtrl : LoboMonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
+    public GameObject mainMenu;
 
     [SerializeField] protected PlayerCollider playerCollider;
     public PlayerCollider PlayerCollider => playerCollider;
@@ -19,6 +20,7 @@ public class UICtrl : LoboMonoBehaviour
         this.LoadGameOverMenu();
         this.LoadPlayerCollider();
         this.LoadDistanceTextGO();
+        this.LoadMainMenu();
     }
     protected virtual void LoadGameOverMenu()
     {
@@ -43,5 +45,11 @@ public class UICtrl : LoboMonoBehaviour
         if (this.distanceTextGO != null) return;
         this.distanceTextGO = FindAnyObjectByType<DistanceTextGO>();
         Debug.Log(transform.name + ": LoadDistanceText", gameObject);
+    }
+    protected virtual void LoadMainMenu()
+    {
+        if (this.mainMenu != null) return;
+        this.mainMenu = GameObject.Find("MainMenu");
+        Debug.Log(transform.name + ": LoadMainMenu", gameObject);
     }
 }
