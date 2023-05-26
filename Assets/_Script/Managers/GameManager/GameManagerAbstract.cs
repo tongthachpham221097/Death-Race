@@ -6,6 +6,8 @@ public class GameManagerAbstract : LoboMonoBehaviour
 {
     [SerializeField] protected GameManagerCtrl gameManagerCtrl;
     public GameManagerCtrl GameManagerCtrl => gameManagerCtrl;
+
+    protected AudioSource audioSource;
     protected override void LoadComponents()
     {
         base.LoadComponents();

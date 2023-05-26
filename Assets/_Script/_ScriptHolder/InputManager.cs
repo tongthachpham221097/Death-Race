@@ -12,14 +12,15 @@ public class InputManager : MonoBehaviour
     [SerializeField] public float pressKeySpace = 0f;
     [SerializeField] public bool pressKeyS = false;
     [SerializeField] public float pressKeyEscape = 0f;
-    
-    private void Awake()
+    public bool countDowned = false;
+    protected virtual void Awake()
     {
         if (InputManager.instance != null) Debug.LogError("only 1 InputManager allow to exist");
         InputManager.instance = this;
     }
-    private void Update()
+    protected virtual void Update()
     {
+        if (!this.countDowned) return;
         this.pressHorizontal = Input.GetAxis("Horizontal");
         this.pressVertical = Input.GetAxis("Vertical");
         this.pressKeySpace = Input.GetAxis("Jump");
