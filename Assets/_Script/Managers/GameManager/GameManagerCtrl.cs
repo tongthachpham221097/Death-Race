@@ -13,7 +13,7 @@ public class GameManagerCtrl : LoboMonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject mainMenu;
-    public AudioSource audioSource;
+    public AudioSource soundMainMenu;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -49,8 +49,8 @@ public class GameManagerCtrl : LoboMonoBehaviour
     }
     protected virtual void LoadAudioSource()
     {
-        if (this.audioSource != null) return;
-        this.audioSource = GameObject.Find("SoundMainMenu").GetComponent<AudioSource>();
+        if (this.soundMainMenu != null) return;
+        this.soundMainMenu = GameObject.Find("SoundMainMenu").GetComponent<AudioSource>();
         Debug.Log(transform.name + ": LoadAudioSource", gameObject);
     }
 }

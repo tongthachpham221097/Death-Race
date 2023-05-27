@@ -16,7 +16,11 @@ public class UIManager : LoboMonoBehaviour
     }
     protected virtual void Update()
     {
-        if(this.uiCtrl.PlayerCollider.isGameOver == true) this.OnEnableGameOverMenu();
+        if(this.uiCtrl.PlayerCollider.isGameOver == true)
+        {
+            this.uiCtrl.soundRacing.mute = true;
+            this.OnEnableGameOverMenu();
+        }
     }
     protected override void LoadComponents()
     {

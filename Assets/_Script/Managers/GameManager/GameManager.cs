@@ -30,12 +30,16 @@ public class GameManager : GameManagerAbstract
         {
             pauseMenu.DisablePauseMenu();
         }
+        AudioSource soundMainMenu = GameObject.Find("SoundMainMenu").GetComponent<AudioSource>();
+        soundMainMenu.mute = true;
+        CountDownText countDownText = FindObjectOfType<CountDownText>();
+        countDownText.Countdown();
         Time.timeScale = 1;
     }
     public virtual void StartGame()
     {
         this.gameManagerCtrl.pauseMenu.SetActive(false);
-        this.gameManagerCtrl.audioSource.mute = true;
+        this.gameManagerCtrl.soundMainMenu.mute = true;
     }
     public virtual void PauseGame()
     {

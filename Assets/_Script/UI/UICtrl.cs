@@ -8,6 +8,7 @@ public class UICtrl : LoboMonoBehaviour
     public GameObject gameOverMenu;
     public GameObject mainMenu;
     public GameObject carSpawner;
+    public AudioSource soundRacing;
 
     [SerializeField] protected PlayerCollider playerCollider;
     public PlayerCollider PlayerCollider => playerCollider;
@@ -23,6 +24,7 @@ public class UICtrl : LoboMonoBehaviour
         this.LoadDistanceTextGO();
         this.LoadMainMenu();
         this.LoadCarSpawner();
+        this.LoadSoundRacing();
     }
     protected virtual void LoadGameOverMenu()
     {
@@ -59,5 +61,11 @@ public class UICtrl : LoboMonoBehaviour
         if (this.carSpawner != null) return;
         this.carSpawner = GameObject.Find("CarSpawner");
         Debug.Log(transform.name + ": LoadCarSpawner", gameObject);
+    }
+    protected virtual void LoadSoundRacing()
+    {
+        if (this.soundRacing != null) return;
+        this.soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
+        Debug.Log(transform.name + ": LoadSoundRacing", gameObject);
     }
 }
