@@ -35,9 +35,7 @@ public class GameManager : GameManagerAbstract
     public virtual void StartGame()
     {
         this.gameManagerCtrl.pauseMenu.SetActive(false);
-        
-        this.audioSource = FindObjectOfType<AudioSource>();
-        this.audioSource.enabled = false;
+        this.gameManagerCtrl.audioSource.mute = true;
     }
     public virtual void PauseGame()
     {

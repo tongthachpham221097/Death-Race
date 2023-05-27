@@ -13,6 +13,7 @@ public class GameManagerCtrl : LoboMonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject mainMenu;
+    public AudioSource audioSource;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -20,6 +21,7 @@ public class GameManagerCtrl : LoboMonoBehaviour
         this.LoadPlayerCollider();
         this.LoadPauseMenu();
         this.LoadMainMenu();
+        this.LoadAudioSource();
     }
     protected virtual void LoadDistanceText()
     {
@@ -44,5 +46,11 @@ public class GameManagerCtrl : LoboMonoBehaviour
         if (this.mainMenu != null) return;
         this.mainMenu = GameObject.Find("MainMenu");
         Debug.Log(transform.name + ": LoadMainMenu", gameObject);
+    }
+    protected virtual void LoadAudioSource()
+    {
+        if (this.audioSource != null) return;
+        this.audioSource = GameObject.Find("SoundMainMenu").GetComponent<AudioSource>();
+        Debug.Log(transform.name + ": LoadAudioSource", gameObject);
     }
 }

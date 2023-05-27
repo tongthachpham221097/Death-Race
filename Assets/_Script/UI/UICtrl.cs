@@ -7,6 +7,7 @@ public class UICtrl : LoboMonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
     public GameObject mainMenu;
+    public GameObject carSpawner;
 
     [SerializeField] protected PlayerCollider playerCollider;
     public PlayerCollider PlayerCollider => playerCollider;
@@ -21,6 +22,7 @@ public class UICtrl : LoboMonoBehaviour
         this.LoadPlayerCollider();
         this.LoadDistanceTextGO();
         this.LoadMainMenu();
+        this.LoadCarSpawner();
     }
     protected virtual void LoadGameOverMenu()
     {
@@ -51,5 +53,11 @@ public class UICtrl : LoboMonoBehaviour
         if (this.mainMenu != null) return;
         this.mainMenu = GameObject.Find("MainMenu");
         Debug.Log(transform.name + ": LoadMainMenu", gameObject);
+    }
+    protected virtual void LoadCarSpawner()
+    {
+        if (this.carSpawner != null) return;
+        this.carSpawner = GameObject.Find("CarSpawner");
+        Debug.Log(transform.name + ": LoadCarSpawner", gameObject);
     }
 }
