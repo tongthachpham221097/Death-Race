@@ -12,6 +12,7 @@ public class UIManager : LoboMonoBehaviour
         base.Awake();
         UIManager.instance = this;
         this.uiCtrl.gameOverMenu.SetActive(false);
+        this.uiCtrl.carSpawner.SetActive(false);
     }
     protected virtual void Update()
     {
