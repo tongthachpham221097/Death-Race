@@ -4,16 +4,33 @@ using UnityEngine;
 
 public class BombSpawner : Spawner
 {
-    protected override void Reset()
+    [SerializeField] protected PlayerCollider playerCollider;
+    public PlayerCollider PlayerCollider { get => playerCollider; }
+    protected override void ResetValue()
     {
-        this.spawnPosName = "BombSpawnPos";
         this.prefabName = "BombPrefab";
-        this.maxObj = 17;
+        this.maxObj = 99;
+    }
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        this.LoadPlayerCollider();
+    }
+    protected virtual void LoadPlayerCollider()
+    {
+        if (this.playerCollider != null) return;
+        this.playerCollider = FindAnyObjectByType<PlayerCollider>();
+        Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
     }
     protected override void Update()
     {
-        if (InputManager.Instance.pressKeySpace == 0 || this.playerCollider.bombCount == 0) return;
+        if (InputManager.Instance.pressKeySpace == 0) return;
+        if (this.playerCollider.bombCount == 0) return;
         this.Spawn();
-        //this.CheckDead();
+    }
+    protected override GameObject Spawn(Vector3 pos)
+    {
+        this.playerCollider.bombCount--;
+        return base.Spawn(pos); ;
     }
 }

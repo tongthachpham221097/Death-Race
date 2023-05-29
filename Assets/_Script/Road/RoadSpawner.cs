@@ -11,8 +11,7 @@ public class RoadSpawner : BaseRoadSpawner
 
     protected override void Awake()
     {
-        //this.roadCurrent = this.roadPrefab;
-        this.roadLayerOrder = (int) this.roadPrefab.transform.position.z;
+        //this.roadLayerOrder = (int) this.roadPrefab.transform.position.z;
 
         this.Spawn(this.roadPrefab.transform.position);
     }
@@ -31,7 +30,7 @@ public class RoadSpawner : BaseRoadSpawner
     {
         Vector3 pos = this.playerCtrl.transform.position;
         pos.x = 0;
-        pos.z = this.roadLayerOrder;
+        //pos.z = this.roadLayerOrder;
         pos.y += 40;
         this.Spawn(pos);
         this.roadCurrent = Instantiate(this.roadPrefab, pos, this.roadPrefab.transform.rotation);

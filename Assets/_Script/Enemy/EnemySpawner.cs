@@ -6,9 +6,18 @@ public class EnemySpawner : Spawner
 {
     //[Header("Enemy")]
     
-    protected override void Reset()
+    protected override void ResetValue()
     {
-        this.spawnPosName = "EnemySpawnPos";
         this.prefabName = "EnemyPrefab";
+    }
+    protected override void Update()
+    {
+        base.Update();
+        this.CheckDead();
+    }
+    protected override GameObject Spawn(Vector3 pos)
+    {
+        pos.y -= 15;
+        return base.Spawn(pos);
     }
 }
