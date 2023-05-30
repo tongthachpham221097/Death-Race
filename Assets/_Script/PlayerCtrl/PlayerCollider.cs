@@ -23,15 +23,7 @@ public class PlayerCollider : LoboMonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "ModelCar") this.ColliderWithCar();
-        if (collision.gameObject.name == "ModelBomb") this.PickupBomb();
-    }
-    protected virtual void PickupBomb()
-    {
-        this.bombCount++;
-    }
-    protected virtual void ColliderWithCar()
-    {
-        this.isGameOver = true;
+        if (collision.gameObject.name == "ModelCar") this.isGameOver = true;
+        if (collision.gameObject.name == "ModelBomb") this.bombCount++;
     }
 }
