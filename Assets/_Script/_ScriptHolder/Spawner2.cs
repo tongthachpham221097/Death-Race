@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-//using Unity.Mathematics;
 using UnityEngine;
 
 public class Spawner2 : LoboMonoBehaviour
@@ -98,7 +95,7 @@ public class Spawner2 : LoboMonoBehaviour
     }
     public virtual Transform RandomPrefab()
     {
-        int rand = UnityEngine.Random.Range(0, this.prefabs.Count);
+        int rand = Random.Range(0, this.prefabs.Count);
         return this.prefabs[rand];
     }
 }
