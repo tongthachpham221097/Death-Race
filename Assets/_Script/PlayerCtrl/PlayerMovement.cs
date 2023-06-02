@@ -1,22 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
-//[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : LoboMonoBehaviour
+public class PlayerMovement : BaseMovement
 {
-    [SerializeField] protected Rigidbody2D rb2d;
+    [Header("Player Movement")]
     [SerializeField] public Vector2 velocity = new Vector2(0f, 0f);
     [SerializeField] public float speedUp = 0.5f;
     [SerializeField] public float speedDown = 0.5f;
     [SerializeField] public float speedMax = 20f;
     [SerializeField] public float speedHorizontal = 6f;
-    
-    protected override void LoadComponents()
-    {
-        this.rb2d = GetComponentInParent<Rigidbody2D>();
-    }
     protected virtual void Update()
     {
         if (InputManager.Instance.pressKeyS) UpdateSpeedDown2();
