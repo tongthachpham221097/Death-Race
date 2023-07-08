@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerCtrl : LoboMonoBehaviour
 {
-    //public DamageReceiver damageReceiver;
-    //public PlayerStatus playerStatus;
+    private static PlayerCtrl _instance;
+    public static PlayerCtrl Instance { get => _instance; }
+
     [SerializeField] protected UICtrl uiCtrl;
     public UICtrl UICtrl => uiCtrl;
     protected override void Awake()
     {
-        //this.damageReceiver = GetComponent<DamageReceiver>();
-        //this.playerStatus = GetComponent<PlayerStatus>();
+        if (PlayerCtrl._instance != null) Debug.LogError("only 1 PlayerCtrl allow to exist");
+        PlayerCtrl._instance = this;
     }
     protected override void LoadComponents()
     {

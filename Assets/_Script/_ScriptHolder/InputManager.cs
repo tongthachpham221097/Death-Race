@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private static InputManager instance;
-    public static InputManager Instance { get => instance; }
+    private static InputManager _instance;
+    public static InputManager Instance { get => _instance; }
 
     [SerializeField] public float pressHorizontal = 0f;
     [SerializeField] public float pressVertical = 0f;
@@ -15,8 +15,8 @@ public class InputManager : MonoBehaviour
     public bool countDowned = false;
     protected virtual void Awake()
     {
-        if (InputManager.instance != null) Debug.LogError("only 1 InputManager allow to exist");
-        InputManager.instance = this;
+        if (InputManager._instance != null) Debug.LogError("only 1 InputManager allow to exist");
+        InputManager._instance = this;
     }
     protected virtual void Update()
     {
