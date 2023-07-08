@@ -14,14 +14,7 @@ public class UIManager : LoboMonoBehaviour
         this.uiCtrl.gameOverMenu.SetActive(false);
         this.uiCtrl.carSpawner.SetActive(false);
     }
-    protected virtual void Update()
-    {
-        if(this.uiCtrl.PlayerCollider.isGameOver == true)
-        {
-            this.uiCtrl.soundRacing.mute = true;
-            this.OnEnableGameOverMenu();
-        }
-    }
+    
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -30,9 +23,19 @@ public class UIManager : LoboMonoBehaviour
     protected virtual void LoadUICtrl()
     {
         if (this.uiCtrl != null) return;
-        this.uiCtrl = GetComponent<UICtrl>();
+        this.uiCtrl = GetComponentInChildren<UICtrl>();
         Debug.Log(transform.name + ": LoadUICtrl", gameObject);
     }
+
+    protected virtual void Update()
+    {
+        if (this.uiCtrl.PlayerCollider.isGameOver == true)
+        {
+            this.uiCtrl.soundRacing.mute = true;
+            this.OnEnableGameOverMenu();
+        }
+    }
+
     protected virtual void OnEnableGameOverMenu()
     {
         this.uiCtrl.gameOverMenu.SetActive(true);
