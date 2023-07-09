@@ -21,9 +21,6 @@ public class ManagersCtrl : LoboMonoBehaviour
     [SerializeField] private SoundManager _soundManager;
     public SoundManager SoundManager => _soundManager;
 
-    [SerializeField] private UIManager _uiManager;
-    public UIManager UIManager => _uiManager;
-
     protected override void Awake()
     {
         base.Awake();
@@ -38,7 +35,6 @@ public class ManagersCtrl : LoboMonoBehaviour
         this.LoadLevelsManager();
         this.LoadEffectManager();
         this.LoadSoundManager();
-        this.LoadUIManager();
     }
 
     protected virtual void LoadGameManager()
@@ -69,10 +65,4 @@ public class ManagersCtrl : LoboMonoBehaviour
         Debug.LogWarning(transform.name + ": LoadSoundManager", gameObject);
     }
 
-    protected virtual void LoadUIManager()
-    {
-        if (this._uiManager != null) return;
-        this._uiManager = GetComponentInChildren<UIManager>();
-        Debug.LogWarning(transform.name + ": LoadUIManager", gameObject);
-    }
 }
