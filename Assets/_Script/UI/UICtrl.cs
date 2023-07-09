@@ -4,68 +4,59 @@ using UnityEngine;
 
 public class UICtrl : LoboMonoBehaviour
 {
-    public GameObject pauseMenu;
-    public GameObject gameOverMenu;
-    public GameObject mainMenu;
-    public GameObject carSpawner;
-    public AudioSource soundRacing;
+    [Header("UI Ctrl")]
 
-    [SerializeField] protected PlayerCollider playerCollider;
-    public PlayerCollider PlayerCollider => playerCollider;
+    private GameObject _carSpawner;
+    private AudioSource _soundRacing;
 
-    [SerializeField] protected DistanceTextGO distanceTextGO;
-    public DistanceTextGO DistanceTextGO => distanceTextGO;
+    [SerializeField] private UIMenuCtrl _uiMenuCtrl;
+    public UIMenuCtrl UIMenuCtrl => _uiMenuCtrl;
+    
+    [SerializeField] private PlayerCollider _playerCollider;
+    public PlayerCollider PlayerCollider => _playerCollider;
+
+    [SerializeField] private DistanceTextGO _distanceTextGO;
+    public DistanceTextGO DistanceTextGO => _distanceTextGO;
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadPauseMenu();
-        this.LoadGameOverMenu();
         this.LoadPlayerCollider();
         this.LoadDistanceTextGO();
-        this.LoadMainMenu();
         this.LoadCarSpawner();
         this.LoadSoundRacing();
+        this.LoadUIMenuCtrl();
     }
-    protected virtual void LoadGameOverMenu()
-    {
-        if (this.gameOverMenu != null) return;
-        this.gameOverMenu = GameObject.Find("GameOverMenu");
-        Debug.Log(transform.name + ": LoadGameOverMenu", gameObject);
-    }
-    protected virtual void LoadPauseMenu()
-    {
-        if (this.pauseMenu != null) return;
-        this.pauseMenu = GameObject.Find("PauseMenu");
-        Debug.Log(transform.name + ": LoadPauseMenu", gameObject);
-    }
+    
     protected virtual void LoadPlayerCollider()
     {
-        if (this.playerCollider != null) return;
-        this.playerCollider = FindAnyObjectByType<PlayerCollider>();
+        if (this._playerCollider != null) return;
+        this._playerCollider = FindAnyObjectByType<PlayerCollider>();
         Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
     }
     protected virtual void LoadDistanceTextGO()
     {
-        if (this.distanceTextGO != null) return;
-        this.distanceTextGO = FindAnyObjectByType<DistanceTextGO>();
+        if (this._distanceTextGO != null) return;
+        this._distanceTextGO = FindAnyObjectByType<DistanceTextGO>();
         Debug.Log(transform.name + ": LoadDistanceText", gameObject);
     }
-    protected virtual void LoadMainMenu()
-    {
-        if (this.mainMenu != null) return;
-        this.mainMenu = GameObject.Find("MainMenu");
-        Debug.Log(transform.name + ": LoadMainMenu", gameObject);
-    }
+    
     protected virtual void LoadCarSpawner()
     {
-        if (this.carSpawner != null) return;
-        this.carSpawner = GameObject.Find("CarSpawner");
+        if (this._carSpawner != null) return;
+        this._carSpawner = GameObject.Find("CarSpawner");
         Debug.Log(transform.name + ": LoadCarSpawner", gameObject);
     }
     protected virtual void LoadSoundRacing()
     {
-        if (this.soundRacing != null) return;
-        this.soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
+        if (this._soundRacing != null) return;
+        this._soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
         Debug.Log(transform.name + ": LoadSoundRacing", gameObject);
+    }
+
+    protected virtual void LoadUIMenuCtrl()
+    {
+        if (this._uiMenuCtrl != null) return;
+        this._uiMenuCtrl = GetComponentInChildren<UIMenuCtrl>();
+        Debug.Log(transform.name + ": LoadUIMenuCtrl", gameObject);
     }
 }
