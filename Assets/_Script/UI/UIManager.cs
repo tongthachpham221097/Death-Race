@@ -10,7 +10,7 @@ public class UIManager : LoboMonoBehaviour
     protected override void Awake()
     {
         base.Awake();
-        this._uiCtrl.UIMenuCtrl.GameOverMenu.SetActive(false);
+        //this._uiCtrl.UIMenuCtrl.GameOverMenu.SetActive(false);
         //this._uiCtrl.UIMenuCtrl.carSpawner.SetActive(false);
     }
     

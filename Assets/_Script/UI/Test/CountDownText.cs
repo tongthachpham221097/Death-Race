@@ -36,7 +36,7 @@ public class CountDownText : BaseText
     }
     public virtual void Countdown()
     {
-        StartCoroutine(StartCountdown());
+        //StartCoroutine(StartCountdown());
     }
     IEnumerator StartCountdown()
     {

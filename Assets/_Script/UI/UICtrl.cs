@@ -5,6 +5,8 @@ using UnityEngine;
 public class UICtrl : LoboMonoBehaviour
 {
     [Header("UI Ctrl")]
+    private static UICtrl _instance;
+    public static UICtrl Instance { get => _instance; }
 
     private GameObject _carSpawner;
     private AudioSource _soundRacing;
@@ -17,6 +19,13 @@ public class UICtrl : LoboMonoBehaviour
 
     [SerializeField] private DistanceTextGO _distanceTextGO;
     public DistanceTextGO DistanceTextGO => _distanceTextGO;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        if (UICtrl._instance != null) Debug.LogError("only 1 UICtrl allow to exist");
+        UICtrl._instance = this;
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
