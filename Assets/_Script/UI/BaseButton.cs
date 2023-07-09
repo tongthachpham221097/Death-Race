@@ -36,9 +36,24 @@ public abstract class BaseButton : LoboMonoBehaviour
         this.DisableGameObject(ManagersCtrl.Instance.UIManager.UICtrl.UIMenuCtrl.MainMenu);
     }
 
+    protected virtual void OnEnableOptionMenu()
+    {
+        this.OnEnableGameObject(ManagersCtrl.Instance.UIManager.UICtrl.UIMenuCtrl.OptitonsMenu);
+    }
+
+    protected virtual void OnEnableGarageMenu()
+    {
+        this.OnEnableGameObject(ManagersCtrl.Instance.UIManager.UICtrl.UIMenuCtrl.GarageMenu);
+    }
+
     protected virtual void DisableGameObject(GameObject gameObject)
     {
         gameObject.SetActive(false);
+    }
+
+    protected virtual void OnEnableGameObject(GameObject gameObject)
+    {
+        gameObject.SetActive(true);
     }
 
     protected abstract void OnClick();
