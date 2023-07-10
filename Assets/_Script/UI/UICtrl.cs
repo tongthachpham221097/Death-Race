@@ -14,8 +14,8 @@ public class UICtrl : LoboMonoBehaviour
     [SerializeField] private UIMenuCtrl _uiMenuCtrl;
     public UIMenuCtrl UIMenuCtrl => _uiMenuCtrl;
     
-    [SerializeField] private PlayerCollider _playerCollider;
-    public PlayerCollider PlayerCollider => _playerCollider;
+    [SerializeField] private PlayerPickUpItem _playerCollider;
+    public PlayerPickUpItem PlayerCollider => _playerCollider;
 
     [SerializeField] private DistanceTextGO _distanceTextGO;
     public DistanceTextGO DistanceTextGO => _distanceTextGO;
@@ -39,7 +39,7 @@ public class UICtrl : LoboMonoBehaviour
     protected virtual void LoadPlayerCollider()
     {
         if (this._playerCollider != null) return;
-        this._playerCollider = FindAnyObjectByType<PlayerCollider>();
+        this._playerCollider = FindAnyObjectByType<PlayerPickUpItem>();
         Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
     }
     protected virtual void LoadDistanceTextGO()

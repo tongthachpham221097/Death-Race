@@ -35,7 +35,7 @@ public class ChangeMapText : BaseText
     }
     protected virtual void UpdateChangeMap()
     {
-        this.changeMap = this.levelsManager.distanceLevelUp - this.distanceText.distance;
+        //this.changeMap = this.levelsManager.distanceLevelUp - this.distanceText.distance;
         text.text = "Change Map: " + this.changeMap.ToString();
     }
 }

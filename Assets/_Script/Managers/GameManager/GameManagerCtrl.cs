@@ -8,8 +8,8 @@ public class GameManagerCtrl : LoboMonoBehaviour
     [SerializeField] protected DistanceText distanceText;
     public DistanceText DistanceText => distanceText;
 
-    [SerializeField] protected PlayerCollider playerCollider;
-    public PlayerCollider PlayerCollider => playerCollider;
+    [SerializeField] protected PlayerPickUpItem playerCollider;
+    public PlayerPickUpItem PlayerCollider => playerCollider;
 
     public GameObject pauseMenu;
     public GameObject mainMenu;
@@ -32,7 +32,7 @@ public class GameManagerCtrl : LoboMonoBehaviour
     protected virtual void LoadPlayerCollider()
     {
         if (this.playerCollider != null) return;
-        this.playerCollider = FindAnyObjectByType<PlayerCollider>();
+        this.playerCollider = FindAnyObjectByType<PlayerPickUpItem>();
         Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
     }
     protected virtual void LoadPauseMenu()
