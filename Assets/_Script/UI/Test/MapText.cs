@@ -23,6 +23,6 @@ public class MapText : BaseText
     }
     protected virtual void UpdateMap()
     {
-        text.text = "Map " + (this.levelsManager.level+1).ToString();
+        //text.text = "Map " + (this.levelsManager._level+1).ToString();
     }
 }

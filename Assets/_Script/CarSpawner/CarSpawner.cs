@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarSpawner : Spawner2
+public class CarSpawner : Spawner
 {
     private static CarSpawner instance;
     public static CarSpawner Instance { get => instance; }

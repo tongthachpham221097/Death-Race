@@ -8,7 +8,7 @@ public class GameManager : GameManagerAbstract
 {
     protected virtual void Update()
     {
-        if(InputManager.Instance.pressKeyEscape != 0) this.PauseGame();
+        if(InputManager.Instance.PressKeyEsc) this.PauseGame();
     }
     public virtual async void ResetGame()
     {

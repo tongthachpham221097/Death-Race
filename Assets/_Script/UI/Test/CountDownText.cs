@@ -67,7 +67,7 @@ public class CountDownText : BaseText
     }
     protected virtual void FinishCountDown()
     {
-        InputManager.Instance.countDowned = true;
+        //InputManager.Instance.CountDowned = true;
         this.carSpawner.SetActive(true);
         this.soundIdle.mute = true;
         this.soundRacing.mute = false;
