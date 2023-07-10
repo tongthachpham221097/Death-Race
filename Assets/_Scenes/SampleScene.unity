@@ -355,7 +355,7 @@ GameObject:
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &27258998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,7 +1508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead3c04b0e83c1142b14b1f5b48714a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCtrl: {fileID: 525830375}
 --- !u!4 &289666985
 Transform:
   m_ObjectHideFlags: 0
@@ -7958,12 +7957,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e63580f2f2026b4fb8423f10107a3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressHorizontal: 0
-  pressVertical: 0
-  pressKeySpace: 0
-  pressKeyS: 0
-  pressKeyEscape: 0
-  countDowned: 0
+  _pressHorizontal: 0
+  _pressVertical: 0
+  _pressKeyEsc: 0
+  _pressSpace: 0
+  _pressKeyS: 0
+  _countDowned: 0
 --- !u!4 &1203955483
 Transform:
   m_ObjectHideFlags: 0
