@@ -34,21 +34,21 @@ public class PlayerCtrl : LoboMonoBehaviour
     {
         if (this._playerAvatars != null) return;
         this._playerAvatars = GetComponentInChildren<PlayerAvatars>();
-        Debug.Log(transform.name + ": LoadPlayerAvatars", gameObject);
+        Debug.LogWarning(transform.name + ": LoadPlayerAvatars", gameObject);
     }
 
     protected virtual void LoadPlayerMovement()
     {
         if (this._playerMovement != null) return;
         this._playerMovement = GetComponentInChildren<PlayerMovement>();
-        Debug.Log(transform.name + ": LoadPlayerMovement", gameObject);
+        Debug.LogWarning(transform.name + ": LoadPlayerMovement", gameObject);
     }
 
     protected virtual void LoadPlayerPickUpItem()
     {
         if (this._playerPickUpItem != null) return;
         this._playerPickUpItem = GetComponentInChildren<PlayerPickUpItem>();
-        Debug.Log(transform.name + ": LoadPlayerPickUpItem", gameObject);
+        Debug.LogWarning(transform.name + ": LoadPlayerPickUpItem", gameObject);
     }
 
 }

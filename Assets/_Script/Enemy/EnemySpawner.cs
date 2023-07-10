@@ -5,12 +5,4 @@ using UnityEngine;
 public class EnemySpawner : Spawner
 {
     
-    protected override void ResetValue()
-    {
-    }
-    void Update()
-    {
-
-    }
-    
 }
