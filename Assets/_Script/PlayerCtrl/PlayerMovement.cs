@@ -11,7 +11,7 @@ public class PlayerMovement : BaseMovement
     [SerializeField] public float speedHorizontal = 6f;
     protected virtual void Update()
     {
-        if (InputManager.Instance.pressKeyS) UpdateSpeedDown2();
+        if (InputManager.Instance.PressKeyS) UpdateSpeedDown2();
     }
     private void FixedUpdate()
     {
@@ -20,7 +20,7 @@ public class PlayerMovement : BaseMovement
     }
     protected virtual void UpdateSpeed()
     {
-        this.velocity.x = InputManager.Instance.pressHorizontal * speedHorizontal;
+        this.velocity.x = InputManager.Instance.PressHorizontal * speedHorizontal;
         
         this.UpdateSpeedUp();
         
@@ -31,7 +31,7 @@ public class PlayerMovement : BaseMovement
     
     protected virtual void UpdateSpeedUp()
     {
-        if (InputManager.Instance.pressVertical <= 0) return;
+        if (InputManager.Instance.PressVertical <= 0) return;
         
         this.velocity.y += this.speedUp;
 
@@ -45,13 +45,13 @@ public class PlayerMovement : BaseMovement
     }
     protected virtual void UpdateSpeedDown()
     {
-        if (InputManager.Instance.pressVertical != 0) return;
+        if (InputManager.Instance.PressVertical != 0) return;
 
         this.UpdateSpeedDown3();
     }
     public virtual void UpdateSpeedDown2()
     {
-        if (InputManager.Instance.pressVertical == 0) return;
+        if (InputManager.Instance.PressVertical == 0) return;
 
         this.UpdateSpeedDown3();
     }
