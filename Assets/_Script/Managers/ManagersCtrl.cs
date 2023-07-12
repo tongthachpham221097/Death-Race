@@ -12,9 +12,6 @@ public class ManagersCtrl : LoboMonoBehaviour
     [SerializeField] private GameManager _gameManager;
     public GameManager GameManager => _gameManager;
 
-    [SerializeField] private LevelsManager _levelsManager;
-    public LevelsManager LevelsManager => _levelsManager;
-
     [SerializeField] private EffectManager _effectsManager;
     public EffectManager EffectsManager => _effectsManager;
 
@@ -32,7 +29,6 @@ public class ManagersCtrl : LoboMonoBehaviour
     {
         base.LoadComponents();
         this.LoadGameManager();
-        this.LoadLevelsManager();
         this.LoadEffectManager();
         this.LoadSoundManager();
     }
@@ -42,13 +38,6 @@ public class ManagersCtrl : LoboMonoBehaviour
         if (this._gameManager != null) return;
         this._gameManager = GetComponentInChildren<GameManager>();
         Debug.LogWarning(transform.name + ": LoadGameManager", gameObject);
-    }
-
-    protected virtual void LoadLevelsManager()
-    {
-        if (this._levelsManager != null) return;
-        this._levelsManager = GetComponentInChildren<LevelsManager>();
-        Debug.LogWarning(transform.name + ": LoadLevelsManager", gameObject);
     }
 
     protected virtual void LoadEffectManager()

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MapText : BaseText
 {
-    [SerializeField] protected LevelsManager levelsManager;
-    public LevelsManager LevelsManager => levelsManager;
+    [SerializeField] protected RoadCtrl levelsManager;
+    public RoadCtrl LevelsManager => levelsManager;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -14,7 +14,7 @@ public class MapText : BaseText
     protected virtual void LoadLevelsManager()
     {
         if (this.levelsManager != null) return;
-        this.levelsManager = FindAnyObjectByType<LevelsManager>();
+        this.levelsManager = FindAnyObjectByType<RoadCtrl>();
         Debug.Log(transform.name + ": LoadLevelsManager", gameObject);
     }
     protected virtual void FixedUpdate()

@@ -13,7 +13,7 @@ public class RoadCheckPoint : LoboMonoBehaviour
     void CheckPoint()
     {
         if (transform.position.y - PlayerCtrl.Instance.transform.position.y > 0) return;
-        SpawnerCtrl.Instance.RoadSpawner.RoadSpawning(transform.position);
+        //SpawnerCtrl.Instance.RoadSpawner.RoadSpawning(transform.position);
     }
 
 }
