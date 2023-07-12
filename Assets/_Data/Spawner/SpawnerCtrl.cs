@@ -10,9 +10,6 @@ public class SpawnerCtrl : LoboMonoBehaviour
     [SerializeField] private BombSpawner _bombSpawner;
     public BombSpawner BombSpawner { get => _bombSpawner; }
 
-    [SerializeField] private RoadSpawner _roadSpawner;
-    public RoadSpawner RoadSpawner { get => _roadSpawner; }
-
     protected override void Awake()
     {
         if (SpawnerCtrl._instance != null) Debug.LogError("only 1 SpawnerCtrl allow to exist");
@@ -23,7 +20,6 @@ public class SpawnerCtrl : LoboMonoBehaviour
     {
         base.LoadComponents();
         this.LoadBombSpawner();
-        this.LoadRoadSpawner();
     }
 
     protected virtual void LoadBombSpawner()
@@ -33,10 +29,4 @@ public class SpawnerCtrl : LoboMonoBehaviour
         Debug.Log(transform.name + ": LoadBombSpawner", gameObject);
     }
 
-    protected virtual void LoadRoadSpawner()
-    {
-        if (this._roadSpawner != null) return;
-        this._roadSpawner = GetComponentInChildren<RoadSpawner>();
-        Debug.Log(transform.name + ": LoadRoadSpawner", gameObject);
-    }
 }
