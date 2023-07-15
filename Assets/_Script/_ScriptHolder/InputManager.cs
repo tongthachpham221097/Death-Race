@@ -22,6 +22,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] private bool _pressKeyS = false;
     public bool PressKeyS => _pressKeyS;
 
+    [SerializeField] private bool _pressCtrl = false;
+    public bool PressCtrl => _pressCtrl;
+
     [SerializeField] private bool _countDowned = false;
     public bool CountDowned => _countDowned;
 
@@ -38,5 +41,6 @@ public class InputManager : MonoBehaviour
         this._pressSpace = Input.GetButtonDown("Jump");
         this._pressKeyS = Input.GetKey(KeyCode.S);
         this._pressKeyEsc = Input.GetButtonDown("Cancel");
+        this._pressCtrl = Input.GetButton("Fire1");
     }
 }
