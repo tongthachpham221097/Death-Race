@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GarageMenuItemBtn : BaseButton
+public abstract class GarageMenuItemBtn : BaseButton
 {
     [SerializeField] protected GarageMenuItem garageMenuItem;
+    [SerializeField] protected int index;
 
     protected override void LoadComponents()
     {
@@ -22,5 +23,8 @@ public class GarageMenuItemBtn : BaseButton
     protected override void OnClick()
     {
         transform.gameObject.SetActive(false);
+        this.garageMenuItem.ItemButtonOn.OnEnableGameObject(this.index);
+        this.garageMenuItem.ItemButtonOn.DisableSomeGameObject(this.index);
+        this.garageMenuItem.ItemButtonOff.OnEnableSomeGameObject(this.index);
     }
 }

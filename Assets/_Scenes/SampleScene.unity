@@ -1003,6 +1003,7 @@ GameObject:
   - component: {fileID: 97022168}
   - component: {fileID: 97022167}
   - component: {fileID: 97022166}
+  - component: {fileID: 97022169}
   m_Layer: 5
   m_Name: ItemButtonOffWeapons
   m_TagString: Untagged
@@ -1111,6 +1112,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97022164}
   m_CullTransparentMesh: 1
+--- !u!114 &97022169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97022164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4054a82d54cdf479d7b8bbc9d0c56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 97022166}
+  garageMenuItem: {fileID: 758512120}
+  index: 2
 --- !u!1 &98130659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &289666984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4242,12 +4258,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525830369}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62747ef0ba8cff74f8086af914a21074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiCtrl: {fileID: 525830375}
+  _uiCtrl: {fileID: 0}
 --- !u!114 &525830375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4262,7 +4278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiMenuCtrl: {fileID: 526746486}
   _playerCollider: {fileID: 1484397879}
-  _distanceTextGO: {fileID: 2132194226}
+  _distanceTextGO: {fileID: 0}
 --- !u!1 &526746484
 GameObject:
   m_ObjectHideFlags: 0
@@ -8278,6 +8294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 958716874}
   garageMenuItem: {fileID: 758512120}
+  index: 0
 --- !u!1 &964098450
 GameObject:
   m_ObjectHideFlags: 0
@@ -11530,6 +11547,7 @@ GameObject:
   - component: {fileID: 1370191073}
   - component: {fileID: 1370191072}
   - component: {fileID: 1370191071}
+  - component: {fileID: 1370191074}
   m_Layer: 5
   m_Name: ItemButtonOffMotobodys
   m_TagString: Untagged
@@ -11638,6 +11656,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370191069}
   m_CullTransparentMesh: 1
+--- !u!114 &1370191074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370191069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff183f08038cf541b5ee437842ae684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1370191071}
+  garageMenuItem: {fileID: 758512120}
+  index: 1
 --- !u!1 &1384139538
 GameObject:
   m_ObjectHideFlags: 0
@@ -14676,6 +14709,7 @@ GameObject:
   - component: {fileID: 1679036478}
   - component: {fileID: 1679036477}
   - component: {fileID: 1679036476}
+  - component: {fileID: 1679036479}
   m_Layer: 5
   m_Name: ItemButtonOffTires
   m_TagString: Untagged
@@ -14784,6 +14818,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679036474}
   m_CullTransparentMesh: 1
+--- !u!114 &1679036479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679036474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b374600b6d8cdbe4aba36df042973f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1679036476}
+  garageMenuItem: {fileID: 758512120}
+  index: 3
 --- !u!1 &1686827911
 GameObject:
   m_ObjectHideFlags: 0

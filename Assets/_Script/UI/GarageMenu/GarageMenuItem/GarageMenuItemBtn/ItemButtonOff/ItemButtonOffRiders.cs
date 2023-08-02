@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ItemButtonOffRiders : GarageMenuItemBtn
 {
-    protected override void OnClick()
+    protected override void ResetValue()
     {
-        base.OnClick();
-        this.garageMenuItem.ItemButtonOn.OnEnableGameObject(0);
-        
+        base.ResetValue();
+        this.index = 0;
     }
 }
