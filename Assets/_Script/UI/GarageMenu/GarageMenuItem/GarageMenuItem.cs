@@ -10,11 +10,15 @@ public class GarageMenuItem : LoboMonoBehaviour
     [SerializeField] private ItemButtonOn _itemButtonOn;
     public ItemButtonOn ItemButtonOn => _itemButtonOn;
 
+    [SerializeField] private ItemBar _itemBar;
+    public ItemBar ItemBar => _itemBar;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadItemButtonOff();
         this.LoadItemButtonOn();
+        this.LoadItemBar();
     }
 
     void LoadItemButtonOff()
@@ -29,6 +33,13 @@ public class GarageMenuItem : LoboMonoBehaviour
         if (this._itemButtonOn != null) return;
         this._itemButtonOn = GetComponentInChildren<ItemButtonOn>();
         Debug.Log(transform.name + ": LoadItemButtonOn", gameObject);
+    }
+
+    void LoadItemBar()
+    {
+        if (this._itemBar != null) return;
+        this._itemBar = GetComponentInChildren<ItemBar>();
+        Debug.Log(transform.name + ": LoadItemBar", gameObject);
     }
 
 }
