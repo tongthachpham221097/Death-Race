@@ -58,7 +58,7 @@ public class UICtrl : LoboMonoBehaviour
     protected virtual void LoadSoundRacing()
     {
         if (this._soundRacing != null) return;
-        this._soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
+        //this._soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
         Debug.Log(transform.name + ": LoadSoundRacing", gameObject);
     }
 
