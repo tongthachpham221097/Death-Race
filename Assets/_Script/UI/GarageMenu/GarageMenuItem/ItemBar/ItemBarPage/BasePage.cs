@@ -21,6 +21,20 @@ public abstract class BasePage : BaseListTransform
         this.indexPageOn = this.listTransform.Count - 1;
     }
 
+    public void ClickRightArrowButton()
+    {
+        this.IncreaseIndexPageOn();
+        this.DisableSomeGameObject(this.indexPageOn);
+        this.OnEnableGameObject(this.indexPageOn);
+    }
+
+    void IncreaseIndexPageOn()
+    {
+        this.indexPageOn++;
+        if (this.indexPageOn < this.listTransform.Count) return;
+        this.indexPageOn = 0;
+    }
+
     protected override void PublicListTransform(){}    
 
 }

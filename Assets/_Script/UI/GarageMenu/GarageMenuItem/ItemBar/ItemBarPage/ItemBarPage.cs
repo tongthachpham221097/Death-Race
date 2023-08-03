@@ -62,7 +62,18 @@ public class ItemBarPage : BaseListTransform
 
     public void ClickLeftArrowButton()
     {
+        if (this._indexItemOn == 0) this._ridersPage.ClickLeftArrowButton();
+        if (this._indexItemOn == 1) this._motoBodysPage.ClickLeftArrowButton();
+        if (this._indexItemOn == 2) this._weaponsPage.ClickLeftArrowButton();
+        if (this._indexItemOn == 3) this._tiresPage.ClickLeftArrowButton();
+    }
 
+    public void ClickRightArrowButton()
+    {
+        if (this._indexItemOn == 0) this._ridersPage.ClickRightArrowButton();
+        if (this._indexItemOn == 1) this._motoBodysPage.ClickRightArrowButton();
+        if (this._indexItemOn == 2) this._weaponsPage.ClickRightArrowButton();
+        if (this._indexItemOn == 3) this._tiresPage.ClickRightArrowButton();
     }
 
 }

@@ -3375,6 +3375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd0fe88b235aaf4fabc189b597404cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPageOn: 0
   WeaponsPages:
   - {fileID: 348700257}
   - {fileID: 869440439}
@@ -12499,6 +12500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9218de30c60e579428309f3e1f95c17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPageOn: 0
   MotoBodysPages:
   - {fileID: 518470790}
   - {fileID: 1355082018}
@@ -12988,6 +12990,7 @@ GameObject:
   - component: {fileID: 1241627988}
   - component: {fileID: 1241627987}
   - component: {fileID: 1241627986}
+  - component: {fileID: 1241627989}
   m_Layer: 5
   m_Name: RightArrowButton
   m_TagString: Untagged
@@ -13096,6 +13099,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241627984}
   m_CullTransparentMesh: 1
+--- !u!114 &1241627989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241627984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296b6c91c89b9f640a42c26fa96c663d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1241627986}
+  itemBarPage: {fileID: 1565707977}
 --- !u!1 &1254560943
 GameObject:
   m_ObjectHideFlags: 0
@@ -19805,6 +19822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15540d57e7ff69648833d3ca16dc67bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPageOn: 0
   TiresPages:
   - {fileID: 404681195}
   - {fileID: 319837883}

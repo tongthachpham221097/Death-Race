@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsPage : BaseListTransform
+public class WeaponsPage : BasePage
 {
 
     [SerializeField] public List<Transform> WeaponsPages;
