@@ -432,8 +432,9 @@ GameObject:
   - component: {fileID: 17043737}
   - component: {fileID: 17043736}
   - component: {fileID: 17043735}
+  - component: {fileID: 17043738}
   m_Layer: 5
-  m_Name: Riders_06
+  m_Name: RidersButton_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,6 +541,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17043733}
   m_CullTransparentMesh: 1
+--- !u!114 &17043738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17043733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f38bd4299edc04fbf952fda4a473ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 17043735}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &27258997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,8 +1155,9 @@ GameObject:
   - component: {fileID: 98130663}
   - component: {fileID: 98130662}
   - component: {fileID: 98130661}
+  - component: {fileID: 98130664}
   m_Layer: 5
-  m_Name: Riders_08
+  m_Name: RidersButton_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,6 +1264,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98130659}
   m_CullTransparentMesh: 1
+--- !u!114 &98130664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98130659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44550c5607098f42950d4e55902058b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 98130661}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &99226363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,8 +1758,9 @@ GameObject:
   - component: {fileID: 150496877}
   - component: {fileID: 150496876}
   - component: {fileID: 150496875}
+  - component: {fileID: 150496878}
   m_Layer: 5
-  m_Name: MotoBodys_07
+  m_Name: MotoBodysButton_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1834,6 +1867,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150496873}
   m_CullTransparentMesh: 1
+--- !u!114 &150496878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150496873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef46390d11845324ba08b0d8859ddee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 150496875}
+  userInfoAvatar: {fileID: 900404525}
+  index: 6
 --- !u!1 &151435544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,8 +2164,9 @@ GameObject:
   - component: {fileID: 179795187}
   - component: {fileID: 179795186}
   - component: {fileID: 179795185}
+  - component: {fileID: 179795188}
   m_Layer: 5
-  m_Name: MotoBodys_06
+  m_Name: MotoBodysButton_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2224,6 +2273,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179795183}
   m_CullTransparentMesh: 1
+--- !u!114 &179795188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179795183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7aad7fa878ecd468753844edfe7a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 179795185}
+  userInfoAvatar: {fileID: 900404525}
+  index: 5
 --- !u!1 &182755042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,8 +2330,9 @@ GameObject:
   - component: {fileID: 188865145}
   - component: {fileID: 188865144}
   - component: {fileID: 188865143}
+  - component: {fileID: 188865146}
   m_Layer: 5
-  m_Name: Riders_09
+  m_Name: RidersButton_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2374,6 +2439,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188865141}
   m_CullTransparentMesh: 1
+--- !u!114 &188865146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188865141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a063d7630fa9efe41aa817835b4c4f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 188865143}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &198403003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,8 +2860,9 @@ GameObject:
   - component: {fileID: 237524366}
   - component: {fileID: 237524365}
   - component: {fileID: 237524364}
+  - component: {fileID: 237524367}
   m_Layer: 5
-  m_Name: Weapons_06
+  m_Name: WeaponsButton_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2888,6 +2969,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237524362}
   m_CullTransparentMesh: 1
+--- !u!114 &237524367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237524362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657b0f998d7306c48a71630eab7878f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 237524364}
+  userInfoAvatar: {fileID: 900404525}
+  index: 5
 --- !u!1 &238022268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3828,8 +3924,9 @@ GameObject:
   - component: {fileID: 324540279}
   - component: {fileID: 324540278}
   - component: {fileID: 324540277}
+  - component: {fileID: 324540280}
   m_Layer: 5
-  m_Name: MotoBodys_08
+  m_Name: MotoBodysButton_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3936,6 +4033,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324540275}
   m_CullTransparentMesh: 1
+--- !u!114 &324540280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324540275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45a55711715ce943bcafab21291ad53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 324540277}
+  userInfoAvatar: {fileID: 900404525}
+  index: 7
 --- !u!1 &348700256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5159,8 +5271,9 @@ GameObject:
   - component: {fileID: 508821906}
   - component: {fileID: 508821905}
   - component: {fileID: 508821904}
+  - component: {fileID: 508821907}
   m_Layer: 5
-  m_Name: MotoBodys_05
+  m_Name: MotoBodysButton_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5267,6 +5380,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508821902}
   m_CullTransparentMesh: 1
+--- !u!114 &508821907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508821902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb5a6b0156d72246a4b1563cfe46f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 508821904}
+  userInfoAvatar: {fileID: 900404525}
+  index: 4
 --- !u!1 &513895456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,8 +5890,9 @@ GameObject:
   - component: {fileID: 550565375}
   - component: {fileID: 550565374}
   - component: {fileID: 550565376}
+  - component: {fileID: 550565377}
   m_Layer: 5
-  m_Name: Riders_01
+  m_Name: RidersButton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5870,6 +5999,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &550565377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550565372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a063d7630fa9efe41aa817835b4c4f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 550565376}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &556715057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6244,8 +6388,9 @@ GameObject:
   - component: {fileID: 619577634}
   - component: {fileID: 619577633}
   - component: {fileID: 619577632}
+  - component: {fileID: 619577635}
   m_Layer: 5
-  m_Name: Riders_02
+  m_Name: RidersButton_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6352,6 +6497,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619577630}
   m_CullTransparentMesh: 1
+--- !u!114 &619577635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619577630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4736b3530166cc44381d9b4661a73435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 619577632}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &627006461
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,7 +8852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &876700687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8762,8 +8922,9 @@ GameObject:
   - component: {fileID: 879077776}
   - component: {fileID: 879077775}
   - component: {fileID: 879077774}
+  - component: {fileID: 879077777}
   m_Layer: 5
-  m_Name: Riders_03
+  m_Name: RidersButton_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8870,6 +9031,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879077772}
   m_CullTransparentMesh: 1
+--- !u!114 &879077777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879077772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b342656d6bdc33b45b5e12be178490e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 879077774}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &890951063
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,7 +9188,7 @@ GameObject:
   - component: {fileID: 900404524}
   - component: {fileID: 900404525}
   m_Layer: 5
-  m_Name: UIAvatar
+  m_Name: UserInfoAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9282,8 +9458,9 @@ GameObject:
   - component: {fileID: 936500279}
   - component: {fileID: 936500278}
   - component: {fileID: 936500277}
+  - component: {fileID: 936500280}
   m_Layer: 5
-  m_Name: MotoBodys_09
+  m_Name: MotoBodysButton_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9390,6 +9567,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936500275}
   m_CullTransparentMesh: 1
+--- !u!114 &936500280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936500275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8ae79c435ab1745a26d6ad103998f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 936500277}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &940921690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,8 +9676,9 @@ GameObject:
   - component: {fileID: 949003780}
   - component: {fileID: 949003779}
   - component: {fileID: 949003778}
+  - component: {fileID: 949003781}
   m_Layer: 5
-  m_Name: Riders_05
+  m_Name: RidersButton_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9592,6 +9785,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949003776}
   m_CullTransparentMesh: 1
+--- !u!114 &949003781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949003776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69f78f2835bc734fa873be6c607df8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 949003778}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &949605658
 GameObject:
   m_ObjectHideFlags: 0
@@ -10371,8 +10579,9 @@ GameObject:
   - component: {fileID: 992042181}
   - component: {fileID: 992042180}
   - component: {fileID: 992042179}
+  - component: {fileID: 992042182}
   m_Layer: 5
-  m_Name: Weapons_03
+  m_Name: WeaponsButton_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10479,6 +10688,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992042177}
   m_CullTransparentMesh: 1
+--- !u!114 &992042182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992042177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e2eb4ba4cd550408e4b2e02c2a8751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 992042179}
+  userInfoAvatar: {fileID: 900404525}
+  index: 2
 --- !u!1 &994082861
 GameObject:
   m_ObjectHideFlags: 0
@@ -11994,8 +12218,9 @@ GameObject:
   - component: {fileID: 1105811675}
   - component: {fileID: 1105811674}
   - component: {fileID: 1105811673}
+  - component: {fileID: 1105811676}
   m_Layer: 5
-  m_Name: MotoBodys_01
+  m_Name: MotoBodysButton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12102,6 +12327,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105811671}
   m_CullTransparentMesh: 1
+--- !u!114 &1105811676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105811671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8ae79c435ab1745a26d6ad103998f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1105811673}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &1125270042
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,8 +15813,9 @@ GameObject:
   - component: {fileID: 1556767914}
   - component: {fileID: 1556767913}
   - component: {fileID: 1556767912}
+  - component: {fileID: 1556767915}
   m_Layer: 5
-  m_Name: Weapons_02
+  m_Name: WeaponsButton_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15681,6 +15922,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556767910}
   m_CullTransparentMesh: 1
+--- !u!114 &1556767915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556767910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a553dfb4376c268458860476b0a6dcc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1556767912}
+  userInfoAvatar: {fileID: 900404525}
+  index: 1
 --- !u!1 &1559113625
 GameObject:
   m_ObjectHideFlags: 0
@@ -16049,8 +16305,9 @@ GameObject:
   - component: {fileID: 1583834899}
   - component: {fileID: 1583834898}
   - component: {fileID: 1583834897}
+  - component: {fileID: 1583834900}
   m_Layer: 5
-  m_Name: MotoBodys_04
+  m_Name: MotoBodysButton_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16157,6 +16414,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583834895}
   m_CullTransparentMesh: 1
+--- !u!114 &1583834900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583834895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a1b6c07a3f53c438839e4da4b693ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1583834897}
+  userInfoAvatar: {fileID: 900404525}
+  index: 3
 --- !u!1 &1587493436
 GameObject:
   m_ObjectHideFlags: 0
@@ -16366,8 +16638,9 @@ GameObject:
   - component: {fileID: 1601552257}
   - component: {fileID: 1601552256}
   - component: {fileID: 1601552255}
+  - component: {fileID: 1601552258}
   m_Layer: 5
-  m_Name: MotoBodys_03
+  m_Name: MotoBodysButton_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16474,6 +16747,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601552253}
   m_CullTransparentMesh: 1
+--- !u!114 &1601552258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601552253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ccc68378cf1224aa2bf0b0714e5eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1601552255}
+  userInfoAvatar: {fileID: 900404525}
+  index: 2
 --- !u!1 &1602863328
 GameObject:
   m_ObjectHideFlags: 0
@@ -17309,8 +17597,9 @@ GameObject:
   - component: {fileID: 1674333219}
   - component: {fileID: 1674333218}
   - component: {fileID: 1674333217}
+  - component: {fileID: 1674333220}
   m_Layer: 5
-  m_Name: MotoBodys_02
+  m_Name: MotoBodysButton_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17417,6 +17706,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674333215}
   m_CullTransparentMesh: 1
+--- !u!114 &1674333220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674333215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42683421effe937429a521bc161e95d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1674333217}
+  userInfoAvatar: {fileID: 900404525}
+  index: 1
 --- !u!1 &1676607131
 GameObject:
   m_ObjectHideFlags: 0
@@ -18751,8 +19055,9 @@ GameObject:
   - component: {fileID: 1781110868}
   - component: {fileID: 1781110867}
   - component: {fileID: 1781110866}
+  - component: {fileID: 1781110869}
   m_Layer: 5
-  m_Name: Riders_04
+  m_Name: RidersButton_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18859,6 +19164,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781110864}
   m_CullTransparentMesh: 1
+--- !u!114 &1781110869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781110864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92526372b0d0284a898cbd8f4bfd13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1781110866}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &1790694691
 GameObject:
   m_ObjectHideFlags: 0
@@ -19001,8 +19321,9 @@ GameObject:
   - component: {fileID: 1793002596}
   - component: {fileID: 1793002595}
   - component: {fileID: 1793002594}
+  - component: {fileID: 1793002597}
   m_Layer: 5
-  m_Name: Weapons_05
+  m_Name: WeaponsButton_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19109,6 +19430,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793002592}
   m_CullTransparentMesh: 1
+--- !u!114 &1793002597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793002592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f82c5e3553091e418a7e75ba883a822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1793002594}
+  userInfoAvatar: {fileID: 900404525}
+  index: 4
 --- !u!1 &1803840954
 GameObject:
   m_ObjectHideFlags: 0
@@ -19588,8 +19924,9 @@ GameObject:
   - component: {fileID: 1894376412}
   - component: {fileID: 1894376411}
   - component: {fileID: 1894376410}
+  - component: {fileID: 1894376413}
   m_Layer: 5
-  m_Name: Riders_07
+  m_Name: RidersButton_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19696,6 +20033,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894376408}
   m_CullTransparentMesh: 1
+--- !u!114 &1894376413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894376408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32536b952d65194f92efa38f706c14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1894376410}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &1896760720
 GameObject:
   m_ObjectHideFlags: 0
@@ -19914,8 +20266,9 @@ GameObject:
   - component: {fileID: 1918461712}
   - component: {fileID: 1918461711}
   - component: {fileID: 1918461710}
+  - component: {fileID: 1918461713}
   m_Layer: 5
-  m_Name: Weapons_01
+  m_Name: WeaponsButton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20022,6 +20375,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918461708}
   m_CullTransparentMesh: 1
+--- !u!114 &1918461713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918461708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4dc2c611e06ed946b04f55759d0f847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1918461710}
+  userInfoAvatar: {fileID: 900404525}
+  index: 0
 --- !u!1 &1921471047
 GameObject:
   m_ObjectHideFlags: 0
@@ -20072,8 +20440,9 @@ GameObject:
   - component: {fileID: 1931330267}
   - component: {fileID: 1931330266}
   - component: {fileID: 1931330265}
+  - component: {fileID: 1931330268}
   m_Layer: 5
-  m_Name: Weapons_04
+  m_Name: WeaponsButton_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20180,6 +20549,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931330263}
   m_CullTransparentMesh: 1
+--- !u!114 &1931330268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931330263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7e3a0050e539d4eb30dd172bdd7119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1931330265}
+  userInfoAvatar: {fileID: 900404525}
+  index: 3
 --- !u!1 &1933581007
 GameObject:
   m_ObjectHideFlags: 0

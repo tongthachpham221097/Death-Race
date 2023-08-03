@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotoBodysList : BaseListTransform
+public class MotoBodysList : BaseUserInfoAvatar
 {
     [SerializeField] public List<Transform> MotoBodys;
 
