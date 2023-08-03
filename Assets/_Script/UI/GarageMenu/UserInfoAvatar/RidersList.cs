@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RidersList : BaseListTransform
+public class RidersList : BaseUserInfoAvatar
 {
     [SerializeField] public List<Transform> Riders;
 
@@ -10,5 +10,5 @@ public class RidersList : BaseListTransform
     {
         this.Riders = this.listTransform;
     }
-
+    
 }

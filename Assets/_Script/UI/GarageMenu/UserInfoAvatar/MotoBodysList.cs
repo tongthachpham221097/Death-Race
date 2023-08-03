@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsList : BaseListTransform
+public class MotoBodysList : BaseUserInfoAvatar
 {
-    [SerializeField] public List<Transform> Weapons;
+    [SerializeField] public List<Transform> MotoBodys;
 
     protected override void PublicListTransform()
     {
-        this.Weapons = this.listTransform;
+        this.MotoBodys = this.listTransform;
     }
 
 }

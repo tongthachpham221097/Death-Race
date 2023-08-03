@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIAvatar : LoboMonoBehaviour
+public class UserInfoAvatar : LoboMonoBehaviour
 {
     [SerializeField] private MotoBodysList _motoBodysList;
     public MotoBodysList MotoBodysList => _motoBodysList;

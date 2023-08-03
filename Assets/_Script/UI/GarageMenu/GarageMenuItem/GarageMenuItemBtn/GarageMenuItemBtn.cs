@@ -23,8 +23,28 @@ public abstract class GarageMenuItemBtn : BaseButton
     protected override void OnClick()
     {
         transform.gameObject.SetActive(false);
-        this.garageMenuItem.ItemButtonOn.OnEnableGameObject(this.index);
-        this.garageMenuItem.ItemButtonOn.DisableSomeGameObject(this.index);
-        this.garageMenuItem.ItemButtonOff.OnEnableSomeGameObject(this.index);
+        this.SetActiveItemButton();
+        this.SetActiveItemBarPage();
     }
+
+    void SetActiveItemButton()
+    {
+        ItemButtonOn itemButtonOn = this.garageMenuItem.ItemButtonOn;
+        ItemButtonOff itemButtonOff = this.garageMenuItem.ItemButtonOff;
+
+        itemButtonOn.OnEnableGameObject(this.index);
+        itemButtonOn.DisableSomeGameObject(this.index);
+        itemButtonOff.OnEnableSomeGameObject(this.index);
+    }    
+
+    void SetActiveItemBarPage()
+    {
+        ItemBarPage itemBarPage = this.garageMenuItem.ItemBar.ItemBarPage;
+
+        itemBarPage.DisableSomeGameObject(this.index);
+        itemBarPage.OnEnableGameObject(this.index);
+
+        itemBarPage.SetIndexPageOn(this.index);
+    }
+
 }

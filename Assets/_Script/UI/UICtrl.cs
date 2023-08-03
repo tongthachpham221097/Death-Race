@@ -26,43 +26,43 @@ public class UICtrl : LoboMonoBehaviour
         if (UICtrl._instance != null) Debug.LogError("only 1 UICtrl allow to exist");
         UICtrl._instance = this;
     }
-    protected override void LoadComponents()
-    {
-        base.LoadComponents();
-        this.LoadPlayerCollider();
-        this.LoadDistanceTextGO();
-        this.LoadCarSpawner();
-        this.LoadSoundRacing();
-        this.LoadUIMenuCtrl();
-    }
+    //protected override void LoadComponents()
+    //{
+    //    base.LoadComponents();
+    //    this.LoadPlayerCollider();
+    //    this.LoadDistanceTextGO();
+    //    this.LoadCarSpawner();
+    //    this.LoadSoundRacing();
+    //    this.LoadUIMenuCtrl();
+    //}
     
-    protected virtual void LoadPlayerCollider()
+    void LoadPlayerCollider()
     {
         if (this._playerCollider != null) return;
         this._playerCollider = FindAnyObjectByType<PlayerPickUpItem>();
         Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
     }
-    protected virtual void LoadDistanceTextGO()
+    void LoadDistanceTextGO()
     {
         if (this._distanceTextGO != null) return;
         this._distanceTextGO = FindAnyObjectByType<DistanceTextGO>();
         Debug.Log(transform.name + ": LoadDistanceText", gameObject);
     }
     
-    protected virtual void LoadCarSpawner()
+    void LoadCarSpawner()
     {
         if (this._carSpawner != null) return;
         this._carSpawner = GameObject.Find("CarSpawner");
         Debug.Log(transform.name + ": LoadCarSpawner", gameObject);
     }
-    protected virtual void LoadSoundRacing()
+    void LoadSoundRacing()
     {
         if (this._soundRacing != null) return;
         //this._soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
         Debug.Log(transform.name + ": LoadSoundRacing", gameObject);
     }
 
-    protected virtual void LoadUIMenuCtrl()
+    void LoadUIMenuCtrl()
     {
         if (this._uiMenuCtrl != null) return;
         this._uiMenuCtrl = GetComponentInChildren<UIMenuCtrl>();
