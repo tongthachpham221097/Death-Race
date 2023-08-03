@@ -26,15 +26,15 @@ public class UICtrl : LoboMonoBehaviour
         if (UICtrl._instance != null) Debug.LogError("only 1 UICtrl allow to exist");
         UICtrl._instance = this;
     }
-    protected override void LoadComponents()
-    {
-        base.LoadComponents();
-        this.LoadPlayerCollider();
-        this.LoadDistanceTextGO();
-        this.LoadCarSpawner();
-        this.LoadSoundRacing();
-        this.LoadUIMenuCtrl();
-    }
+    //protected override void LoadComponents()
+    //{
+    //    base.LoadComponents();
+    //    this.LoadPlayerCollider();
+    //    this.LoadDistanceTextGO();
+    //    this.LoadCarSpawner();
+    //    this.LoadSoundRacing();
+    //    this.LoadUIMenuCtrl();
+    //}
     
     protected virtual void LoadPlayerCollider()
     {
