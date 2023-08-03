@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RidersPage : BaseListTransform
+public class RidersPage : BasePage
 {
     
     [SerializeField] public List<Transform> RidersPages;

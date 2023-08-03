@@ -1989,7 +1989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &167601790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2024,6 +2024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5544bb1970bb33418a2ee396be1f160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPageOn: 0
   RidersPages:
   - {fileID: 49040985}
   - {fileID: 366072975}
@@ -10973,6 +10974,7 @@ GameObject:
   - component: {fileID: 1043668779}
   - component: {fileID: 1043668778}
   - component: {fileID: 1043668777}
+  - component: {fileID: 1043668780}
   m_Layer: 5
   m_Name: LeftArrowButton
   m_TagString: Untagged
@@ -11081,6 +11083,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043668775}
   m_CullTransparentMesh: 1
+--- !u!114 &1043668780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043668775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e61d22575a4964395c682bf9224a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1043668777}
+  itemBarPage: {fileID: 1565707977}
 --- !u!1 &1044801170
 GameObject:
   m_ObjectHideFlags: 0
@@ -15780,6 +15796,11 @@ MonoBehaviour:
   - {fileID: 1193327915}
   - {fileID: 291769110}
   - {fileID: 1907631825}
+  _indexItemOn: 0
+  _ridersPage: {fileID: 167601791}
+  _motoBodysPage: {fileID: 1193327916}
+  _tiresPage: {fileID: 1907631826}
+  _weaponsPage: {fileID: 291769111}
 --- !u!1 &1571127304
 GameObject:
   m_ObjectHideFlags: 0
@@ -19749,7 +19770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1907631825
 RectTransform:
   m_ObjectHideFlags: 0
