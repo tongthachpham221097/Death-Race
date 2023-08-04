@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TiresList : BaseListTransform
+public class TiresList : BaseUserInfoAvatar
 {
     [SerializeField] public List<Transform> Tires;
 
