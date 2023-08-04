@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TiresList : BaseListTransform
+public class TiresList : BaseUserInfoAvatar
 {
     [SerializeField] public List<Transform> Tires;
 
@@ -11,4 +11,8 @@ public class TiresList : BaseListTransform
         this.Tires = this.listTransform;
     }
 
+    protected override void SaveIndex(int index)
+    {
+        this.userInfoStartRaceBtn.SaveIndexTire(index);
+    }
 }

@@ -10,5 +10,9 @@ public class RidersList : BaseUserInfoAvatar
     {
         this.Riders = this.listTransform;
     }
-    
+
+    protected override void SaveIndex(int index)
+    {
+        this.userInfoStartRaceBtn.SaveIndexRider(index);
+    }
 }
