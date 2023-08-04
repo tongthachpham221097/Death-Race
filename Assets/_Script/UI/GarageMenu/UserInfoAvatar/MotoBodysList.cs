@@ -11,4 +11,9 @@ public class MotoBodysList : BaseUserInfoAvatar
         this.MotoBodys = this.listTransform;
     }
 
+    protected override void SaveIndex(int index)
+    {
+        this.userInfoStartRaceBtn.SaveIndexMotobody(index);
+    }
+
 }
