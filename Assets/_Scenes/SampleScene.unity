@@ -2134,8 +2134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -10}
-  m_SizeDelta: {x: 19, y: 46}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 16, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161774081
 MonoBehaviour:
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dea4ed181adc29543a09a020a861b0c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47377e8f62715d14ead33bb48156e705, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2223,7 +2223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &167601790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2747,7 +2747,6 @@ GameObject:
   - component: {fileID: 199278855}
   - component: {fileID: 199278858}
   - component: {fileID: 199278857}
-  - component: {fileID: 199278856}
   m_Layer: 0
   m_Name: Rider_06
   m_TagString: Untagged
@@ -2769,19 +2768,6 @@ Transform:
   m_Father: {fileID: 238022269}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &199278856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199278854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 199278857}
 --- !u!95 &199278857
 Animator:
   serializedVersion: 5
@@ -3298,6 +3284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238022269}
   - component: {fileID: 238022270}
+  - component: {fileID: 238022271}
   m_Layer: 0
   m_Name: PlayerAvatarsRiders
   m_TagString: Untagged
@@ -3348,6 +3335,20 @@ MonoBehaviour:
   - {fileID: 199278855}
   - {fileID: 2017641154}
   - {fileID: 901472112}
+--- !u!114 &238022271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238022268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAvatarsRiders: {fileID: 238022270}
+  _animator: {fileID: 0}
 --- !u!1 &252610787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,7 +3756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &291769110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4116,6 +4117,7 @@ MonoBehaviour:
   _playerAvatarsMotoBodys: {fileID: 1571127306}
   _playerAvatarsWeapons: {fileID: 387945462}
   _playerAvatarsTires: {fileID: 828665703}
+  _riderAnimation: {fileID: 238022271}
 --- !u!1 &310393606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,7 +4419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &348700257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6187,7 +6189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &525830370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7420,7 +7422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -3, y: -10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666934669
@@ -7552,7 +7554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 13, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677062246
@@ -9862,7 +9864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &869440439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9912,15 +9914,15 @@ RectTransform:
   m_GameObject: {fileID: 876700686}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 666934668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -10}
-  m_SizeDelta: {x: 61, y: 78}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 45, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876700688
 MonoBehaviour:
@@ -9942,7 +9944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0622947d5f88ed343a4905935f0a0e00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9137a12cd6890b3429cf6a040ddd72e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10294,7 +10296,6 @@ GameObject:
   - component: {fileID: 901472112}
   - component: {fileID: 901472115}
   - component: {fileID: 901472114}
-  - component: {fileID: 901472113}
   m_Layer: 0
   m_Name: Rider_08
   m_TagString: Untagged
@@ -10316,19 +10317,6 @@ Transform:
   m_Father: {fileID: 238022269}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &901472113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901472111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 901472114}
 --- !u!95 &901472114
 Animator:
   serializedVersion: 5
@@ -11698,7 +11686,7 @@ SpriteRenderer:
   m_SortingLayerID: 1399758837
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9137a12cd6890b3429cf6a040ddd72e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0622947d5f88ed343a4905935f0a0e00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11920,7 +11908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9137a12cd6890b3429cf6a040ddd72e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0622947d5f88ed343a4905935f0a0e00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12190,7 +12178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1003395763
 Transform:
   m_ObjectHideFlags: 0
@@ -14036,7 +14024,6 @@ GameObject:
   - component: {fileID: 1163438427}
   - component: {fileID: 1163438430}
   - component: {fileID: 1163438429}
-  - component: {fileID: 1163438428}
   m_Layer: 0
   m_Name: Rider_04
   m_TagString: Untagged
@@ -14058,19 +14045,6 @@ Transform:
   m_Father: {fileID: 238022269}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1163438428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163438426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1163438429}
 --- !u!95 &1163438429
 Animator:
   serializedVersion: 5
@@ -15017,7 +14991,7 @@ SpriteRenderer:
   m_SortingLayerID: 1399758837
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0622947d5f88ed343a4905935f0a0e00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9137a12cd6890b3429cf6a040ddd72e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16275,7 +16249,6 @@ GameObject:
   - component: {fileID: 1436351900}
   - component: {fileID: 1436351902}
   - component: {fileID: 1436351901}
-  - component: {fileID: 1436351903}
   m_Layer: 0
   m_Name: Rider_02
   m_TagString: Untagged
@@ -16369,19 +16342,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1436351903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436351899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1436351901}
 --- !u!1 &1442883094
 GameObject:
   m_ObjectHideFlags: 0
@@ -18233,7 +18193,6 @@ GameObject:
   - component: {fileID: 1580108203}
   - component: {fileID: 1580108206}
   - component: {fileID: 1580108205}
-  - component: {fileID: 1580108204}
   m_Layer: 0
   m_Name: Rider_05
   m_TagString: Untagged
@@ -18255,19 +18214,6 @@ Transform:
   m_Father: {fileID: 238022269}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1580108204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580108202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1580108205}
 --- !u!95 &1580108205
 Animator:
   serializedVersion: 5
@@ -19160,14 +19106,14 @@ RectTransform:
   m_GameObject: {fileID: 1621637571}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 666934668}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 67, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621637573
@@ -19533,15 +19479,15 @@ RectTransform:
   m_GameObject: {fileID: 1649340449}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 666934668}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -10}
-  m_SizeDelta: {x: 45, y: 63}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 61, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649340451
 MonoBehaviour:
@@ -19563,7 +19509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9137a12cd6890b3429cf6a040ddd72e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0622947d5f88ed343a4905935f0a0e00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21411,8 +21357,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -10}
-  m_SizeDelta: {x: 16, y: 22}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 19, y: 49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790694693
 MonoBehaviour:
@@ -21434,7 +21380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47377e8f62715d14ead33bb48156e705, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dea4ed181adc29543a09a020a861b0c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21958,14 +21904,13 @@ GameObject:
   - component: {fileID: 1864232274}
   - component: {fileID: 1864232275}
   - component: {fileID: 1864232276}
-  - component: {fileID: 1864232277}
   m_Layer: 0
   m_Name: Rider_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1864232274
 Transform:
   m_ObjectHideFlags: 0
@@ -22052,19 +21997,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1864232277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864232273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1864232276}
 --- !u!1 &1888190970
 GameObject:
   m_ObjectHideFlags: 0
@@ -22585,7 +22517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0622947d5f88ed343a4905935f0a0e00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9137a12cd6890b3429cf6a040ddd72e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23149,7 +23081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1992230740
 Transform:
   m_ObjectHideFlags: 0
@@ -23283,7 +23215,6 @@ GameObject:
   - component: {fileID: 2017641154}
   - component: {fileID: 2017641157}
   - component: {fileID: 2017641156}
-  - component: {fileID: 2017641155}
   m_Layer: 0
   m_Name: Rider_07
   m_TagString: Untagged
@@ -23305,19 +23236,6 @@ Transform:
   m_Father: {fileID: 238022269}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2017641155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017641153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 2017641156}
 --- !u!95 &2017641156
 Animator:
   serializedVersion: 5
@@ -23401,7 +23319,6 @@ GameObject:
   - component: {fileID: 2019604956}
   - component: {fileID: 2019604958}
   - component: {fileID: 2019604957}
-  - component: {fileID: 2019604959}
   m_Layer: 0
   m_Name: Rider_03
   m_TagString: Untagged
@@ -23495,19 +23412,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2019604959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019604955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4c5cf1f36bb124cb0d31ba42ee7466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 2019604957}
 --- !u!1 &2031481046
 GameObject:
   m_ObjectHideFlags: 0
@@ -23801,7 +23705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2079626686
 Transform:
   m_ObjectHideFlags: 0

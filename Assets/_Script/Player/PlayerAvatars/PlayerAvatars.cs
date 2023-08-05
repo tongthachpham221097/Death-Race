@@ -16,6 +16,9 @@ public class PlayerAvatars : LoboMonoBehaviour
     [SerializeField] private PlayerAvatarsTires _playerAvatarsTires;
     public PlayerAvatarsTires PlayerAvatarsTires => _playerAvatarsTires;
 
+    [SerializeField] private RiderAnimation _riderAnimation;
+    public RiderAnimation RiderAnimation => _riderAnimation;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -23,6 +26,7 @@ public class PlayerAvatars : LoboMonoBehaviour
         this.LoadPlayerAvatarsMotoBodys();
         this.LoadPlayerAvatarsWeapons();
         this.LoadPlayerAvatarsTires();
+        this.LoadRiderAnimation();
     }
 
     void LoadPlayerAvatarsRiders()
@@ -51,6 +55,13 @@ public class PlayerAvatars : LoboMonoBehaviour
         if (this._playerAvatarsTires != null) return;
         this._playerAvatarsTires = GetComponentInChildren<PlayerAvatarsTires>();
         Debug.LogWarning(transform.name + ": LoadPlayerAvatarsTires", gameObject);
+    }
+
+    void LoadRiderAnimation()
+    {
+        if (this._riderAnimation != null) return;
+        this._riderAnimation = GetComponentInChildren<RiderAnimation>();
+        Debug.LogWarning(transform.name + ": LoadRiderAnimation", gameObject);
     }
 
 }

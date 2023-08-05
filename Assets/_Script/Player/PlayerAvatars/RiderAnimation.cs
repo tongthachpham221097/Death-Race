@@ -4,19 +4,39 @@ using UnityEngine;
 
 public class RiderAnimation : LoboMonoBehaviour
 {
+    [SerializeField] private PlayerAvatarsRiders _playerAvatarsRiders;
+
     [SerializeField] private Animator _animator;
+    [SerializeField] private int _indexWeapon;
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadAnimator();
+        this.LoadPlayerAvatarsRiders();
     }
 
-    void LoadAnimator()
+    void LoadPlayerAvatarsRiders()
     {
-        if (this._animator != null) return;
-        this._animator = GetComponent<Animator>();
-        Debug.LogWarning(transform.name + ": LoadAnimator", gameObject);
+        if (this._playerAvatarsRiders != null) return;
+        this._playerAvatarsRiders = GetComponent<PlayerAvatarsRiders>();
+        Debug.LogWarning(transform.name + ": LoadPlayerAvatarsRiders", gameObject);
+    }
+
+    public void UpdateRidersAnimation(int indexRider, int indexWeapon)
+    {
+        this.GetAnimator(indexRider);
+        this._indexWeapon = indexWeapon;
+        this.SetChooseHitAnimationCtrl();
+    }
+    void GetAnimator(int indexRider)
+    {
+        Transform rider = this._playerAvatarsRiders.PlayerAvatarsRidersList[indexRider];
+        this._animator = rider.GetComponent<Animator>();
+    }
+
+    void SetChooseHitAnimationCtrl()
+    {
+        this._animator.SetInteger("chooseHit", this._indexWeapon + 1);
     }
 
     private void Update()
@@ -34,8 +54,22 @@ public class RiderAnimation : LoboMonoBehaviour
 
     void SetIsAttacking()
     {
+        if (this._animator == null) return;
         bool isAttack = InputManager.Instance.PressCtrl;
         this._animator.SetBool("isAttack", isAttack);
+        this.SetActiveWeapon(isAttack);
+    }
+
+    void SetActiveWeapon(bool isAttack)
+    {
+        List<Transform> weaponsList = this.GetWeaponsList();
+        weaponsList[this._indexWeapon].gameObject.SetActive(!isAttack);
+    }
+
+    List<Transform> GetWeaponsList()
+    {
+        PlayerAvatarsWeapons weapons = PlayerCtrl.Instance.PlayerAvatars.PlayerAvatarsWeapons;
+        return weapons.PlayerAvatarsWeaponsList;
     }
 
 }
