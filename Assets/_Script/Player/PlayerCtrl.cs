@@ -30,21 +30,21 @@ public class PlayerCtrl : LoboMonoBehaviour
         this.LoadPlayerPickUpItem();
     }
 
-    protected virtual void LoadPlayerAvatars()
+    void LoadPlayerAvatars()
     {
         if (this._playerAvatars != null) return;
         this._playerAvatars = GetComponentInChildren<PlayerAvatars>();
         Debug.LogWarning(transform.name + ": LoadPlayerAvatars", gameObject);
     }
 
-    protected virtual void LoadPlayerMovement()
+    void LoadPlayerMovement()
     {
         if (this._playerMovement != null) return;
         this._playerMovement = GetComponentInChildren<PlayerMovement>();
         Debug.LogWarning(transform.name + ": LoadPlayerMovement", gameObject);
     }
 
-    protected virtual void LoadPlayerPickUpItem()
+    void LoadPlayerPickUpItem()
     {
         if (this._playerPickUpItem != null) return;
         this._playerPickUpItem = GetComponentInChildren<PlayerPickUpItem>();
