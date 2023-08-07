@@ -11,6 +11,6 @@ public class BombCountText : BaseText
     }
     protected virtual void GetBombCount()
     {
-        text.text = "BombCount: " + this.TextCtrl.PlayerCollider.bombCount.ToString();  
+        //text.text = "BombCount: " + this.TextCtrl.PlayerCollider.bombCount.ToString();  
     }
 }

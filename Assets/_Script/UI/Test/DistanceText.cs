@@ -19,7 +19,7 @@ public class DistanceText : BaseText
     }
     public virtual void GetDistance()
     {
-        this.distance = (int)TextCtrl.PlayerCollider.transform.parent.position.y;
+        //this.distance = (int)TextCtrl.PlayerCollider.transform.parent.position.y;
     }
     public virtual void OnEnableDistance()
     {
