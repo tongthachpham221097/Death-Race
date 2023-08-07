@@ -6,7 +6,8 @@ public class TiresButton : ItemBarPageBtn
 {
     protected override void OnClick()
     {
-        this.userInfoAvatar.TiresList.ItemBarOnClick(this.index);
+        this.userInfo.UserInfoAvatar.TiresList.ItemBarOnClick(this.index);
+        this.userInfo.StaticBar.DurabilitySlider.IncreaseCurrentPercent(this.index);
     }
 
 }

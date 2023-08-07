@@ -7,7 +7,8 @@ public abstract class RidersButton : ItemBarPageBtn
 
     protected override void OnClick()
     {
-        this.userInfoAvatar.RidersList.ItemBarOnClick(this.index);
+        this.userInfo.UserInfoAvatar.RidersList.ItemBarOnClick(this.index);
+        this.userInfo.StaticBar.HealthSlider.IncreaseCurrentPercent(this.index);
     }
 
 }
