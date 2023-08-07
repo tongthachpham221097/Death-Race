@@ -6,7 +6,8 @@ public class WeaponsButton : ItemBarPageBtn
 {
     protected override void OnClick()
     {
-        this.userInfoAvatar.WeaponsList.ItemBarOnClick(this.index);
+        this.userInfo.UserInfoAvatar.WeaponsList.ItemBarOnClick(this.index);
+        this.userInfo.StaticBar.DamageSlider.IncreaseCurrentPercent(this.index);
     }
 
 }

@@ -5,24 +5,22 @@ using UnityEngine;
 public abstract class ItemBarPageBtn : BaseButton
 {
     [Header("Item Bar Page Btn")]
-    [SerializeField] protected UserInfoAvatar userInfoAvatar;
+    [SerializeField] protected UserInfo userInfo;
     [SerializeField] protected int index;
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadUserInfoAvatar();
+        this.LoadUserInfo();
     }
 
-    void LoadUserInfoAvatar()
+    void LoadUserInfo()
     {
-        if (this.userInfoAvatar != null) return;
-        this.userInfoAvatar = FindAnyObjectByType<UserInfoAvatar>();
-        Debug.Log(transform.name + ": LoadUserInfoAvatar", gameObject);
+        if (this.userInfo != null) return;
+        this.userInfo = FindAnyObjectByType<UserInfo>();
+        Debug.Log(transform.name + ": LoadUserInfo", gameObject);
     }
 
-    protected override void OnClick()
-    {
+    protected override void OnClick(){}
 
-    }
 }

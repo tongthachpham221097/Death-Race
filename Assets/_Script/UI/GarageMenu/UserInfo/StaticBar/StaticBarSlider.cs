@@ -46,19 +46,17 @@ public abstract class StaticBarSlider : BaseSlider
         this.percentText.SetPercentText(this.currentPercent + this.defaultPercent);
     }
 
-    protected virtual void IncreaseCurrentPercent(float percent)
+    public virtual void IncreaseCurrentPercent(float percent)
     {
-        this.currentPercent += percent;
-        if (this.currentPercent <= 100) return;
-        this.currentPercent = 100;
+        this.currentPercent = percent * 6;
+        if (this.currentPercent > 100) this.currentPercent = 100;
         this.UpdatePercent();
     }
 
-    protected virtual void DecreaseCurrentPercent(float percent)
+    public virtual void DecreaseCurrentPercent(float percent)
     {
-        this.currentPercent -= percent;
-        if(this.currentPercent >= 0) return;
-        this.currentPercent = 0;
+        this.currentPercent = percent * 6;
+        if(this.currentPercent < 0) this.currentPercent = 0;
         this.UpdatePercent();
     }
 

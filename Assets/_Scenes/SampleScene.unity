@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 17043735}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 5
 --- !u!1 &27258997
 GameObject:
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 98130661}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 7
 --- !u!1 &99226363
 GameObject:
@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 150496875}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 6
 --- !u!1 &151435544
 GameObject:
@@ -2508,7 +2508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 179795185}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 5
 --- !u!1 &182755042
 GameObject:
@@ -2674,7 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 188865143}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &198403003
 GameObject:
@@ -3306,7 +3306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 237524364}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 5
 --- !u!1 &238022268
 GameObject:
@@ -4131,7 +4131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 292747059}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 4
 --- !u!1 &296074638
 GameObject:
@@ -4267,7 +4267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 296074640}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 6
 --- !u!1 &306415975
 GameObject:
@@ -4680,7 +4680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 324540277}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 7
 --- !u!1 &333460613
 GameObject:
@@ -6736,7 +6736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 504847634}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 1
 --- !u!1 &508821902
 GameObject:
@@ -6872,7 +6872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 508821904}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 4
 --- !u!1 &513895456
 GameObject:
@@ -7529,7 +7529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 550565376}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &556715057
 GameObject:
@@ -7876,7 +7876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 570818579}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &600737555
 GameObject:
@@ -8043,7 +8043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 619577632}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 1
 --- !u!1 &627006461
 GameObject:
@@ -8761,6 +8761,7 @@ GameObject:
   - component: {fileID: 732462152}
   - component: {fileID: 732462154}
   - component: {fileID: 732462153}
+  - component: {fileID: 732462155}
   m_Layer: 5
   m_Name: UserInfo
   m_TagString: Untagged
@@ -8828,6 +8829,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732462151}
   m_CullTransparentMesh: 1
+--- !u!114 &732462155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732462151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b573db931411c4e9bd4b69134bf114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _userInfoAvatar: {fileID: 900404525}
+  _staticBar: {fileID: 1210337096}
 --- !u!1 &734492953
 GameObject:
   m_ObjectHideFlags: 0
@@ -11109,7 +11124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 879077774}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 2
 --- !u!1 &890951063
 GameObject:
@@ -11863,7 +11878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 936500277}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &940921690
 GameObject:
@@ -12081,7 +12096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 949003778}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 4
 --- !u!1 &949605658
 GameObject:
@@ -13174,7 +13189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 992042179}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 2
 --- !u!1 &994082861
 GameObject:
@@ -15005,7 +15020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1105811673}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &1117510440
 GameObject:
@@ -15848,7 +15863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1207343022}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 2
 --- !u!1 &1210337092
 GameObject:
@@ -15861,6 +15876,7 @@ GameObject:
   - component: {fileID: 1210337093}
   - component: {fileID: 1210337095}
   - component: {fileID: 1210337094}
+  - component: {fileID: 1210337096}
   m_Layer: 5
   m_Name: StaticBar
   m_TagString: Untagged
@@ -15929,6 +15945,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210337092}
   m_CullTransparentMesh: 1
+--- !u!114 &1210337096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210337092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5410a935328841a04cd12811c74dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthSlider: {fileID: 1490773597}
+  _damageSlider: {fileID: 957786983}
+  _speedSlider: {fileID: 1981047491}
+  _durabilitySlider: {fileID: 1908720366}
 --- !u!1 &1222803656
 GameObject:
   m_ObjectHideFlags: 0
@@ -16096,7 +16128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1228370698}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 7
 --- !u!1 &1237888758
 GameObject:
@@ -19374,7 +19406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1547206431}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &1556767910
 GameObject:
@@ -19510,7 +19542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1556767912}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 1
 --- !u!1 &1559113625
 GameObject:
@@ -20135,7 +20167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1583834897}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 3
 --- !u!1 &1584265384
 GameObject:
@@ -20629,7 +20661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1601552255}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 2
 --- !u!1 &1605606668
 GameObject:
@@ -21603,7 +21635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1674333217}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 1
 --- !u!1 &1676607131
 GameObject:
@@ -22138,7 +22170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1690256670}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 3
 --- !u!1 &1697282888
 GameObject:
@@ -23301,7 +23333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1781110866}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 3
 --- !u!1 &1790694691
 GameObject:
@@ -23567,7 +23599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1793002594}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 4
 --- !u!1 &1803840954
 GameObject:
@@ -23772,7 +23804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1821039081}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 5
 --- !u!1 &1822730648
 GameObject:
@@ -24411,7 +24443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1894376410}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 6
 --- !u!1 &1896760720
 GameObject:
@@ -24861,7 +24893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1918461710}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 0
 --- !u!1 &1921471047
 GameObject:
@@ -25035,7 +25067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1931330265}
-  userInfoAvatar: {fileID: 900404525}
+  userInfo: {fileID: 732462155}
   index: 3
 --- !u!1 &1933581007
 GameObject:
