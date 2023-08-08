@@ -6,6 +6,7 @@ public class LeftArrowButton : BaseArrowButton
 {
     protected override void OnClick()
     {
+        base.OnClick();
         this.itemBarPage.ClickLeftArrowButton();
     }
 }

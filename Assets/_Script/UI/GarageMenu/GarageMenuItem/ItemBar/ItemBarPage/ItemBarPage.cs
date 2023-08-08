@@ -9,9 +9,16 @@ public class ItemBarPage : BaseListTransform
     [SerializeField] private int _indexItemOn = 0;
 
     [SerializeField] private RidersPage _ridersPage;
+    public RidersPage RidersPage => _ridersPage;
+
     [SerializeField] private MotoBodysPage _motoBodysPage;
+    public MotoBodysPage MotoBodysPage => _motoBodysPage;
+
     [SerializeField] private TiresPage _tiresPage;
+    public TiresPage TiresPage => _tiresPage;
+
     [SerializeField] private WeaponsPage _weaponsPage;
+    public WeaponsPage WeaponsPage => _weaponsPage;
 
     protected override void LoadComponents()
     {

@@ -6,6 +6,7 @@ public class RightArrowButton : BaseArrowButton
 {
     protected override void OnClick()
     {
+        base.OnClick();
         this.itemBarPage.ClickRightArrowButton();
     }
 }

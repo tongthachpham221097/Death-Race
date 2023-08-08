@@ -28,18 +28,18 @@ public class UIManager : LoboMonoBehaviour
 
     protected virtual void Update()
     {
-        if (this._uiCtrl.PlayerCollider.isGameOver == true)
-        {
-            //this._uiCtrl.soundRacing.mute = true;
-            this.OnEnableGameOverMenu();
-        }
+        //if (this._uiCtrl.PlayerCollider.isGameOver == true)
+        //{
+        //    //this._uiCtrl.soundRacing.mute = true;
+        //    this.OnEnableGameOverMenu();
+        //}
     }
 
-    protected virtual void OnEnableGameOverMenu()
-    {
-        this._uiCtrl.UIMenuCtrl.GameOverMenu.SetActive(true);
-        this._uiCtrl.DistanceTextGO.GetDistance();
-        this._uiCtrl.DistanceTextGO.OnEnableDistance();
-        Time.timeScale = 0f;
-    }
+    //protected virtual void OnEnableGameOverMenu()
+    //{
+    //    this._uiCtrl.UIMenuCtrl.GameOverMenu.SetActive(true);
+    //    this._uiCtrl.DistanceTextGO.GetDistance();
+    //    this._uiCtrl.DistanceTextGO.OnEnableDistance();
+    //    Time.timeScale = 0f;
+    //}
 }

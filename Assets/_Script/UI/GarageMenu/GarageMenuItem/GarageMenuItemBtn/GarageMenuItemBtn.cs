@@ -25,6 +25,7 @@ public abstract class GarageMenuItemBtn : BaseButton
         transform.gameObject.SetActive(false);
         this.SetActiveItemButton();
         this.SetActiveItemBarPage();
+        this.SetCurrentBg();
     }
 
     void SetActiveItemButton()
@@ -41,10 +42,23 @@ public abstract class GarageMenuItemBtn : BaseButton
     {
         ItemBarPage itemBarPage = this.garageMenuItem.ItemBar.ItemBarPage;
 
-        itemBarPage.DisableSomeGameObject(this.index);
+        itemBarPage.DisableAllGameObject();
         itemBarPage.OnEnableGameObject(this.index);
 
         itemBarPage.SetIndexPageOn(this.index);
     }
+
+    protected virtual void SetCurrentBg()
+    {
+        ItemBg itemBg = this.GetItemBg();
+        itemBg.BackgroundOnClick(this.LoadCurrentBg());
+    }
+
+    ItemBg GetItemBg()
+    {
+        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg;
+    }
+
+    protected abstract int LoadCurrentBg();
 
 }

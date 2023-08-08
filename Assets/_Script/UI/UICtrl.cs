@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class UICtrl : LoboMonoBehaviour
 {
-    [Header("UI Ctrl")]
+    
     private static UICtrl _instance;
     public static UICtrl Instance { get => _instance; }
 
-    private GameObject _carSpawner;
-    private AudioSource _soundRacing;
-
-    [SerializeField] private UIMenuCtrl _uiMenuCtrl;
-    public UIMenuCtrl UIMenuCtrl => _uiMenuCtrl;
-    
-    [SerializeField] private PlayerPickUpItem _playerCollider;
-    public PlayerPickUpItem PlayerCollider => _playerCollider;
-
-    [SerializeField] private DistanceTextGO _distanceTextGO;
-    public DistanceTextGO DistanceTextGO => _distanceTextGO;
+    [SerializeField] private GarageMenu _garageMenu;
+    public GarageMenu GarageMenu => _garageMenu;
 
     protected override void Awake()
     {
@@ -26,46 +17,19 @@ public class UICtrl : LoboMonoBehaviour
         if (UICtrl._instance != null) Debug.LogError("only 1 UICtrl allow to exist");
         UICtrl._instance = this;
     }
-    //protected override void LoadComponents()
-    //{
-    //    base.LoadComponents();
-    //    this.LoadPlayerCollider();
-    //    this.LoadDistanceTextGO();
-    //    this.LoadCarSpawner();
-    //    this.LoadSoundRacing();
-    //    this.LoadUIMenuCtrl();
-    //}
-    
-    void LoadPlayerCollider()
+    protected override void LoadComponents()
     {
-        if (this._playerCollider != null) return;
-        this._playerCollider = FindAnyObjectByType<PlayerPickUpItem>();
-        Debug.Log(transform.name + ": LoadPlayerCollider", gameObject);
-    }
-    void LoadDistanceTextGO()
-    {
-        if (this._distanceTextGO != null) return;
-        this._distanceTextGO = FindAnyObjectByType<DistanceTextGO>();
-        Debug.Log(transform.name + ": LoadDistanceText", gameObject);
-    }
-    
-    void LoadCarSpawner()
-    {
-        if (this._carSpawner != null) return;
-        this._carSpawner = GameObject.Find("CarSpawner");
-        Debug.Log(transform.name + ": LoadCarSpawner", gameObject);
-    }
-    void LoadSoundRacing()
-    {
-        if (this._soundRacing != null) return;
-        //this._soundRacing = GameObject.Find("SoundRacing").GetComponent<AudioSource>();
-        Debug.Log(transform.name + ": LoadSoundRacing", gameObject);
+        base.LoadComponents();
+        this.LoadGarageMenu();
     }
 
-    void LoadUIMenuCtrl()
+    void LoadGarageMenu()
     {
-        if (this._uiMenuCtrl != null) return;
-        this._uiMenuCtrl = GetComponentInChildren<UIMenuCtrl>();
-        Debug.Log(transform.name + ": LoadUIMenuCtrl", gameObject);
+        if (this._garageMenu != null) return;
+        this._garageMenu = GetComponentInChildren<GarageMenu>();
+        Debug.Log(transform.name + ": LoadGarageMenu", gameObject);
     }
+    
+
+
 }
