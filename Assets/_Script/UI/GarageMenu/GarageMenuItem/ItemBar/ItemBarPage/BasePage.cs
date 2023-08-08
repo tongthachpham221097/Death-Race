@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,25 @@ public abstract class BasePage : BaseListTransform
     public int IndexPageOn => indexPageOn;
 
     [SerializeField] protected int currentIndexBg;
+    public int CurrentBg => currentIndexBg;
+
+    [SerializeField] protected int currentIndexPage;
+    public int CurrentIndexPage => currentIndexPage;
 
     public void ClickLeftArrowButton()
     {
         this.DecreaseIndexPageOn();
         this.DisableSomeGameObject(this.indexPageOn);
         this.OnEnableGameObject(this.indexPageOn);
+        this.ShowCurrentBg();
+    }
+
+    public void ClickRightArrowButton()
+    {
+        this.IncreaseIndexPageOn();
+        this.DisableSomeGameObject(this.indexPageOn);
+        this.OnEnableGameObject(this.indexPageOn);
+        this.ShowCurrentBg();
     }
 
     void DecreaseIndexPageOn()
@@ -24,13 +38,6 @@ public abstract class BasePage : BaseListTransform
         this.indexPageOn = this.listTransform.Count - 1;
     }
 
-    public void ClickRightArrowButton()
-    {
-        this.IncreaseIndexPageOn();
-        this.DisableSomeGameObject(this.indexPageOn);
-        this.OnEnableGameObject(this.indexPageOn);
-    }
-
     void IncreaseIndexPageOn()
     {
         this.indexPageOn++;
@@ -38,11 +45,27 @@ public abstract class BasePage : BaseListTransform
         this.indexPageOn = 0;
     }
 
+    void ShowCurrentBg()
+    {
+        if (this.indexPageOn != this.currentIndexPage) return;
+        ItemBg itemBg = this.GetItemBg();
+        itemBg.BackgroundOnClick(this.currentIndexBg);
+    }
+
+    ItemBg GetItemBg()
+    {
+        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg;
+    }
+    
     public void SaveCurrentIndexBg(int index)
     {
         this.currentIndexBg = index;
     }
 
+    public void SaveCurrentIndexPage(int index)
+    {
+        this.currentIndexPage = index;
+    }
 
     protected override void PublicListTransform(){}    
 

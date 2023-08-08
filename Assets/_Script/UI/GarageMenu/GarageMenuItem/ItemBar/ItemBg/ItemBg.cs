@@ -32,4 +32,12 @@ public class ItemBg : LoboMonoBehaviour
         Debug.Log(transform.name + ": LoadItemBgOff", gameObject);
     }
 
+    public void BackgroundOnClick(int indexBg)
+    {
+        this._itemBgOn.DisableSomeGameObject(indexBg);
+        this._itemBgOff.OnEnableSomeGameObject(indexBg);
+        this._itemBgOff.DisableGameObject(indexBg);
+        this._itemBgOn.OnEnableGameObject(indexBg);
+    }
+
 }

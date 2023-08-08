@@ -16,6 +16,7 @@ public abstract class RidersButton : ItemBarPageBtn
     {
         ItemBarPage itemBarPage = this.GetItemBarPage();
         itemBarPage.RidersPage.SaveCurrentIndexBg(this.indexBg);
+        itemBarPage.RidersPage.SaveCurrentIndexPage(this.GetIndexPage());
     }
 
 }

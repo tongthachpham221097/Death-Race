@@ -15,6 +15,7 @@ public class MotoBodysButton : ItemBarPageBtn
     {
         ItemBarPage itemBarPage = this.GetItemBarPage();
         itemBarPage.MotoBodysPage.SaveCurrentIndexBg(this.indexBg);
+        itemBarPage.MotoBodysPage.SaveCurrentIndexPage(this.GetIndexPage());
     }
 
 }

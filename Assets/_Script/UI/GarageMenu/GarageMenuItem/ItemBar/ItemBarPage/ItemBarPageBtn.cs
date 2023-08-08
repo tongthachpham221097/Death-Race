@@ -21,10 +21,8 @@ public abstract class ItemBarPageBtn : BaseButton
     protected override void OnClick()
     {
         ItemBg itemBg = this.GetItemBg();
-        itemBg.ItemBgOn.DisableSomeGameObject(this.indexBg);
-        itemBg.ItemBgOff.OnEnableSomeGameObject(this.indexBg);
-        itemBg.ItemBgOff.DisableGameObject(this.indexBg);
-        itemBg.ItemBgOn.OnEnableGameObject(this.indexBg);
+        itemBg.BackgroundOnClick(this.indexBg);
+
         this.SaveIndexBg();
     }
 
@@ -48,6 +46,13 @@ public abstract class ItemBarPageBtn : BaseButton
     void GetUserInfo()
     {
         this.userInfo = UICtrl.Instance.GarageMenu.UserInfo;
+    }
+
+    protected virtual int GetIndexPage()
+    {
+        if (this.index == 0 || this.index == 1 || this.index == 2) return 0;
+        else if(this.index == 3 || this.index == 4 || this.index == 5) return 1;
+        else return 2;
     }
 
     protected abstract void SaveIndexBg();

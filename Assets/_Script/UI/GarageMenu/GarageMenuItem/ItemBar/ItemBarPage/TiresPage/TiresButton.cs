@@ -15,6 +15,7 @@ public class TiresButton : ItemBarPageBtn
     {
         ItemBarPage itemBarPage = this.GetItemBarPage();
         itemBarPage.TiresPage.SaveCurrentIndexBg(this.indexBg);
+        itemBarPage.TiresPage.SaveCurrentIndexPage(this.GetIndexPage());
     }
 
 }

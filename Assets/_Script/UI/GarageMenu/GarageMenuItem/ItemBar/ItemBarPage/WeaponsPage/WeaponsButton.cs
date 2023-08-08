@@ -14,7 +14,8 @@ public class WeaponsButton : ItemBarPageBtn
     protected override void SaveIndexBg()
     {
         ItemBarPage itemBarPage = this.GetItemBarPage();
-        itemBarPage.weaponsPage.SaveCurrentIndexBg(this.indexBg);
+        itemBarPage.WeaponsPage.SaveCurrentIndexBg(this.indexBg);
+        itemBarPage.WeaponsPage.SaveCurrentIndexPage(this.GetIndexPage());
     }
 
 }

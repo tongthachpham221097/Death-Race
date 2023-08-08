@@ -18,7 +18,7 @@ public class ItemBarPage : BaseListTransform
     public TiresPage TiresPage => _tiresPage;
 
     [SerializeField] private WeaponsPage _weaponsPage;
-    public WeaponsPage weaponsPage => _weaponsPage;
+    public WeaponsPage WeaponsPage => _weaponsPage;
 
     protected override void LoadComponents()
     {
