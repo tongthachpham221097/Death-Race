@@ -26,6 +26,14 @@ public abstract class BaseListTransform : LoboMonoBehaviour
 
     protected abstract void PublicListTransform();
 
+    public void OnEnableAllGameObject()
+    {
+        for (int i = 0; i < this.listTransform.Count; i++)
+        {
+            this.OnEnableGameObject(i);
+        }
+    }
+
     public void OnEnableSomeGameObject(int index)
     {
         for(int i = 0; i < this.listTransform.Count; i++)
@@ -44,13 +52,23 @@ public abstract class BaseListTransform : LoboMonoBehaviour
         }
     }
 
+    public void DisableAllGameObject()
+    {
+        for (int i = 0; i < this.listTransform.Count; i++)
+        {
+            this.DisableGameObject(i);
+        }
+    }
+
     public void OnEnableGameObject(int index)
     {
+        if (this.listTransform[index].gameObject.activeSelf) return;
         this.listTransform[index].gameObject.SetActive(true);
     }
 
     public void DisableGameObject(int index)
     {
+        if (!this.listTransform[index].gameObject.activeSelf) return;
         this.listTransform[index].gameObject.SetActive(false);
     }
 

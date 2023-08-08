@@ -6,6 +6,9 @@ public abstract class BasePage : BaseListTransform
 {
 
     [SerializeField] protected int indexPageOn = 0;
+    public int IndexPageOn => indexPageOn;
+
+    [SerializeField] protected int currentIndexBg;
 
     public void ClickLeftArrowButton()
     {
@@ -34,6 +37,12 @@ public abstract class BasePage : BaseListTransform
         if (this.indexPageOn < this.listTransform.Count) return;
         this.indexPageOn = 0;
     }
+
+    public void SaveCurrentIndexBg(int index)
+    {
+        this.currentIndexBg = index;
+    }
+
 
     protected override void PublicListTransform(){}    
 

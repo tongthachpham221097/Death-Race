@@ -33,17 +33,17 @@ public abstract class BaseButton : LoboMonoBehaviour
 
     protected virtual void DisableMainMenu()
     {
-        this.DisableGameObject(UICtrl.Instance.UIMenuCtrl.MainMenu);
+        //this.DisableGameObject(UICtrl.Instance.UIMenuCtrl.MainMenu);
     }
 
     protected virtual void OnEnableOptionMenu()
     {
-        this.OnEnableGameObject(UICtrl.Instance.UIMenuCtrl.OptitonsMenu);
+        //this.OnEnableGameObject(UICtrl.Instance.UIMenuCtrl.OptitonsMenu);
     }
 
     protected virtual void OnEnableGarageMenu()
     {
-        this.OnEnableGameObject(UICtrl.Instance.UIMenuCtrl.GarageMenu);
+        //this.OnEnableGameObject(UICtrl.Instance.UIMenuCtrl.GarageMenu);
     }
 
     protected virtual void DisableGameObject(GameObject gameObject)

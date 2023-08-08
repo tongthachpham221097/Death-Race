@@ -22,6 +22,13 @@ public abstract class BaseArrowButton : BaseButton
 
     protected override void OnClick()
     {
-        
+        ItemBgOff itemBgOff = this.GetItemBgOff();
+        itemBgOff.OnEnableAllGameObject();
     }
+
+    ItemBgOff GetItemBgOff()
+    {
+        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg.ItemBgOff;
+    }
+
 }
