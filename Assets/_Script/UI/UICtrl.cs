@@ -11,6 +11,9 @@ public class UICtrl : LoboMonoBehaviour
     [SerializeField] private GarageMenu _garageMenu;
     public GarageMenu GarageMenu => _garageMenu;
 
+    [SerializeField] private MainMenu _mainMenu;
+    public MainMenu MainMenu => _mainMenu;
+
     protected override void Awake()
     {
         base.Awake();
@@ -21,6 +24,7 @@ public class UICtrl : LoboMonoBehaviour
     {
         base.LoadComponents();
         this.LoadGarageMenu();
+        this.LoadMainMenu();
     }
 
     void LoadGarageMenu()
@@ -29,7 +33,12 @@ public class UICtrl : LoboMonoBehaviour
         this._garageMenu = GetComponentInChildren<GarageMenu>();
         Debug.Log(transform.name + ": LoadGarageMenu", gameObject);
     }
-    
 
+    void LoadMainMenu()
+    {
+        if (this._mainMenu != null) return;
+        this._mainMenu = GetComponentInChildren<MainMenu>();
+        Debug.Log(transform.name + ": LoadMainMenu", gameObject);
+    }
 
 }
