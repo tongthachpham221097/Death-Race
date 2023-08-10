@@ -4,42 +4,25 @@ using UnityEngine;
 
 public class UIManager : LoboMonoBehaviour
 {
-    [Header("UI Manager")]
-    [SerializeField] private UICtrl _uiCtrl;
-    public UICtrl UICtrl => _uiCtrl;
-    protected override void Awake()
-    {
-        base.Awake();
-        //this._uiCtrl.UIMenuCtrl.GameOverMenu.SetActive(false);
-        //this._uiCtrl.UIMenuCtrl.carSpawner.SetActive(false);
-    }
     
-    protected override void LoadComponents()
+    public void OnEnableMainMenu()
     {
-        base.LoadComponents();
-        this.LoadUICtrl();
-    }
-    protected virtual void LoadUICtrl()
-    {
-        if (this._uiCtrl != null) return;
-        this._uiCtrl = GetComponentInChildren<UICtrl>();
-        Debug.Log(transform.name + ": LoadUICtrl", gameObject);
+        UICtrl.Instance.MainMenu.gameObject.SetActive(true);
     }
 
-    protected virtual void Update()
+    public void DisableMainMenu()
     {
-        //if (this._uiCtrl.PlayerCollider.isGameOver == true)
-        //{
-        //    //this._uiCtrl.soundRacing.mute = true;
-        //    this.OnEnableGameOverMenu();
-        //}
+        UICtrl.Instance.MainMenu.gameObject.SetActive(false);    
     }
 
-    //protected virtual void OnEnableGameOverMenu()
-    //{
-    //    this._uiCtrl.UIMenuCtrl.GameOverMenu.SetActive(true);
-    //    this._uiCtrl.DistanceTextGO.GetDistance();
-    //    this._uiCtrl.DistanceTextGO.OnEnableDistance();
-    //    Time.timeScale = 0f;
-    //}
+    public void OnEnableGarageMenu()
+    {
+        UICtrl.Instance.GarageMenu.gameObject.SetActive(true);
+    }
+
+    public void DisableGarageMenu()
+    {
+        UICtrl.Instance.GarageMenu.gameObject.SetActive(false);
+    }
+
 }

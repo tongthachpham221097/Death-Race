@@ -7,6 +7,6 @@ public class OptionsButton : BaseButton
     protected override void OnClick()
     {
         this.DisableMainMenu();
-        this.OnEnableOptionMenu();
+        //this.OnEnableOptionMenu();
     }
 }
