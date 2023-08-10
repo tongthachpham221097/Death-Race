@@ -8337,7 +8337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50153954f8b450c41ac5985ae865db4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInfoStartRaceBtn: {fileID: 737506088}
+  userInfoStartRaceBtn: {fileID: 0}
   Weapons:
   - {fileID: 876700687}
   - {fileID: 1621637572}
@@ -8803,6 +8803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _userInfoAvatar: {fileID: 900404525}
+  _userInfoStartRaceBtn: {fileID: 737506088}
   _staticBar: {fileID: 1210337096}
 --- !u!1 &734492953
 GameObject:
@@ -16564,7 +16565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e935a6777780f40a4184e223f98b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInfoStartRaceBtn: {fileID: 737506088}
+  userInfoStartRaceBtn: {fileID: 0}
   Riders:
   - {fileID: 1576298824}
   - {fileID: 81508859}
@@ -17617,7 +17618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ffd5ccbb79bed46b147a116fea5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInfoStartRaceBtn: {fileID: 737506088}
+  userInfoStartRaceBtn: {fileID: 0}
   MotoBodys:
   - {fileID: 453916826}
   - {fileID: 1888190971}
@@ -21140,7 +21141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12a9c865c5000147aac2425683a2daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInfoStartRaceBtn: {fileID: 737506088}
+  userInfoStartRaceBtn: {fileID: 0}
   Tires:
   - {fileID: 958298175}
   - {fileID: 1048060568}

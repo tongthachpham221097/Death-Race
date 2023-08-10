@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UserInfoAvatar : LoboMonoBehaviour
 {
+    
     [SerializeField] private MotoBodysList _motoBodysList;
     public MotoBodysList MotoBodysList => _motoBodysList;
 

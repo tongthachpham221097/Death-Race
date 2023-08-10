@@ -13,6 +13,7 @@ public class TiresList : BaseUserInfoAvatar
 
     protected override void SaveIndex(int index)
     {
-        this.userInfoStartRaceBtn.SaveIndexTire(index);
+        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+        userInfoStartRaceBtn.SaveIndexTire(index);
     }
 }

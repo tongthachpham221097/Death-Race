@@ -4,21 +4,10 @@ using UnityEngine;
 
 public abstract class BaseUserInfoAvatar : BaseListTransform
 {
+    
+    protected override void PublicListTransform() { }
 
-    [SerializeField] protected UserInfoStartRaceBtn userInfoStartRaceBtn;
-
-    protected override void LoadComponents()
-    {
-        base.LoadComponents();
-        this.LoadUserInfoStartRaceBtn();
-    }
-
-    void LoadUserInfoStartRaceBtn()
-    {
-        if (this.userInfoStartRaceBtn != null) return;
-        this.userInfoStartRaceBtn = FindAnyObjectByType<UserInfoStartRaceBtn>();
-        Debug.Log(transform.name + ": LoadUserInfoStartRaceBtn", gameObject);
-    }
+    protected abstract void SaveIndex(int index);
 
     public void ItemBarOnClick(int index)
     {
@@ -27,8 +16,9 @@ public abstract class BaseUserInfoAvatar : BaseListTransform
         this.SaveIndex(index);
     }
 
-    protected abstract void SaveIndex(int index);
-
-    protected override void PublicListTransform() { }
+    protected virtual UserInfoStartRaceBtn GetUserInfoStartRaceBtn()
+    {
+        return UICtrl.Instance.GarageMenu.UserInfo.UserInfoStartRaceBtn;
+    }
 
 }

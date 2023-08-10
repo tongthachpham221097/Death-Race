@@ -7,17 +7,10 @@ public abstract class GarageMenuItemBtn : BaseButton
     [SerializeField] protected GarageMenuItem garageMenuItem;
     [SerializeField] protected int index;
 
-    protected override void LoadComponents()
+    protected override void Start()
     {
-        base.LoadComponents();
-        this.LoadGarageMenuItem();
-    }
-
-    void LoadGarageMenuItem()
-    {
-        if (this.garageMenuItem != null) return;
-        this.garageMenuItem = GetComponentInParent<GarageMenuItem>();
-        Debug.Log(transform.name + ": LoadGarageMenuItem", gameObject);
+        base.Start();
+        this.garageMenuItem = UICtrl.Instance.GarageMenu.GarageMenuItem;
     }
 
     protected override void OnClick()
