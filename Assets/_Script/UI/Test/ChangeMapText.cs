@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChangeMapText : BaseText
 {
-    [SerializeField] protected RoadCtrl levelsManager;
-    public RoadCtrl LevelsManager => levelsManager;
+    //[SerializeField] protected RoadCtrl levelsManager;
+    //public RoadCtrl LevelsManager => levelsManager;
 
     [SerializeField] protected DistanceText distanceText;
     public DistanceText DistanceText => distanceText;
@@ -14,15 +14,15 @@ public class ChangeMapText : BaseText
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadLevelsManager();
+        //this.LoadLevelsManager();
         this.LoadDistanceText();
     }
-    protected virtual void LoadLevelsManager()
-    {
-        if (this.levelsManager != null) return;
-        this.levelsManager = FindAnyObjectByType<RoadCtrl>();
-        Debug.Log(transform.name + ": LoadLevelsManager", gameObject);
-    }
+    //protected virtual void LoadLevelsManager()
+    //{
+    //    if (this.levelsManager != null) return;
+    //    this.levelsManager = FindAnyObjectByType<RoadCtrl>();
+    //    Debug.Log(transform.name + ": LoadLevelsManager", gameObject);
+    //}
     protected virtual void LoadDistanceText()
     {
         if (this.distanceText != null) return;
