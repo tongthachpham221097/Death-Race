@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class BaseText : LoboMonoBehaviour
+public class BaseText : LoboMonoBehaviour
 {
-    [Header("Base Text")]
     [SerializeField] protected Text text;
 
     protected override void LoadComponents()
@@ -16,7 +15,9 @@ public abstract class BaseText : LoboMonoBehaviour
 
     void LoadText()
     {
+        if (this.text != null) return;
         this.text = GetComponent<Text>();
+        Debug.LogWarning(transform.name + ": LoadText", gameObject);
     }
-    
+
 }

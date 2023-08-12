@@ -7,9 +7,6 @@ public class SpawnerCtrl : LoboMonoBehaviour
     private static SpawnerCtrl _instance;
     public static SpawnerCtrl Instance => _instance; 
 
-    [SerializeField] private BombSpawner _bombSpawner;
-    public BombSpawner BombSpawner => _bombSpawner; 
-
     [SerializeField] private RoadSpawner _roadSpawner;
     public RoadSpawner RoadSpawner => _roadSpawner; 
 
@@ -22,15 +19,7 @@ public class SpawnerCtrl : LoboMonoBehaviour
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadBombSpawner();
         this.LoadRoadSpawner();
-    }
-
-    protected virtual void LoadBombSpawner()
-    {
-        if (this._bombSpawner != null) return;
-        this._bombSpawner = GetComponentInChildren<BombSpawner>();
-        Debug.Log(transform.name + ": LoadBombSpawner", gameObject);
     }
 
     protected virtual void LoadRoadSpawner()

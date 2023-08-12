@@ -15,9 +15,6 @@ public class ManagersCtrl : LoboMonoBehaviour
     [SerializeField] private EffectManager _effectsManager;
     public EffectManager EffectsManager => _effectsManager;
 
-    [SerializeField] private SoundManager _soundManager;
-    public SoundManager SoundManager => _soundManager;
-
     [SerializeField] private UIManager _uiManager;
     public UIManager UIManager => _uiManager;
 
@@ -33,7 +30,6 @@ public class ManagersCtrl : LoboMonoBehaviour
         base.LoadComponents();
         this.LoadGameManager();
         this.LoadEffectManager();
-        this.LoadSoundManager();
         this.LoadUIManager();
     }
 
@@ -49,13 +45,6 @@ public class ManagersCtrl : LoboMonoBehaviour
         if (this._effectsManager != null) return;
         this._effectsManager = GetComponentInChildren<EffectManager>();
         Debug.LogWarning(transform.name + ": LoadLevelsManager", gameObject);
-    }
-
-    void LoadSoundManager()
-    {
-        if (this._soundManager != null) return;
-        this._soundManager = GetComponentInChildren<SoundManager>();
-        Debug.LogWarning(transform.name + ": LoadSoundManager", gameObject);
     }
 
     void LoadUIManager()
