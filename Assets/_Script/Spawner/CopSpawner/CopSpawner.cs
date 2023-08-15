@@ -17,7 +17,7 @@ public class CopSpawner : Spawner
     {
         if (this.TimeDelay()) return;
         
-        Transform prefab = this.prefabs[1];
+        Transform prefab = this.prefabs[2];
         Vector3 copPosition = this.GetCopPosition();
         Transform obj = this.Spawn(prefab, copPosition, Quaternion.identity);
         obj.gameObject.SetActive(true);

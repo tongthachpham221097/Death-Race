@@ -7,9 +7,9 @@ public class CopSpawnerCar : CopSpawnerList
     
     [SerializeField] public List<Transform> Cars;
 
-    protected override void PublicListTransform()
+    protected override void PublicTransforms()
     {
-        this.Cars = this.listTransform;
+        this.Cars = this.transforms;
     }
 
 }

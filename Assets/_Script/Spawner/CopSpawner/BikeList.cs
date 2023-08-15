@@ -7,16 +7,16 @@ public class BikeList : CopSpawnerList
     [Header("Bike List")]
     [SerializeField] public List<Transform> Bikes;
     
-    protected override void PublicListTransform()
+    protected override void PublicTransforms()
     {
-        this.Bikes = this.listTransform;
+        this.Bikes = this.transforms;
     }
 
     protected override void OnEnable(){}
 
     public void OnEnableRamdomBike()
     {
-        this.Bikes[1].gameObject.SetActive(true);
+        this.OnEnableRamdomObject();
     }
 
 }

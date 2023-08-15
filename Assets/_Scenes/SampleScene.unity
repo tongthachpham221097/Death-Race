@@ -981,11 +981,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ramdom: 0
-  Bikes:
+  transforms:
   - {fileID: 1361589732}
   - {fileID: 2019282759}
   - {fileID: 1542126043}
   - {fileID: 622786752}
+  Bikes: []
 --- !u!1 &97022164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ramdom: 0
+  transforms: []
   Cars:
   - {fileID: 360246589}
   - {fileID: 1246517370}
@@ -5385,11 +5387,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ramdom: 0
-  Bikes:
+  transforms:
   - {fileID: 1818363441}
   - {fileID: 306940108}
   - {fileID: 887121521}
   - {fileID: 421392251}
+  Bikes: []
 --- !u!1 &419054444
 GameObject:
   m_ObjectHideFlags: 0
@@ -16981,6 +16984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1585479960}
+  - component: {fileID: 1585479961}
   m_Layer: 0
   m_Name: CopSpawnerBike_2
   m_TagString: Untagged
@@ -17005,6 +17009,19 @@ Transform:
   m_Father: {fileID: 1677091160}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585479961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585479959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d70556816e41ed46a1a4554f425da38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bikeList: {fileID: 413665804}
 --- !u!1 &1587493436
 GameObject:
   m_ObjectHideFlags: 0
