@@ -14,7 +14,7 @@ public abstract class BaseListTransform : LoboMonoBehaviour
         this.PublicListTransform();
     }
 
-    void LoadListTransform()
+    protected virtual void LoadListTransform()
     {
         if (this.listTransform.Count > 0) return;
 
