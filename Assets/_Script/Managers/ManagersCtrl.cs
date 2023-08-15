@@ -12,11 +12,8 @@ public class ManagersCtrl : LoboMonoBehaviour
     [SerializeField] private GameManager _gameManager;
     public GameManager GameManager => _gameManager;
 
-    [SerializeField] private EffectManager _effectsManager;
-    public EffectManager EffectsManager => _effectsManager;
-
-    [SerializeField] private SoundManager _soundManager;
-    public SoundManager SoundManager => _soundManager;
+    [SerializeField] private UIManager _uiManager;
+    public UIManager UIManager => _uiManager;
 
     protected override void Awake()
     {
@@ -29,29 +26,21 @@ public class ManagersCtrl : LoboMonoBehaviour
     {
         base.LoadComponents();
         this.LoadGameManager();
-        this.LoadEffectManager();
-        this.LoadSoundManager();
+        this.LoadUIManager();
     }
 
-    protected virtual void LoadGameManager()
+    void LoadGameManager()
     {
         if (this._gameManager != null) return;
         this._gameManager = GetComponentInChildren<GameManager>();
         Debug.LogWarning(transform.name + ": LoadGameManager", gameObject);
     }
 
-    protected virtual void LoadEffectManager()
+    void LoadUIManager()
     {
-        if (this._effectsManager != null) return;
-        this._effectsManager = GetComponentInChildren<EffectManager>();
-        Debug.LogWarning(transform.name + ": LoadLevelsManager", gameObject);
-    }
-
-    protected virtual void LoadSoundManager()
-    {
-        if (this._soundManager != null) return;
-        this._soundManager = GetComponentInChildren<SoundManager>();
-        Debug.LogWarning(transform.name + ": LoadSoundManager", gameObject);
+        if (this._uiManager != null) return;
+        this._uiManager = GetComponentInChildren<UIManager>();
+        Debug.LogWarning(transform.name + ": LoadUIManager", gameObject);
     }
 
 }

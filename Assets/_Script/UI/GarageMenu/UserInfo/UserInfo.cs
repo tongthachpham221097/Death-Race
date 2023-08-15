@@ -8,6 +8,9 @@ public class UserInfo : LoboMonoBehaviour
     [SerializeField] private UserInfoAvatar _userInfoAvatar;
     public UserInfoAvatar UserInfoAvatar => _userInfoAvatar;
 
+    [SerializeField] private UserInfoStartRaceBtn _userInfoStartRaceBtn;
+    public UserInfoStartRaceBtn UserInfoStartRaceBtn => _userInfoStartRaceBtn;
+
     [SerializeField] private StaticBar _staticBar;
     public StaticBar StaticBar => _staticBar;
 
@@ -15,6 +18,7 @@ public class UserInfo : LoboMonoBehaviour
     {
         base.LoadComponents();
         this.LoadUserInfoAvatar();
+        this.LoadUserInfoStartRaceBtn();
         this.LoadStaticBar();
     }
 
@@ -23,6 +27,13 @@ public class UserInfo : LoboMonoBehaviour
         if (this._userInfoAvatar != null) return;
         this._userInfoAvatar = GetComponentInChildren<UserInfoAvatar>();
         Debug.Log(transform.name + ": LoadUserInfoAvatar", gameObject);
+    }
+
+    void LoadUserInfoStartRaceBtn()
+    {
+        if (this._userInfoStartRaceBtn != null) return;
+        this._userInfoStartRaceBtn = GetComponentInChildren<UserInfoStartRaceBtn>();
+        Debug.Log(transform.name + ": LoadUserInfoStartRaceBtn", gameObject);
     }
 
     void LoadStaticBar()

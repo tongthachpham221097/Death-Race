@@ -14,11 +14,16 @@ public class UserInfoStartRaceBtn : BaseButton
     
     protected override void OnClick()
     {
-        this.DisableGameObject(transform.parent.parent.gameObject);
-        this._playerAvatars = PlayerCtrl.Instance.PlayerAvatars;
+        this.DisableGarageMenu();
+        this.GetPlayerAvatars();
         this.OnEnablePlayerAvatars();
         this.UpdateRidersAnimation();
 
+    }
+
+    void GetPlayerAvatars()
+    {
+        this._playerAvatars = PlayerCtrl.Instance.PlayerAvatars;
     }
 
     void OnEnablePlayerAvatars()

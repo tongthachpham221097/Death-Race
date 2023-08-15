@@ -13,7 +13,8 @@ public class MotoBodysList : BaseUserInfoAvatar
 
     protected override void SaveIndex(int index)
     {
-        this.userInfoStartRaceBtn.SaveIndexMotobody(index);
+        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+        userInfoStartRaceBtn.SaveIndexMotobody(index);
     }
 
 }

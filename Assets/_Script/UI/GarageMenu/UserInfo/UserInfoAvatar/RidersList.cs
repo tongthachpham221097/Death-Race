@@ -13,6 +13,7 @@ public class RidersList : BaseUserInfoAvatar
 
     protected override void SaveIndex(int index)
     {
-        this.userInfoStartRaceBtn.SaveIndexRider(index);
+        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+        userInfoStartRaceBtn.SaveIndexRider(index);
     }
 }

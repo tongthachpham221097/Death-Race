@@ -13,7 +13,8 @@ public class WeaponsList : BaseUserInfoAvatar
 
     protected override void SaveIndex(int index)
     {
-        this.userInfoStartRaceBtn.SaveIndexWeapon(index);
+        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+        userInfoStartRaceBtn.SaveIndexWeapon(index);
     }
 
 }

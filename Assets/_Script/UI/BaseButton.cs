@@ -31,29 +31,24 @@ public abstract class BaseButton : LoboMonoBehaviour
         this.button.onClick.AddListener(this.OnClick);
     }
 
-    protected virtual void DisableMainMenu()
+    protected virtual void OnEnableMainMenu()
     {
-        //this.DisableGameObject(UICtrl.Instance.UIMenuCtrl.MainMenu);
+        ManagersCtrl.Instance.UIManager.OnEnableMainMenu();
     }
 
-    protected virtual void OnEnableOptionMenu()
+    protected virtual void DisableMainMenu()
     {
-        //this.OnEnableGameObject(UICtrl.Instance.UIMenuCtrl.OptitonsMenu);
+        ManagersCtrl.Instance.UIManager.DisableMainMenu();
     }
 
     protected virtual void OnEnableGarageMenu()
     {
-        //this.OnEnableGameObject(UICtrl.Instance.UIMenuCtrl.GarageMenu);
+        ManagersCtrl.Instance.UIManager.OnEnableGarageMenu();
     }
 
-    protected virtual void DisableGameObject(GameObject gameObject)
+    protected virtual void DisableGarageMenu()
     {
-        gameObject.SetActive(false);
-    }
-
-    protected virtual void OnEnableGameObject(GameObject gameObject)
-    {
-        gameObject.SetActive(true);
+        ManagersCtrl.Instance.UIManager.DisableGarageMenu();
     }
 
     protected abstract void OnClick();
