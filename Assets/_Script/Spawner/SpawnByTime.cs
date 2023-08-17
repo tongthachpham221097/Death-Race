@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerByTime : Spawner
+public class SpawnByTime : Spawner
 {
     [SerializeField] protected float timer;
     [SerializeField] protected float timeDelay;
