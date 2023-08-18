@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CopSpawner : SpawnByTime
+public class GoRaceBtn03 : BaseGoRaceBtn
 {
-    
+
     protected override void ResetValue()
     {
         base.ResetValue();
-        this.timeDelay = 5f;
-        this.offset = -20f;
+        this.indexPrefabRace = 2;
     }
 
 }

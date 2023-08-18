@@ -23,6 +23,6 @@ public class CameraFollowPlayer : LoboMonoBehaviour
     }
     protected virtual void Following()
     {
-        transform.position = new Vector3(0, this.playerCtrl.position.y, this.defaultPosZ);
+        transform.position = new Vector3(0, this.playerCtrl.position.y + 6, this.defaultPosZ);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleSpawner : SpawnerByTime
+public class ObstacleSpawner : SpawnByTime
 {
 
     protected override void ResetValue()

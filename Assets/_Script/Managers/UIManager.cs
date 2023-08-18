@@ -25,4 +25,9 @@ public class UIManager : LoboMonoBehaviour
         UICtrl.Instance.GarageMenu.gameObject.SetActive(false);
     }
 
+    public void DisableChooseRaceMenu()
+    {
+        UICtrl.Instance.ChooseRaceMenu.gameObject.SetActive(false);
+    }
+
 }

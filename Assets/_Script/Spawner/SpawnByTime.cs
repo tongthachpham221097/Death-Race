@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerByTime : Spawner
+public class SpawnByTime : Spawner
 {
     [SerializeField] protected float timer;
     [SerializeField] protected float timeDelay;
@@ -17,10 +17,15 @@ public class SpawnerByTime : Spawner
     {
         if (this.TimeDelay()) return;
 
-        Transform prefab = this.RandomPrefab();
+        Transform prefab = this.GetPrefab();
         Vector3 spawnPosition = this.GetSpawnPosition();
         Transform obj = this.Spawn(prefab, spawnPosition, Quaternion.identity);
         obj.gameObject.SetActive(true);
+    }
+
+    protected virtual Transform GetPrefab()
+    {
+        return this.RandomPrefab();
     }
     protected virtual bool TimeDelay()
     {
