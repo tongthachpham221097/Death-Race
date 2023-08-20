@@ -10,7 +10,7 @@ public abstract class GarageMenuItemBtn : BaseButton
     protected override void Start()
     {
         base.Start();
-        this.garageMenuItem = UICtrl.Instance.GarageMenu.GarageMenuItem;
+        this.garageMenuItem = ManagersCtrl.Instance.UI.GetGarageMenuItem();
     }
 
     protected override void OnClick()
@@ -49,7 +49,7 @@ public abstract class GarageMenuItemBtn : BaseButton
 
     ItemBg GetItemBg()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg;
+        return ManagersCtrl.Instance.UI.GetItemBg();
     }
 
     protected abstract int LoadCurrentBg();

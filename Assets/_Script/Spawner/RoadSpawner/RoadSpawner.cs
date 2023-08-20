@@ -22,9 +22,14 @@ public class RoadSpawner : Spawner
 
     void UpdateRoad()
     {
-        float PlayerPosY = PlayerCtrl.Instance.transform.position.y;
+        float PlayerPosY = this.GetPlayerPosY();
         if (PlayerPosY - this._currentRoad.y < this._offset / 2) return;
         this.RoadSpawning(this._currentRoad);
+    }
+
+    float GetPlayerPosY()
+    {
+        return ManagersCtrl.Instance.Player.GetPlayerPositionY();
     }
 
     public void RoadSpawning(Vector3 pos)

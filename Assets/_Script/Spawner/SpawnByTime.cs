@@ -50,7 +50,7 @@ public class SpawnByTime : Spawner
 
     protected virtual Vector3 GetPlayerPosition()
     {
-        return PlayerCtrl.Instance.transform.position;
+        return ManagersCtrl.Instance.Player.GetPlayerPosition();
     }
 
 }

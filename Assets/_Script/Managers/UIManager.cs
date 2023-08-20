@@ -4,30 +4,121 @@ using UnityEngine;
 
 public class UIManager : LoboMonoBehaviour
 {
-    
+
+    [SerializeField] private UICtrl _uiCtrl;
+
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        this.LoadUICtrl();
+    }
+
+    void LoadUICtrl()
+    {
+        if (this._uiCtrl != null) return;
+        this._uiCtrl = FindAnyObjectByType<UICtrl>();
+        Debug.Log(transform.name + ": LoadUICtrl", gameObject);
+    }
+
+
+    // MainMenu
     public void OnEnableMainMenu()
     {
-        UICtrl.Instance.MainMenu.gameObject.SetActive(true);
+        this._uiCtrl.MainMenu.gameObject.SetActive(true);
     }
 
     public void DisableMainMenu()
     {
-        UICtrl.Instance.MainMenu.gameObject.SetActive(false);    
+        this._uiCtrl.MainMenu.gameObject.SetActive(false);    
     }
+
+    // GarageMenu
 
     public void OnEnableGarageMenu()
     {
-        UICtrl.Instance.GarageMenu.gameObject.SetActive(true);
+        this.GetGarageMenu().gameObject.SetActive(true);
     }
-
+    
     public void DisableGarageMenu()
     {
-        UICtrl.Instance.GarageMenu.gameObject.SetActive(false);
+        this.GetGarageMenu().gameObject.SetActive(false);
     }
+
+    public GarageMenu GetGarageMenu()
+    {
+        return this._uiCtrl.GarageMenu;
+    }
+    
+    public UserInfo GetUserInfo()
+    {
+        return this.GetGarageMenu().UserInfo;
+    }
+
+    public UserInfoAvatar GetUserInfoAvatar()
+    {
+        return this.GetUserInfo().UserInfoAvatar;
+    }
+
+    public TiresList GetTiresList()
+    {
+        return this.GetUserInfoAvatar().TiresList;
+    }
+
+    public RidersList GetRidersList()
+    {
+        return this.GetUserInfoAvatar().RidersList;
+    }
+
+    public MotoBodysList GetMotoBodysList()
+    {
+        return this.GetUserInfoAvatar().MotoBodysList;
+    }
+
+    public WeaponsList GetWeaponsList()
+    {
+        return this.GetUserInfoAvatar().WeaponsList;
+    }
+
+    public GarageMenuItem GetGarageMenuItem()
+    {
+        return this.GetGarageMenu().GarageMenuItem;
+    }    
+
+    public ItemBar GetItemBar()
+    {
+        return this.GetGarageMenuItem().ItemBar;
+    }    
+
+    public ItemBarPage GetItemBarPage()
+    {
+        return this.GetItemBar().ItemBarPage;
+    }
+
+    public ItemBg GetItemBg()
+    {
+        return this.GetItemBar().ItemBg;
+    }    
+
+    public ItemBgOff GetItemBgOff()
+    {
+        return this.GetItemBg().ItemBgOff;
+    }
+
+    // ChooseRaceMenu
 
     public void DisableChooseRaceMenu()
     {
-        UICtrl.Instance.ChooseRaceMenu.gameObject.SetActive(false);
+        this.GetChooseRaceMenu().gameObject.SetActive(false);
+    }
+
+    public ChooseRaceMenu GetChooseRaceMenu()
+    {
+        return this._uiCtrl.ChooseRaceMenu;
+    }
+
+    public ChooseRaceList GetChooseRaceList()
+    {
+        return this.GetChooseRaceMenu().ChooseRaceList;
     }
 
 }

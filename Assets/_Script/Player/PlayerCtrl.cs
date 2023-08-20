@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class PlayerCtrl : LoboMonoBehaviour
 {
-    private static PlayerCtrl _instance;
-    public static PlayerCtrl Instance { get => _instance; }
+    //private static PlayerCtrl _instance;
+    //public static PlayerCtrl Instance { get => _instance; }
 
     [SerializeField] private PlayerAvatars _playerAvatars;
-    public PlayerAvatars PlayerAvatars { get => _playerAvatars; }
+    public PlayerAvatars Avatars => _playerAvatars;
 
     [SerializeField] private PlayerMovement _playerMovement;
-    public PlayerMovement PlayerMovement { get => _playerMovement; }
+    public PlayerMovement Movement => _playerMovement;
 
     [SerializeField] private PlayerPickUpItem _playerPickUpItem;
-    public PlayerPickUpItem PlayerPickUpItem { get => _playerPickUpItem; }
+    public PlayerPickUpItem PickUpItem => _playerPickUpItem;
 
-    protected override void Awake()
-    {
-        if (PlayerCtrl._instance != null) Debug.LogError("only 1 PlayerCtrl allow to exist");
-        PlayerCtrl._instance = this;
-    }
+    //protected override void Awake()
+    //{
+    //    if (PlayerCtrl._instance != null) Debug.LogError("only 1 PlayerCtrl allow to exist");
+    //    PlayerCtrl._instance = this;
+    //}
 
     protected override void LoadComponents()
     {

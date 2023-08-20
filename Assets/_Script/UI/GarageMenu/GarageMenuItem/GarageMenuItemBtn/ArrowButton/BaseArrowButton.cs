@@ -11,14 +11,19 @@ public abstract class BaseArrowButton : BaseButton
         itemBgOff.OnEnableAllGameObject();
     }
 
+    UIManager GetUIManager()
+    {
+        return ManagersCtrl.Instance.UI;
+    }
+
     ItemBgOff GetItemBgOff()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg.ItemBgOff;
+        return this.GetUIManager().GetItemBgOff();
     }
 
     protected virtual ItemBarPage GetItemBarPage()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBarPage;
+        return this.GetUIManager().GetItemBarPage();
     }
 
 }

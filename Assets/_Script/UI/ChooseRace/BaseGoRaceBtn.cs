@@ -5,12 +5,12 @@ using UnityEngine;
 public abstract class BaseGoRaceBtn : BaseButton
 {
 
-    protected int indexPrefabRace;
+    [SerializeField] protected int indexPrefabRace;
 
     protected override void OnClick()
     {
         SpawnerCtrl.Instance.RoadSpawner.SetPrefab(this.indexPrefabRace);
-        ManagersCtrl.Instance.UIManager.DisableChooseRaceMenu();
+        ManagersCtrl.Instance.UI.DisableChooseRaceMenu();
     }
 
 }

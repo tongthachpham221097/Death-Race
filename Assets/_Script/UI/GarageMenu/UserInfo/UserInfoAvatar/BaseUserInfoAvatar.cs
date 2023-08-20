@@ -7,18 +7,28 @@ public abstract class BaseUserInfoAvatar : BaseListTransform
     
     protected override void PublicListTransform() { }
 
-    protected abstract void SaveIndex(int index);
+    //protected abstract void SaveIndex(int index);
 
     public void ItemBarOnClick(int index)
     {
         this.DisableSomeGameObject(index);
         this.OnEnableGameObject(index);
-        this.SaveIndex(index);
+        //this.SaveIndex(index);
     }
 
-    protected virtual UserInfoStartRaceBtn GetUserInfoStartRaceBtn()
+    public int GetIndexOnEnable()
     {
-        return UICtrl.Instance.GarageMenu.UserInfo.UserInfoStartRaceBtn;
+        for(int i = 0; i < this.listTransform.Count; i++)
+        {
+            if (listTransform[i].gameObject.activeSelf) return i;
+        }
+
+        return 0;
     }
+
+    //protected virtual UserInfoStartRaceBtn GetUserInfoStartRaceBtn()
+    //{
+    //    return UICtrl.Instance.GarageMenu.UserInfo.UserInfoStartRaceBtn;
+    //}
 
 }

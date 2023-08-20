@@ -1368,6 +1368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 87668363}
+  indexPrefabRace: 2
 --- !u!1 &87840166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,7 +1983,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a7ba5d4efc8e4441bdf1a4e2869d2cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a441372dadecea44b949e0458bc6449, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2184,7 +2185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &105082159
@@ -3960,7 +3961,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fc15263adb1c94f489494e86f4dda9a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 574cef11d5dfc2a44ae47fcc17760f74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4306,7 +4307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &223150589
 Transform:
   m_ObjectHideFlags: 0
@@ -4337,10 +4338,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc945ffe24ea4391cb64a17bedd2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAvatarsRiders: {fileID: 1935654263}
-  _playerAvatarsMotoBodys: {fileID: 859068577}
-  _playerAvatarsWeapons: {fileID: 503838397}
-  _playerAvatarsTires: {fileID: 1220381519}
+  _riders: {fileID: 0}
+  _motoBodys: {fileID: 0}
+  _weapons: {fileID: 0}
+  _tires: {fileID: 0}
   _riderAnimation: {fileID: 1935654262}
 --- !u!1 &237524362
 GameObject:
@@ -4531,15 +4532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad310eb026481848af38531f25d3569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsRidersList:
-  - {fileID: 1864232274}
-  - {fileID: 1436351900}
-  - {fileID: 2019604956}
-  - {fileID: 1163438427}
-  - {fileID: 1580108203}
-  - {fileID: 199278855}
-  - {fileID: 2017641154}
-  - {fileID: 901472112}
+  RidersList: []
 --- !u!114 &238022271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5060,7 +5053,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &287652255
@@ -5634,10 +5627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc945ffe24ea4391cb64a17bedd2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAvatarsRiders: {fileID: 238022270}
-  _playerAvatarsMotoBodys: {fileID: 1571127306}
-  _playerAvatarsWeapons: {fileID: 387945462}
-  _playerAvatarsTires: {fileID: 828665703}
+  _riders: {fileID: 238022270}
+  _motoBodys: {fileID: 1571127306}
+  _weapons: {fileID: 387945462}
+  _tires: {fileID: 828665703}
   _riderAnimation: {fileID: 238022271}
 --- !u!1 &306940107
 GameObject:
@@ -6889,7 +6882,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed8c10bbffed5634a897c710b698e96b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6bfa4c610cf066541b0ee85f4d2ec24a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6900,6 +6893,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &363855296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363855297}
+  - component: {fileID: 363855298}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &363855297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363855296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 383558303}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363855298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363855296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0683fa496ae212a488f32c6920e368f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerCtrl: {fileID: 289666984}
+  _indexRider: 0
+  _indexMotobody: 0
+  _indexWeapon: 0
+  _indexTire: 0
 --- !u!1 &365271303
 GameObject:
   m_ObjectHideFlags: 0
@@ -7275,6 +7316,7 @@ Transform:
   m_Children:
   - {fileID: 705818837}
   - {fileID: 1894332728}
+  - {fileID: 363855297}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7292,6 +7334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 705818838}
   _uiManager: {fileID: 1894332729}
+  _playerManager: {fileID: 363855298}
 --- !u!1 &384937019
 GameObject:
   m_ObjectHideFlags: 0
@@ -7393,7 +7436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e631a9d00aa4549ae844a0249ca5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsWeaponsList: []
+  WeaponsList: []
 --- !u!1 &404681194
 GameObject:
   m_ObjectHideFlags: 0
@@ -8338,7 +8381,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &453916825
@@ -9010,7 +9053,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &487111528
@@ -9264,7 +9307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e631a9d00aa4549ae844a0249ca5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsWeaponsList: []
+  WeaponsList: []
 --- !u!1 &504847632
 GameObject:
   m_ObjectHideFlags: 0
@@ -9539,51 +9582,6 @@ MonoBehaviour:
   index: 4
   indexBg: 0
   userInfo: {fileID: 732462155}
---- !u!1 &513895456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 513895457}
-  - component: {fileID: 513895458}
-  m_Layer: 5
-  m_Name: Logo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &513895457
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513895456}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 981404341}
-  m_Father: {fileID: 627006462}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: -460.16003}
-  m_SizeDelta: {x: 519.78, y: 920.32007}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &513895458
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513895456}
-  m_CullTransparentMesh: 1
 --- !u!1 &516303661
 GameObject:
   m_ObjectHideFlags: 0
@@ -9756,7 +9754,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.12399429, g: 0.12399429, b: 0.16981131, a: 1}
+  m_BackGroundColor: {r: 0.19374341, g: 0.10852615, b: 0.8584906, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -9948,8 +9946,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1690228559}
-  - {fileID: 627006462}
   - {fileID: 1059868644}
+  - {fileID: 627006462}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10205,7 +10203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &550565372
@@ -11194,7 +11192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &627006462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11207,10 +11205,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1614431749}
-  - {fileID: 513895457}
+  - {fileID: 981404341}
   - {fileID: 1044801171}
   m_Father: {fileID: 525830373}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11809,7 +11807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6c4e675f60b072479d5aaa43aa9a58e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1473a4b985b57d04490294779b2e1909, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12007,7 +12005,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &677062244
@@ -12499,7 +12497,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &732462151
@@ -12648,10 +12646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 737506089}
-  _indexTire: 0
-  _indexMotobody: 0
-  _indexRider: 0
-  _indexWeapon: 0
 --- !u!114 &737506089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13063,7 +13057,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e7b3a72b0498f7343842539c8533ef59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23f29b12fb9ae0848832795d1d233ce3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13535,7 +13529,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &771255382
@@ -13909,7 +13903,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &782104627
@@ -14290,7 +14284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &828665701
@@ -14344,15 +14338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642e256d9d056d549b19455ef2f9fd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsTiresList:
-  - {fileID: 99226364}
-  - {fileID: 1461282443}
-  - {fileID: 1706001356}
-  - {fileID: 1464220076}
-  - {fileID: 749793896}
-  - {fileID: 363025493}
-  - {fileID: 859412885}
-  - {fileID: 1003395763}
+  TiresList: []
 --- !u!1 &834542802
 GameObject:
   m_ObjectHideFlags: 0
@@ -14568,7 +14554,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &852654552
@@ -14806,15 +14792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35738eae7a8a2d489a1409de18c442a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsMotoBodysList:
-  - {fileID: 95057820}
-  - {fileID: 2067077444}
-  - {fileID: 516303662}
-  - {fileID: 1356667548}
-  - {fileID: 1475044669}
-  - {fileID: 1792843769}
-  - {fileID: 1556554482}
-  - {fileID: 351892901}
+  MotoBodysList: []
 --- !u!1 &859412884
 GameObject:
   m_ObjectHideFlags: 0
@@ -14908,7 +14886,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9987c37ba717050479a7b2099ac63b59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d2d7ccde35c0254a9a9e9421e09be29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15624,7 +15602,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 370229da26473f5478c726bfab033523, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca24011777f05f14ab6799bf5a9c0399, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15807,6 +15785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 902288874}
+  indexPrefabRace: 0
 --- !u!1 &902424053
 GameObject:
   m_ObjectHideFlags: 0
@@ -16078,7 +16057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &924922232
@@ -16449,7 +16428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &948197738
@@ -17171,7 +17150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &965993932
@@ -17418,7 +17397,7 @@ GameObject:
   - component: {fileID: 981404343}
   - component: {fileID: 981404342}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17431,12 +17410,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981404340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 513895457}
-  m_RootOrder: 0
+  m_Father: {fileID: 627006462}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -17752,7 +17731,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &994082861
@@ -17923,7 +17902,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d6ffee6450b1a74da37fc355d01547c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 018a7de6735a1ed488c3f589184fa2ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18678,7 +18657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1059868644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18694,7 +18673,7 @@ RectTransform:
   - {fileID: 1960042744}
   - {fileID: 1053808053}
   m_Father: {fileID: 525830373}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -19500,7 +19479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1105811671
@@ -19674,7 +19653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 85.8, y: -48.72}
+  m_AnchoredPosition: {x: 85.79999, y: -48.71997}
   m_SizeDelta: {x: 171.61, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1117510440
@@ -20200,7 +20179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1159655511
@@ -20335,7 +20314,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 72ee958501123cd46ba7afd72cc357c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3db24365f8a388a40926b70c3962f75c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20412,7 +20391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1187134974
@@ -20551,7 +20530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6c4e675f60b072479d5aaa43aa9a58e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1473a4b985b57d04490294779b2e1909, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20728,7 +20707,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1200919154
@@ -21174,15 +21153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642e256d9d056d549b19455ef2f9fd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsTiresList:
-  - {fileID: 2120001097}
-  - {fileID: 768660538}
-  - {fileID: 1951076433}
-  - {fileID: 263098756}
-  - {fileID: 848461738}
-  - {fileID: 994041138}
-  - {fileID: 717273766}
-  - {fileID: 1238205806}
+  TiresList: []
 --- !u!1 &1222803656
 GameObject:
   m_ObjectHideFlags: 0
@@ -21529,7 +21500,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1241627984
@@ -24141,7 +24112,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2ecae29cdb0201e478e57f29f89df7c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae2c77ac75e4eca4498145df3dedd6dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24647,7 +24618,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0af001616e9f80f4982cb93c98858a22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b01d666fbbd92e64581ba72dcd9ccf81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24783,7 +24754,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93160732d691b39438f683e22caeb0ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8251718d3007f41a98a2dbb5fa4b93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -25094,7 +25065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6c4e675f60b072479d5aaa43aa9a58e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1473a4b985b57d04490294779b2e1909, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25926,6 +25897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1528326586}
+  indexPrefabRace: 1
 --- !u!1 &1531592838
 GameObject:
   m_ObjectHideFlags: 0
@@ -26938,15 +26910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35738eae7a8a2d489a1409de18c442a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsMotoBodysList:
-  - {fileID: 1992230740}
-  - {fileID: 68846494}
-  - {fileID: 2146662316}
-  - {fileID: 1715069813}
-  - {fileID: 1591342513}
-  - {fileID: 348892810}
-  - {fileID: 1003976326}
-  - {fileID: 161206823}
+  MotoBodysList: []
 --- !u!1 &1571365938
 GameObject:
   m_ObjectHideFlags: 0
@@ -27245,7 +27209,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 67544b16a0bedbf41aa862575d38493f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82ee7f17bd0d8a84f87ba2d5d18361e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -28166,7 +28130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1614431748
@@ -29060,7 +29024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1674333215
@@ -29948,7 +29912,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 134022af00af9d443a2f107c223e896f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8692812f56ee74342989657dd16be37e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -30588,7 +30552,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1719192538
@@ -30962,6 +30926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1737314736}
+  indexPrefabRace: 3
 --- !u!1 &1740905618
 GameObject:
   m_ObjectHideFlags: 0
@@ -32971,7 +32936,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 48ad8bfd7f6029c4498b8bb118223ad7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12e999749d2020d46aa3d36e9b2dec84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33159,6 +33124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62747ef0ba8cff74f8086af914a21074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _uiCtrl: {fileID: 525830375}
 --- !u!1 &1894376408
 GameObject:
   m_ObjectHideFlags: 0
@@ -34226,15 +34192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad310eb026481848af38531f25d3569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsRidersList:
-  - {fileID: 483789310}
-  - {fileID: 676162238}
-  - {fileID: 1199558597}
-  - {fileID: 1955535846}
-  - {fileID: 1715230682}
-  - {fileID: 2113447762}
-  - {fileID: 778985448}
-  - {fileID: 442765154}
+  RidersList: []
 --- !u!1 &1946241461
 GameObject:
   m_ObjectHideFlags: 0
@@ -34570,7 +34528,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1955535845
@@ -34674,7 +34632,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1960042743
@@ -35350,7 +35308,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c9db632897e107c42bf9acf5a9e1f0c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac1058834fbae4342ac6675763b0669f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35536,7 +35494,7 @@ SpriteRenderer:
   m_SortingLayerID: -1681539765
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b8ec99a76eca24b49bd7cdf53c68c4c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7992d9bc4f01834688dd4d792f7c757, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35976,7 +35934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.3, y: 0}
+  m_AnchoredPosition: {x: 85.29999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2067077443
@@ -36387,7 +36345,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2120001096
@@ -36491,7 +36449,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2121569078

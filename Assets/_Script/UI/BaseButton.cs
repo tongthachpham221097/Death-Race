@@ -33,22 +33,22 @@ public abstract class BaseButton : LoboMonoBehaviour
 
     protected virtual void OnEnableMainMenu()
     {
-        ManagersCtrl.Instance.UIManager.OnEnableMainMenu();
+        ManagersCtrl.Instance.UI.OnEnableMainMenu();
     }
 
     protected virtual void DisableMainMenu()
     {
-        ManagersCtrl.Instance.UIManager.DisableMainMenu();
+        ManagersCtrl.Instance.UI.DisableMainMenu();
     }
 
     protected virtual void OnEnableGarageMenu()
     {
-        ManagersCtrl.Instance.UIManager.OnEnableGarageMenu();
+        ManagersCtrl.Instance.UI.OnEnableGarageMenu();
     }
 
     protected virtual void DisableGarageMenu()
     {
-        ManagersCtrl.Instance.UIManager.DisableGarageMenu();
+        ManagersCtrl.Instance.UI.DisableGarageMenu();
     }
 
     protected abstract void OnClick();

@@ -11,10 +11,10 @@ public class WeaponsList : BaseUserInfoAvatar
         this.Weapons = this.listTransform;
     }
 
-    protected override void SaveIndex(int index)
-    {
-        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
-        userInfoStartRaceBtn.SaveIndexWeapon(index);
-    }
+    //protected override void SaveIndex(int index)
+    //{
+    //    UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+    //    userInfoStartRaceBtn.SaveIndexWeapon(index);
+    //}
 
 }

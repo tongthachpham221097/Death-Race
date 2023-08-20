@@ -28,7 +28,7 @@ public abstract class ItemBarPageBtn : BaseButton
 
     protected virtual ItemBarPage GetItemBarPage()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBarPage;
+        return ManagersCtrl.Instance.UI.GetItemBarPage();
     }
 
     void CalIndexBg()
@@ -40,12 +40,12 @@ public abstract class ItemBarPageBtn : BaseButton
 
     ItemBg GetItemBg()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg;
+        return ManagersCtrl.Instance.UI.GetItemBg();
     }
 
     void GetUserInfo()
     {
-        this.userInfo = UICtrl.Instance.GarageMenu.UserInfo;
+        this.userInfo = ManagersCtrl.Instance.UI.GetUserInfo();
     }
 
     protected virtual int GetIndexPage()

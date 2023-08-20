@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerAvatarsWeapons : BaseListTransform
 {
     
-    [SerializeField] public List<Transform> PlayerAvatarsWeaponsList;
+    [SerializeField] public List<Transform> WeaponsList;
 
     protected override void PublicListTransform()
     {
-        this.PlayerAvatarsWeaponsList = this.listTransform;
+        this.WeaponsList = this.listTransform;
     }
 
 }

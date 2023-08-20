@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlayerAvatars : LoboMonoBehaviour
 {
-    [SerializeField] private PlayerAvatarsRiders _playerAvatarsRiders;
-    public PlayerAvatarsRiders PlayerAvatarsRiders => _playerAvatarsRiders;
+    [SerializeField] private PlayerAvatarsRiders _riders;
+    public PlayerAvatarsRiders Riders => _riders;
 
-    [SerializeField] private PlayerAvatarsMotoBodys _playerAvatarsMotoBodys;
-    public PlayerAvatarsMotoBodys PlayerAvatarsMotoBodys => _playerAvatarsMotoBodys;
+    [SerializeField] private PlayerAvatarsMotoBodys _motoBodys;
+    public PlayerAvatarsMotoBodys MotoBodys => _motoBodys;
 
-    [SerializeField] private PlayerAvatarsWeapons _playerAvatarsWeapons;
-    public PlayerAvatarsWeapons PlayerAvatarsWeapons => _playerAvatarsWeapons;
+    [SerializeField] private PlayerAvatarsWeapons _weapons;
+    public PlayerAvatarsWeapons Weapons => _weapons;
 
-    [SerializeField] private PlayerAvatarsTires _playerAvatarsTires;
-    public PlayerAvatarsTires PlayerAvatarsTires => _playerAvatarsTires;
+    [SerializeField] private PlayerAvatarsTires _tires;
+    public PlayerAvatarsTires Tires => _tires;
 
     [SerializeField] private RiderAnimation _riderAnimation;
     public RiderAnimation RiderAnimation => _riderAnimation;
@@ -22,38 +22,38 @@ public class PlayerAvatars : LoboMonoBehaviour
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadPlayerAvatarsRiders();
-        this.LoadPlayerAvatarsMotoBodys();
-        this.LoadPlayerAvatarsWeapons();
-        this.LoadPlayerAvatarsTires();
+        this.LoadRiders();
+        this.LoadMotoBodys();
+        this.LoadWeapons();
+        this.LoadTires();
         this.LoadRiderAnimation();
     }
 
-    void LoadPlayerAvatarsRiders()
+    void LoadRiders()
     {
-        if (this._playerAvatarsRiders != null) return;
-        this._playerAvatarsRiders = GetComponentInChildren<PlayerAvatarsRiders>();
+        if (this._riders != null) return;
+        this._riders = GetComponentInChildren<PlayerAvatarsRiders>();
         Debug.LogWarning(transform.name + ": LoadPlayerAvatarsRiders", gameObject);
     }
 
-    void LoadPlayerAvatarsMotoBodys()
+    void LoadMotoBodys()
     {
-        if (this._playerAvatarsMotoBodys != null) return;
-        this._playerAvatarsMotoBodys = GetComponentInChildren<PlayerAvatarsMotoBodys>();
+        if (this._motoBodys != null) return;
+        this._motoBodys = GetComponentInChildren<PlayerAvatarsMotoBodys>();
         Debug.LogWarning(transform.name + ": LoadPlayerAvatarsMotoBodys", gameObject);
     }
 
-    void LoadPlayerAvatarsWeapons()
+    void LoadWeapons()
     {
-        if (this._playerAvatarsWeapons != null) return;
-        this._playerAvatarsWeapons = GetComponentInChildren<PlayerAvatarsWeapons>();
+        if (this._weapons != null) return;
+        this._weapons = GetComponentInChildren<PlayerAvatarsWeapons>();
         Debug.LogWarning(transform.name + ": LoadPlayerAvatarsWeapons", gameObject);
     }
 
-    void LoadPlayerAvatarsTires()
+    void LoadTires()
     {
-        if (this._playerAvatarsTires != null) return;
-        this._playerAvatarsTires = GetComponentInChildren<PlayerAvatarsTires>();
+        if (this._tires != null) return;
+        this._tires = GetComponentInChildren<PlayerAvatarsTires>();
         Debug.LogWarning(transform.name + ": LoadPlayerAvatarsTires", gameObject);
     }
 
