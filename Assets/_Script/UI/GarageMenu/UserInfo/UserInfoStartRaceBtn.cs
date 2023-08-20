@@ -4,73 +4,55 @@ using UnityEngine;
 
 public class UserInfoStartRaceBtn : BaseButton
 {
-    [Header("User Info StartRace Btn")]
-    //[SerializeField] private int _indexTire;
-    //[SerializeField] private int _indexMotobody;
-    //[SerializeField] private int _indexRider;
-    //[SerializeField] private int _indexWeapon;
-
-    private PlayerAvatars _playerAvatars;
+    //[Header("User Info StartRace Btn")]
     
     protected override void OnClick()
     {
-        this.SetIndexPlayerManager();
-        
-        ManagersCtrl.Instance.Player.OnEnablePlayerAvatars();
+        this.SetIndexPlayerAvatars();
+        this.GetPlayerManager().OnClickUserInfoStartRaceBtn();
         this.DisableGarageMenu();
-        this.GetPlayerAvatars();
-        //this.OnEnablePlayerAvatars();
-        //this.UpdateRidersAnimation();
     }
 
-    void SetIndexPlayerManager()
+    void SetIndexPlayerAvatars()
     {
-        //ManagersCtrl.Instance.PlayerManager.SetIndexAvatars();
+        this.GetPlayerManager().SetIndexRider(this.GetIndexRider());
+        this.GetPlayerManager().SetIndexMotoBody(this.GetIndexMotoBody());
+        this.GetPlayerManager().SetIndexWeapon(this.GetIndexWeapon());
+        this.GetPlayerManager().SetIndexTire(this.GetIndexTire());
     }
 
     int GetIndexRider()
     {
-        RidersList riders = ManagersCtrl.Instance.UI.GetRidersList();
+        RidersList riders = this.GetUIManager().GetRidersList();
         return riders.GetIndexOnEnable();
     }
 
-    void GetPlayerAvatars()
+    int GetIndexMotoBody()
     {
-        this._playerAvatars = ManagersCtrl.Instance.Player.GetPlayerAvatars();
+        MotoBodysList motoBodys = this.GetUIManager().GetMotoBodysList();
+        return motoBodys.GetIndexOnEnable();
     }
 
-    //void OnEnablePlayerAvatars()
-    //{
-    //    this._playerAvatars.Riders.OnEnableGameObject(this._indexRider);
-    //    this._playerAvatars.MotoBodys.OnEnableGameObject(this._indexMotobody);
-    //    this._playerAvatars.Weapons.OnEnableGameObject(this._indexWeapon);
-    //    this._playerAvatars.Tires.OnEnableGameObject(this._indexTire);
-    //}
+    int GetIndexWeapon()
+    {
+        WeaponsList weapons = this.GetUIManager().GetWeaponsList();
+        return weapons.GetIndexOnEnable();
+    }
 
-    //void UpdateRidersAnimation()
-    //{
-    //    RiderAnimation riderAnimation = this._playerAvatars.RiderAnimation;
-    //    riderAnimation.UpdateRidersAnimation(this._indexRider, this._indexWeapon);
-    //}
+    int GetIndexTire()
+    {
+        TiresList tires = this.GetUIManager().GetTiresList();
+        return tires.GetIndexOnEnable();
+    }
 
-    //public void SaveIndexTire(int indexTire)
-    //{
-    //    this._indexTire = indexTire;
-    //}
+    UIManager GetUIManager()
+    {
+        return ManagersCtrl.Instance.UI;
+    }
 
-    //public void SaveIndexMotobody(int indexMotobody)
-    //{
-    //    this._indexMotobody = indexMotobody;
-    //}
-
-    //public void SaveIndexRider(int indexRider)
-    //{
-    //    this._indexRider = indexRider;
-    //}
-
-    //public void SaveIndexWeapon(int indexWeapon)
-    //{
-    //    this._indexWeapon = indexWeapon;
-    //}
+    PlayerManager GetPlayerManager()
+    {
+        return ManagersCtrl.Instance.Player;
+    }
 
 }

@@ -69,6 +69,16 @@ public class UIManager : LoboMonoBehaviour
         return this.GetUserInfoAvatar().RidersList;
     }
 
+    public MotoBodysList GetMotoBodysList()
+    {
+        return this.GetUserInfoAvatar().MotoBodysList;
+    }
+
+    public WeaponsList GetWeaponsList()
+    {
+        return this.GetUserInfoAvatar().WeaponsList;
+    }
+
     public GarageMenuItem GetGarageMenuItem()
     {
         return this.GetGarageMenu().GarageMenuItem;

@@ -7,6 +7,7 @@ public class PlayerManager : LoboMonoBehaviour
 
     [SerializeField] private PlayerCtrl _playerCtrl;
 
+    [Header("Avatar")]
     [SerializeField] private int _indexRider;
     [SerializeField] private int _indexMotobody;
     [SerializeField] private int _indexWeapon;
@@ -25,14 +26,44 @@ public class PlayerManager : LoboMonoBehaviour
         Debug.Log(transform.name + ": LoadPlayerCtrl", gameObject);
     }
 
+    public void OnClickUserInfoStartRaceBtn()
+    {
+        this.OnEnablePlayerAvatars();
+        this.UpdateRidersAnimation();
+    }
+
+    // Player Avatar
     public void OnEnablePlayerAvatars()
     {
-        this._playerCtrl.Avatars.gameObject.SetActive(true);
+        this.GetRidersList()[this._indexRider].gameObject.SetActive(true);
+        this.GetMotoBodysList()[this._indexMotobody].gameObject.SetActive(true);
+        this.GetWeaponsList()[this._indexWeapon].gameObject.SetActive(true);
+        this.GetTiresList()[this._indexTire].gameObject.SetActive(true);
+    }
+
+    PlayerAvatars GetAvatars()
+    {
+        return this._playerCtrl.Avatars;
+    }
+
+    List<Transform> GetRidersList()
+    {
+        return this.GetAvatars().Riders.RidersList;
+    }
+
+    List<Transform> GetMotoBodysList()
+    {
+        return this.GetAvatars().MotoBodys.MotoBodysList;
+    }
+
+    List<Transform> GetTiresList()
+    {
+        return this.GetAvatars().Tires.TiresList;
     }
 
     public List<Transform> GetWeaponsList()
     {
-        return this._playerCtrl.Avatars.Weapons.PlayerAvatarsWeaponsList;
+        return this._playerCtrl.Avatars.Weapons.WeaponsList;
     }
 
     public PlayerAvatars GetPlayerAvatars()
@@ -40,11 +71,39 @@ public class PlayerManager : LoboMonoBehaviour
         return this._playerCtrl.Avatars;
     }
 
-    public void SetIndexAvatars(int rider, int motobody, int weapon, int tire)
+    public void SetIndexRider(int indexRider)
     {
-
+        this._indexRider = indexRider;
     }
 
+    public void SetIndexMotoBody(int indexMotobody)
+    {
+        this._indexMotobody = indexMotobody;
+    }
+
+    public void SetIndexWeapon(int indexWeapon)
+    {
+        this._indexWeapon = indexWeapon;
+    }
+
+    public void SetIndexTire(int indexTire)
+    {
+        this._indexTire = indexTire;
+    }
+
+
+    void UpdateRidersAnimation()
+    {
+        RiderAnimation riderAnimation = this.GetRiderAnimation();
+        riderAnimation.UpdateRidersAnimation(this._indexRider, this._indexWeapon);
+    }
+
+    RiderAnimation GetRiderAnimation()
+    {
+        return this._playerCtrl.Avatars.RiderAnimation;
+    }
+
+    // Player Position
     public float GetPlayerPositionY()
     {
         return this.GetPlayerPosition().y;

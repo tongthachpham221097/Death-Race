@@ -1928,7 +1928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &99226364
 Transform:
   m_ObjectHideFlags: 0
@@ -4532,15 +4532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad310eb026481848af38531f25d3569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsRidersList:
-  - {fileID: 1864232274}
-  - {fileID: 1436351900}
-  - {fileID: 2019604956}
-  - {fileID: 1163438427}
-  - {fileID: 1580108203}
-  - {fileID: 199278855}
-  - {fileID: 2017641154}
-  - {fileID: 901472112}
+  RidersList: []
 --- !u!114 &238022271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5604,7 +5596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &306415976
 Transform:
   m_ObjectHideFlags: 0
@@ -6945,6 +6937,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCtrl: {fileID: 289666984}
+  _indexRider: 0
+  _indexMotobody: 0
+  _indexWeapon: 0
+  _indexTire: 0
 --- !u!1 &365271303
 GameObject:
   m_ObjectHideFlags: 0
@@ -7440,7 +7436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e631a9d00aa4549ae844a0249ca5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsWeaponsList: []
+  WeaponsList: []
 --- !u!1 &404681194
 GameObject:
   m_ObjectHideFlags: 0
@@ -9311,7 +9307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e631a9d00aa4549ae844a0249ca5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsWeaponsList: []
+  WeaponsList: []
 --- !u!1 &504847632
 GameObject:
   m_ObjectHideFlags: 0
@@ -12650,10 +12646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 737506089}
-  _indexTire: 0
-  _indexMotobody: 0
-  _indexRider: 0
-  _indexWeapon: 0
 --- !u!114 &737506089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14346,15 +14338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642e256d9d056d549b19455ef2f9fd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsTiresList:
-  - {fileID: 99226364}
-  - {fileID: 1461282443}
-  - {fileID: 1706001356}
-  - {fileID: 1464220076}
-  - {fileID: 749793896}
-  - {fileID: 363025493}
-  - {fileID: 859412885}
-  - {fileID: 1003395763}
+  TiresList: []
 --- !u!1 &834542802
 GameObject:
   m_ObjectHideFlags: 0
@@ -14808,15 +14792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35738eae7a8a2d489a1409de18c442a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsMotoBodysList:
-  - {fileID: 95057820}
-  - {fileID: 2067077444}
-  - {fileID: 516303662}
-  - {fileID: 1356667548}
-  - {fileID: 1475044669}
-  - {fileID: 1792843769}
-  - {fileID: 1556554482}
-  - {fileID: 351892901}
+  MotoBodysList: []
 --- !u!1 &859412884
 GameObject:
   m_ObjectHideFlags: 0
@@ -21177,15 +21153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642e256d9d056d549b19455ef2f9fd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsTiresList:
-  - {fileID: 2120001097}
-  - {fileID: 768660538}
-  - {fileID: 1951076433}
-  - {fileID: 263098756}
-  - {fileID: 848461738}
-  - {fileID: 994041138}
-  - {fileID: 717273766}
-  - {fileID: 1238205806}
+  TiresList: []
 --- !u!1 &1222803656
 GameObject:
   m_ObjectHideFlags: 0
@@ -21767,7 +21735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1248965642
 Transform:
   m_ObjectHideFlags: 0
@@ -26942,15 +26910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35738eae7a8a2d489a1409de18c442a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsMotoBodysList:
-  - {fileID: 1992230740}
-  - {fileID: 68846494}
-  - {fileID: 2146662316}
-  - {fileID: 1715069813}
-  - {fileID: 1591342513}
-  - {fileID: 348892810}
-  - {fileID: 1003976326}
-  - {fileID: 161206823}
+  MotoBodysList: []
 --- !u!1 &1571365938
 GameObject:
   m_ObjectHideFlags: 0
@@ -32921,7 +32881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1864232274
 Transform:
   m_ObjectHideFlags: 0
@@ -33164,6 +33124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62747ef0ba8cff74f8086af914a21074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _uiCtrl: {fileID: 525830375}
 --- !u!1 &1894376408
 GameObject:
   m_ObjectHideFlags: 0
@@ -34231,15 +34192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad310eb026481848af38531f25d3569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAvatarsRidersList:
-  - {fileID: 483789310}
-  - {fileID: 676162238}
-  - {fileID: 1199558597}
-  - {fileID: 1955535846}
-  - {fileID: 1715230682}
-  - {fileID: 2113447762}
-  - {fileID: 778985448}
-  - {fileID: 442765154}
+  RidersList: []
 --- !u!1 &1946241461
 GameObject:
   m_ObjectHideFlags: 0
@@ -35139,7 +35092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1992230740
 Transform:
   m_ObjectHideFlags: 0

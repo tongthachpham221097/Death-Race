@@ -30,7 +30,7 @@ public class RiderAnimation : LoboMonoBehaviour
     }
     void GetAnimator(int indexRider)
     {
-        Transform rider = this._playerAvatarsRiders.PlayerAvatarsRidersList[indexRider];
+        Transform rider = this._playerAvatarsRiders.RidersList[indexRider];
         this._animator = rider.GetComponent<Animator>();
     }
 
