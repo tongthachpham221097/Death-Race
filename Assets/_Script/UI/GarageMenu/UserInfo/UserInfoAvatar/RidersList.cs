@@ -11,9 +11,9 @@ public class RidersList : BaseUserInfoAvatar
         this.Riders = this.listTransform;
     }
 
-    protected override void SaveIndex(int index)
-    {
-        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
-        userInfoStartRaceBtn.SaveIndexRider(index);
-    }
+    //protected override void SaveIndex(int index)
+    //{
+    //    //UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+    //    //userInfoStartRaceBtn.SaveIndexRider(index);
+    //}
 }

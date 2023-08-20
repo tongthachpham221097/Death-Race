@@ -7,7 +7,7 @@ public class ItemButtonOffMotobodys : GarageMenuItemBtn
 
     protected override int LoadCurrentBg()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBarPage.MotoBodysPage.CurrentBg;
+        return ManagersCtrl.Instance.UI.GetItemBarPage().MotoBodysPage.CurrentBg;
     }
 
     protected override void ResetValue()

@@ -68,8 +68,7 @@ public class RiderAnimation : LoboMonoBehaviour
 
     List<Transform> GetWeaponsList()
     {
-        PlayerAvatarsWeapons weapons = PlayerCtrl.Instance.PlayerAvatars.PlayerAvatarsWeapons;
-        return weapons.PlayerAvatarsWeaponsList;
+        return ManagersCtrl.Instance.Player.GetWeaponsList();
     }
 
 }

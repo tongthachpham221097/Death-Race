@@ -6,6 +6,6 @@ public class ChooseRaceRightArrowBtn : BaseButton
 {
     protected override void OnClick()
     {
-        UICtrl.Instance.ChooseRaceMenu.ChooseRaceList.ClickRightArrow();
+        ManagersCtrl.Instance.UI.GetChooseRaceList().ClickRightArrow();
     }
 }

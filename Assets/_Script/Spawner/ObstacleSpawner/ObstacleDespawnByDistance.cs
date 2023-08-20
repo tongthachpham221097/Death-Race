@@ -28,7 +28,7 @@ public class ObstacleDespawnByDistance : ObstacleDespawner
 
     float GetPlayerPositionY()
     {
-        return PlayerCtrl.Instance.transform.position.y;
+        return ManagersCtrl.Instance.Player.GetPlayerPositionY();
     }
 
 }

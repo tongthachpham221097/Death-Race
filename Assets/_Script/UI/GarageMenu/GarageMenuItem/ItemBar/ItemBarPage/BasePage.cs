@@ -54,7 +54,7 @@ public abstract class BasePage : BaseListTransform
 
     ItemBg GetItemBg()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBg;
+        return ManagersCtrl.Instance.UI.GetItemBg();
     }
     
     public void SaveCurrentIndexBg(int index)

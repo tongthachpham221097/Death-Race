@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class UICtrl : LoboMonoBehaviour
 {
-    
-    private static UICtrl _instance;
-    public static UICtrl Instance => _instance;
 
     [SerializeField] private GarageMenu _garageMenu;
     public GarageMenu GarageMenu => _garageMenu;
@@ -17,12 +14,6 @@ public class UICtrl : LoboMonoBehaviour
     [SerializeField] private ChooseRaceMenu _chooseRaceMenu;
     public ChooseRaceMenu ChooseRaceMenu => _chooseRaceMenu;
 
-    protected override void Awake()
-    {
-        base.Awake();
-        if (UICtrl._instance != null) Debug.LogError("only 1 UICtrl allow to exist");
-        UICtrl._instance = this;
-    }
     protected override void LoadComponents()
     {
         base.LoadComponents();

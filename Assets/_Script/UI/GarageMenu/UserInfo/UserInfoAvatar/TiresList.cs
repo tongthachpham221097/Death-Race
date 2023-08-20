@@ -11,9 +11,9 @@ public class TiresList : BaseUserInfoAvatar
         this.Tires = this.listTransform;
     }
 
-    protected override void SaveIndex(int index)
-    {
-        UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
-        userInfoStartRaceBtn.SaveIndexTire(index);
-    }
+    //protected override void SaveIndex(int index)
+    //{
+    //    UserInfoStartRaceBtn userInfoStartRaceBtn = this.GetUserInfoStartRaceBtn();
+    //    userInfoStartRaceBtn.SaveIndexTire(index);
+    //}
 }

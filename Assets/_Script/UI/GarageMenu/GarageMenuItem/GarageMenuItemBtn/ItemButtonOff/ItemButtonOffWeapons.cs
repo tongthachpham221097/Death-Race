@@ -7,7 +7,7 @@ public class ItemButtonOffWeapons : GarageMenuItemBtn
 
     protected override int LoadCurrentBg()
     {
-        return UICtrl.Instance.GarageMenu.GarageMenuItem.ItemBar.ItemBarPage.WeaponsPage.CurrentBg;
+        return ManagersCtrl.Instance.UI.GetItemBarPage().WeaponsPage.CurrentBg;
     }
 
     protected override void ResetValue()
