@@ -9,7 +9,7 @@ public abstract class BaseGoRaceBtn : BaseButton
 
     protected override void OnClick()
     {
-        SpawnerCtrl.Instance.RoadSpawner.SetPrefab(this.indexPrefabRace);
+        SpawnerCtrl.Instance.Road.SetPrefab(this.indexPrefabRace);
         ManagersCtrl.Instance.UI.DisableChooseRaceMenu();
     }
 
