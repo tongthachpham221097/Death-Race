@@ -8,5 +8,6 @@ public class DespawnByCollider : ObstacleDespawner
     {
         if (!collision.CompareTag("Player")) return;
         this.Despawning();
+        SpawnerCtrl.Instance.Fx.FxCollisionSpawning(transform.parent.position);
     }
 }

@@ -21,7 +21,7 @@ public class RoadDespawn : LoboMonoBehaviour
         float playerPosY = this.GetPlayerPositionY();
         if (playerPosY - transform.parent.position.y < this._distance) return;
 
-        SpawnerCtrl.Instance.RoadSpawner.Despawn(transform.parent);
+        SpawnerCtrl.Instance.Road.Despawn(transform.parent);
     }
 
     float GetPlayerPositionY()

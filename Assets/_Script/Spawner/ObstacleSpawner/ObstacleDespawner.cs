@@ -7,7 +7,7 @@ public class ObstacleDespawner : LoboMonoBehaviour
     
     protected virtual void Despawning()
     {
-        SpawnerCtrl.Instance.ObstacleSpawner.Despawn(transform.parent);
+        SpawnerCtrl.Instance.Obstacle.Despawn(transform.parent);
     }
 
 }
