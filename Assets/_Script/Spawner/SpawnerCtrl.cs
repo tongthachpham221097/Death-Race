@@ -19,6 +19,9 @@ public class SpawnerCtrl : LoboMonoBehaviour
     [SerializeField] private FxSpawner _fxSpawner;
     public FxSpawner Fx => _fxSpawner;
 
+    [SerializeField] private ItemSpawner _itemSpawner;
+    public ItemSpawner Item => _itemSpawner;
+
     protected override void Awake()
     {
         if (SpawnerCtrl._instance != null) Debug.LogError("only 1 SpawnerCtrl allow to exist");
@@ -32,34 +35,42 @@ public class SpawnerCtrl : LoboMonoBehaviour
         this.LoadCop();
         this.LoadObstacle();
         this.LoadFx();
+        this.LoadItemSpawner();
     }
 
-    protected virtual void LoadRoad()
+    void LoadRoad()
     {
         if (this._roadSpawner != null) return;
         this._roadSpawner = GetComponentInChildren<RoadSpawner>();
         Debug.Log(transform.name + ": LoadRoadSpawner", gameObject);
     }
 
-    protected virtual void LoadCop()
+    void LoadCop()
     {
         if (this._copSpawner != null) return;
         this._copSpawner = GetComponentInChildren<CopSpawner>();
         Debug.Log(transform.name + ": LoadCopSpawner", gameObject);
     }
 
-    protected virtual void LoadObstacle()
+    void LoadObstacle()
     {
         if (this._obstacleSpawner != null) return;
         this._obstacleSpawner = GetComponentInChildren<ObstacleSpawner>();
         Debug.Log(transform.name + ": LoadObstacleSpawner", gameObject);
     }
 
-    protected virtual void LoadFx()
+    void LoadFx()
     {
         if (this._fxSpawner != null) return;
         this._fxSpawner = GetComponentInChildren<FxSpawner>();
         Debug.Log(transform.name + ": LoadFx", gameObject);
+    }
+
+    void LoadItemSpawner()
+    {
+        if (this._itemSpawner != null) return;
+        this._itemSpawner = GetComponentInChildren<ItemSpawner>();
+        Debug.Log(transform.name + ": LoadItemSpawner", gameObject);
     }
 
 }
