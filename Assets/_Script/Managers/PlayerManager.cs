@@ -13,7 +13,9 @@ public class PlayerManager : LoboMonoBehaviour
     [SerializeField] private int _indexWeapon;
     [SerializeField] private int _indexTire;
     [Header("Rotate")]
-    [SerializeField] private float _rotationDecrease = 1f;
+    [SerializeField] private float _rotationSpeed = 1f;
+    [SerializeField] private float _timeDelayRotate = 0.0001f;
+    [SerializeField] private bool _isRotate = false;
 
     protected override void LoadComponents()
     {
@@ -128,16 +130,31 @@ public class PlayerManager : LoboMonoBehaviour
         this._playerCtrl.Movement.IncreaseSpeedMaxByTime();
     }
 
+    public void DecreaseSpeedMaxByTime()
+    {
+        this._playerCtrl.Movement.DecreaseSpeedMaxByTime();
+    }
+
 
     // Player Rotate
 
     public void Rotate()
     {
-        float playerRotationZ = this._playerCtrl.transform.rotation.z;
-        playerRotationZ -= this._rotationDecrease;
-        float playerRotationW = this._playerCtrl.transform.rotation.w;
-        this._playerCtrl.transform.rotation = new Quaternion(0, 0, playerRotationZ, playerRotationW);
-        Invoke(nameof(this.Rotate), 0.0001f);
+        this._playerCtrl.transform.Rotate(Vector3.forward * this._rotationSpeed * Time.deltaTime);
+        InvokeRepeating(nameof(this.Rotatting), 0.1f, this._timeDelayRotate);
+        this.DecreaseSpeedMaxByTime();
     }
-    
+
+    void Rotatting()
+    {
+        if (this._playerCtrl.transform.rotation.z < 0) this._isRotate = true;
+        if (this._playerCtrl.transform.rotation.z >= 0 && this._isRotate == true)
+        {
+            this._playerCtrl.transform.rotation = Quaternion.identity;
+            CancelInvoke(nameof(this.Rotatting));
+            return;
+        }
+        this._playerCtrl.transform.Rotate(Vector3.forward * this._rotationSpeed * Time.deltaTime);
+    }
+
 }

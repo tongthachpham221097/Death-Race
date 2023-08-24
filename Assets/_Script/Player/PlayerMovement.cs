@@ -74,9 +74,24 @@ public class PlayerMovement : BaseMovement
         this._speedMax -= value;
     }
 
+    public void DecreaseSpeedMax()
+    {
+        this._speedMax -= 1;
+        if(this._speedMax <= 0)
+        {
+            this._speedMax = 20;
+            CancelInvoke(nameof(this.DecreaseSpeedMax));
+        }
+    }
+
     public void IncreaseSpeedMaxByTime()
     {
         InvokeRepeating(nameof(this.IncreaseSpeedMax), 1f, 1f);
+    }
+
+    public void DecreaseSpeedMaxByTime()
+    {
+        InvokeRepeating(nameof(this.DecreaseSpeedMax), 0f, 0.2f);
     }
 
 }
