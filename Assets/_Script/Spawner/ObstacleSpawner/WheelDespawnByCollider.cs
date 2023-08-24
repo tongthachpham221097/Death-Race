@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class WheelDespawnByCollider : ObstacleDespawnByCollider
 {
-    protected override void Action()
-    {
-        
-    }
+    
 }

@@ -64,9 +64,19 @@ public class PlayerMovement : BaseMovement
         if (this._velocity.y == 0) this._velocity.x = 0;
     }
 
-    public void DeductSpeedMax(float value)
+    public void IncreaseSpeedMax()
+    {
+        this._speedMax += 0.2f;
+    }
+
+    public void DecreaseSpeedMax(float value)
     {
         this._speedMax -= value;
     }
-    
+
+    public void IncreaseSpeedMaxByTime()
+    {
+        InvokeRepeating(nameof(this.IncreaseSpeedMax), 1f, 1f);
+    }
+
 }

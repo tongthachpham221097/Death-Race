@@ -12,6 +12,8 @@ public class PlayerManager : LoboMonoBehaviour
     [SerializeField] private int _indexMotobody;
     [SerializeField] private int _indexWeapon;
     [SerializeField] private int _indexTire;
+    [Header("Rotate")]
+    [SerializeField] private float _rotationDecrease = 1f;
 
     protected override void LoadComponents()
     {
@@ -116,10 +118,26 @@ public class PlayerManager : LoboMonoBehaviour
 
     // Movement
 
-    public void DeductSpeedMax(float value)
+    public void DecreaseSpeedMax(float value)
     {
-        this._playerCtrl.Movement.DeductSpeedMax(value);
+        this._playerCtrl.Movement.DecreaseSpeedMax(value);
+    }
+
+    public void IncreaseSpeedMaxByTime()
+    {
+        this._playerCtrl.Movement.IncreaseSpeedMaxByTime();
     }
 
 
+    // Player Rotate
+
+    public void Rotate()
+    {
+        float playerRotationZ = this._playerCtrl.transform.rotation.z;
+        playerRotationZ -= this._rotationDecrease;
+        float playerRotationW = this._playerCtrl.transform.rotation.w;
+        this._playerCtrl.transform.rotation = new Quaternion(0, 0, playerRotationZ, playerRotationW);
+        Invoke(nameof(this.Rotate), 0.0001f);
+    }
+    
 }
