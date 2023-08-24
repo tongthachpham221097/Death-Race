@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DespawnByCollider : ObstacleDespawner
+public abstract class ObstacleDespawnByCollider : ObstacleDespawner
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
         this.Despawning();
-        SpawnerCtrl.Instance.Fx.FxCollisionSpawning(transform.parent.position);
+        this.Action();
     }
+
+    protected abstract void Action();
+
 }

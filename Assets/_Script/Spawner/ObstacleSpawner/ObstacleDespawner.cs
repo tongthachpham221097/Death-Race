@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleDespawner : LoboMonoBehaviour
+public abstract class ObstacleDespawner : LoboMonoBehaviour
 {
     
     protected virtual void Despawning()
