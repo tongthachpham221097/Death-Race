@@ -114,5 +114,12 @@ public class PlayerManager : LoboMonoBehaviour
         return this._playerCtrl.transform.position;
     }
 
+    // Movement
+
+    public void DeductSpeedMax(float value)
+    {
+        this._playerCtrl.Movement.DeductSpeedMax(value);
+    }
+
 
 }

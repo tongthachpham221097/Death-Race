@@ -4432,6 +4432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 233314374}
   - component: {fileID: 233314375}
+  - component: {fileID: 233314376}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Player
@@ -4463,7 +4464,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4479,6 +4480,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &233314376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233314373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5239fb9d9b42b84fb645366a07bf222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &237524362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5844,7 +5857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &306415976
 Transform:
   m_ObjectHideFlags: 0
@@ -9005,7 +9018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461776425}
   m_Layer: 0
-  m_Name: Prefabs_1
+  m_Name: Gas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9019,7 +9032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461776424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 13143577}
@@ -14006,6 +14019,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759337392}
   m_CullTransparentMesh: 1
+--- !u!1 &763511682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 763511683}
+  - component: {fileID: 763511685}
+  - component: {fileID: 763511684}
+  m_Layer: 0
+  m_Name: DespawnByCollider
+  m_TagString: ObstacleWheel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &763511683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763511682}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2079856426}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &763511684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763511682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a3f80859050f24fbd95cd5d92a6048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &763511685
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763511682}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3
 --- !u!1 &765228857
 GameObject:
   m_ObjectHideFlags: 0
@@ -24959,8 +25032,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1432392746}
   m_Layer: 0
-  m_Name: Prefabs_2
-  m_TagString: Untagged
+  m_Name: Wheel_1
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24978,6 +25051,7 @@ Transform:
   m_Children:
   - {fileID: 377454534}
   - {fileID: 1379129310}
+  - {fileID: 1689679745}
   m_Father: {fileID: 25421978}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30674,6 +30748,66 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1689679744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689679745}
+  - component: {fileID: 1689679747}
+  - component: {fileID: 1689679746}
+  m_Layer: 0
+  m_Name: DespawnByCollider
+  m_TagString: ObstacleWheel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689679745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689679744}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1432392746}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689679746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689679744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a3f80859050f24fbd95cd5d92a6048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1689679747
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689679744}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02, y: 0.06}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1690228558
 GameObject:
   m_ObjectHideFlags: 0
@@ -37097,11 +37231,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 289666989}
-  velocity: {x: 0, y: 0}
-  speedUp: 0.5
-  speedDown: 0.5
-  speedMax: 20
-  speedHorizontal: 6
+  _velocity: {x: 0, y: 0}
+  _speedUp: 0.5
+  _speedDown: 0.5
+  _speedMax: 20
+  _speedHorizontal: 6
 --- !u!1 &2041890064
 GameObject:
   m_ObjectHideFlags: 0
@@ -37471,7 +37605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079856426}
   m_Layer: 0
-  m_Name: Prefabs_3
+  m_Name: Wheel_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37490,6 +37624,7 @@ Transform:
   m_Children:
   - {fileID: 328704657}
   - {fileID: 296521198}
+  - {fileID: 763511683}
   m_Father: {fileID: 25421978}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

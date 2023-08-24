@@ -4,11 +4,11 @@ using UnityEngine;
 public class PlayerMovement : BaseMovement
 {
     [Header("Player Movement")]
-    [SerializeField] public Vector2 velocity = new Vector2(0f, 0f);
-    [SerializeField] public float speedUp = 0.5f;
-    [SerializeField] public float speedDown = 0.5f;
-    [SerializeField] public float speedMax = 20f;
-    [SerializeField] public float speedHorizontal = 6f;
+    [SerializeField] private Vector2 _velocity = new Vector2(0f, 0f);
+    [SerializeField] private float _speedUp = 0.5f;
+    [SerializeField] private float _speedDown = 0.5f;
+    [SerializeField] private float _speedMax = 20f;
+    [SerializeField] private float _speedHorizontal = 6f;
     protected virtual void Update()
     {
         if (InputManager.Instance.PressKeyS) UpdateSpeedDown2();
@@ -20,27 +20,27 @@ public class PlayerMovement : BaseMovement
     }
     protected virtual void UpdateSpeed()
     {
-        this.velocity.x = InputManager.Instance.PressHorizontal * speedHorizontal;
+        this._velocity.x = InputManager.Instance.PressHorizontal * this._speedHorizontal;
         
         this.UpdateSpeedUp();
         
         this.UpdateSpeedDown();
         
-        this.rb2d.MovePosition(this.rb2d.position + this.velocity * Time.fixedDeltaTime);
+        this.rb2d.MovePosition(this.rb2d.position + this._velocity * Time.fixedDeltaTime);
     }
     
     protected virtual void UpdateSpeedUp()
     {
         if (InputManager.Instance.PressVertical <= 0) return;
         
-        this.velocity.y += this.speedUp;
+        this._velocity.y += this._speedUp;
 
-        if (this.velocity.y > this.speedMax) this.velocity.y = this.speedMax;
+        if (this._velocity.y > this._speedMax) this._velocity.y = this._speedMax;
 
         if (transform.position.x < -7 || transform.position.x > 7)
         {
-            this.velocity.y -= 1f;
-            if (this.velocity.y < 3f) this.velocity.y = 3f;
+            this._velocity.y -= 1f;
+            if (this._velocity.y < 3f) this._velocity.y = 3f;
         }
     }
     protected virtual void UpdateSpeedDown()
@@ -57,11 +57,16 @@ public class PlayerMovement : BaseMovement
     }
     protected virtual void UpdateSpeedDown3()
     {
-        this.velocity.y -= this.speedDown;
+        this._velocity.y -= this._speedDown;
 
-        if (this.velocity.y < 0) this.velocity.y = 0;
+        if (this._velocity.y < 0) this._velocity.y = 0;
 
-        if (this.velocity.y == 0) this.velocity.x = 0;
+        if (this._velocity.y == 0) this._velocity.x = 0;
+    }
+
+    public void DeductSpeedMax(float value)
+    {
+        this._speedMax -= value;
     }
     
 }
