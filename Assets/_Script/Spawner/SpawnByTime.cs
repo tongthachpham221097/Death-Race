@@ -25,8 +25,7 @@ public class SpawnByTime : Spawner
 
     protected virtual Transform GetPrefab()
     {
-        //return this.RandomPrefab();
-        return this.prefabs[0];
+        return this.RandomPrefab();
     }
     protected virtual bool TimeDelay()
     {
